@@ -4,15 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a Technologist, originally from England, currently living in Charlotte, NC.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I work at a software consultancy called Avanade, which is part of Accenture, and I lead the Application Architecture Center of Excellence for North America. Beyond that I am a husband, a father and a 'technology enthusiast'.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I love working with technology and people, finding ways to improve the lives of humans through the use of technology. My work at Avanade is helping find solutions for our customers problems, training and mentoring employees, and building a community of learning, sharing and collaboration both internally and with our clients.
 
+On the flip side of that, I LOVE to learn. I try a lot of things with different technologies, I love to read, watch videos, attend talks, and have great conversations with people about technology, business, and experiential design.
 
-[jekyll-organization]: https://github.com/jekyll
+For all these things I like to do, I want to expand the reach of it through this website. I am hoping to engage with people, learn more, teach more, and have more great conversations.
