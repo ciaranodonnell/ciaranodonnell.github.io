@@ -32,6 +32,8 @@ github_username:  ciaranodonnell
 
 # Build settings
 theme: minima
+remote_theme: bulma-clean-theme
+
 plugins:
   - jekyll-feed
 
@@ -54,3 +56,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Ciaran O'Donnell"
+      layout: post
+      hero_image: /ciaranhero.jpg
+      show_sidebar: true
