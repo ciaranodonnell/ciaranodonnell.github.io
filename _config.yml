@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   architecture in North America. My passion is in finding good software architectures and also
   good culture, processes, practices etc. I like technology and want the industry to grow, mature and become more inclusive.
   I also like training for American Ninja Warrior but hold no misconceptions that I'll ever appear on the show :)
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ciaranodonnell.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ciaranjodonnell
 github_username:  ciaranodonnell
