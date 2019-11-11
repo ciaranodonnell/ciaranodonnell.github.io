@@ -3,6 +3,7 @@ layout: single
 title:  "New Desk Setup"
 date:   2019-09-02 17:43:00 -0500
 categories: posts
+comments: true
 excerpt: I have been working from my home for over 2 years now, since I moved from New Jersey to North Carolina. Recently I have decided to improve my home setup, inspired by Scott Hanselman. This post explains what I did and what kind of results I got.
 ---
 I have been working from my home for over 2 years now, since I moved from New Jersey to North Carolina. While I lived in NJ I was able to work from home but I wasn't set up for it. I didn't have a home office, I would work from my dining table which was open to the front room and the kitchen. With kids, TVs, cooking etc, this was a, to put it nicely, sub-optimal experience.

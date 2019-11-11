@@ -3,6 +3,7 @@ layout: single
 title:  "Using AWS Kinesis From .NET!"
 date:   2019-09-10 13:43:00 -0500
 categories: posts
+comments: true
 toc: true
 author_profile: true
 excerpt: With .NET Core you can write and run C# on just about any platform, including Amazon Web Services. This post explains the challenge using AWS Kinesis from .NET

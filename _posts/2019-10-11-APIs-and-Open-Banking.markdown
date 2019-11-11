@@ -1,9 +1,10 @@
 ---
 layout: single
 title:  "APIs and Open Banking"
-date:   2019-09-10 13:43:00 -0500
+date:   2019-11-08   13:43:00 -0500
 excerpt: Open Banking is a hot topic, especially in the banking industry at the moment. However I think its actually a trend that will have a broad range of effects across a number of consumer facing industries.
 categories: [posts]
+comments: true
 tags: [banking, apis, openbanking, innovation, disruption]
 ---
 
