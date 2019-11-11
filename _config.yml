@@ -20,7 +20,7 @@ title                    : "Ciaran O'Donnell's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ciaran O'Donnell"
-description              : "An amazing website."
+description              : "Personal blog of Ciaran O'Donnell - Technologist, Father, Husband, Geek, Ninja"
 url                      : "https://ciaranodonnell.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
