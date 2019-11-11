@@ -1,0 +1,7 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "About Ciaran"
+    url: /about/
+  - title: "Speaking Schedule"
+    url: /speaking/

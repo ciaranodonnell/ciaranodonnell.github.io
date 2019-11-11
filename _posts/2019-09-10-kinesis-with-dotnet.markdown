@@ -1,8 +1,13 @@
 ---
-layout: post
+layout: single
 title:  "Using AWS Kinesis From .NET!"
 date:   2019-09-10 13:43:00 -0500
 categories: posts
+toc: true
+author_profile: true
+excerpt: With .NET Core you can write and run C# on just about any platform, including Amazon Web Services. This post explains the challenge using AWS Kinesis from .NET
+header:
+  teaser: /images/KinesisWithDotNet_DiagramOfKinesis.png
 ---
 One of the beautiful things about .NET Core is that it isn't just a Windows Desktop/Server option. You can write and run C# on just about any platform, including Amazon Web Services.
 
@@ -75,12 +80,12 @@ Your record processor executable. There is actually one of these per shard so de
 ![Diagram of Kinesis Setup](/images/KinesisWithDotNet_DiagramOfKinesis.png)
 
 1. Your Application is running on a machine or container with Kinesis running in the cloud
-1. Your application wants to start a Subscription to one of the Event Streams in Kinesis
-1. It launches the Java Daemon which manages a connection to Kinesis and balancing the leases to shards
-1. For each Shard your Application becomes a consumer on, the Java process starts a separate application to consume that Shard
-1. As ‘Records’ are received on the Shard, they are serialized by the Java daemon and written to the Std In stream of the processor
-1. As the Records are processed, and the processor wants to Checkpoint, those instructions are written to its Std Out stream
-1. When a new Subscription is started to another Stream, a new Java daemon and Record processors are started as before.
+2. Your application wants to start a Subscription to one of the Event Streams in Kinesis
+3. It launches the Java Daemon which manages a connection to Kinesis and balancing the leases to shards
+4. For each Shard your Application becomes a consumer on, the Java process starts a separate application to consume that Shard
+5. As ‘Records’ are received on the Shard, they are serialized by the Java daemon and written to the Std In stream of the processor
+6. As the Records are processed, and the processor wants to Checkpoint, those instructions are written to its Std Out stream
+7. When a new Subscription is started to another Stream, a new Java daemon and Record processors are started as before.
 
 
 ## What does this mean for me?

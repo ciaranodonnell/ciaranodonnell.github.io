@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Speaking Schedule
 permalink: /speaking/
 ---

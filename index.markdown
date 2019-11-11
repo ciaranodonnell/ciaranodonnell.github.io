@@ -4,7 +4,7 @@
 
 layout: home
 ---
-<!--
+
 <div>
   {% for post in site.posts %}
     
@@ -13,4 +13,3 @@ layout: home
     </p>
   {% endfor %}
   <div>
--->
