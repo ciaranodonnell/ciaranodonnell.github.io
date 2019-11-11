@@ -31,8 +31,8 @@ twitter_username: ciaranjodonnell
 github_username:  ciaranodonnell
 
 # Build settings
-theme: minima
-remote_theme: bulma-clean-theme
+#theme: minima
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-feed
