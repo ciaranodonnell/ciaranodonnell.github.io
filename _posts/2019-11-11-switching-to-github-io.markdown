@@ -22,10 +22,15 @@ It was a wordpress.com hosted blog at
 The last post on that platform was during Build 2012 when Windows 8 launched. 
 
 In the interim i have made other attempts to get into the community. However, I have always had the same kind of 
-problems keeping it going. The first and most prominent of those what that I didn't think I had a useful contribution to make. There were peeople going on .NET Rocks and talking about big frameworks and I felt that my voice wasn't going to be useful in the same crowd as those. Working at a consulting firm meant the cool stuff I did was proprietary and secret so it would have just been opinions. 
+problems keeping it going. The first and most prominent of those what that I didn't think I had a useful contribution 
+to make. There were peeople going on .NET Rocks and talking about big frameworks and I felt that my voice wasn't 
+going to be useful in the same crowd as those. Working at a consulting firm meant the cool stuff I did was 
+proprietary and secret so it would have just been opinions. 
 
 ## Doubling down on social
-About a year ago my role changed and I took a leadership role for Avanade in North America. I am not the leader of our Software Architecture Center of Excellence. As a group we are charged with helping sales (as all groups in consulting firms normally are) but, perhaps more importantly, 'Technical Enablement'. That means that while an important part of my role is solving customer problems, it is also to do training and create recommendations for people across the company. 
+About a year ago my role changed and I took a leadership role for Avanade in North America. I am now the leader 
+of our Software Architecture Center of Excellence. As a group we are charged with helping sales (as all
+ groups in consulting firms normally are) but, perhaps more importantly, 'Technical Enablement'. That means that while an important part of my role is solving customer problems, it is also to do training and create recommendations for people across the company. 
 
 Over the last year I have been creating this training and enablement content and at first, it was close to my least favorite activity in my role. I felt the same pressure I had felt for years, that it was crazy that I would have something to teach all of Avanades 20+ thousands of consultants. However I have come to learn an important lesson:
 
