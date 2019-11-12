@@ -14,9 +14,15 @@ Over the last few months I have tried out a number of different blogging options
 First let me tell you a little bit about those and then I will talk about moving to Github.io for hosting.
 
 ## My old blog
-A long time ago in a galaxy far far away I had a blog. I think I started it in about 2005 or 2006. Its where I got the title 'wanna be developer'. The first post on that blog was about wanting to be one of the great 'teacher' developers. This was a wordpress.com based blog, the url was/is [http://wannabedeveloper.wordpress.com](http://wannabedeveloper.wordpress.com). The most recent post was during Build 2012 when Windows 8 launched. 
+A long time ago in a galaxy far far away I had a blog. Its where I got the title 'wanna be developer' from, which is a 
+moniker I've used a lot since then. The first post on that blog was about wanting to be one of the great 'teacher' 
+developers that I looked up to at the time. 
+It was a wordpress.com hosted blog at  
+[http://wannabedeveloper.wordpress.com](http://wannabedeveloper.wordpress.com). 
+The last post on that platform was during Build 2012 when Windows 8 launched. 
 
-In the interim i have amde other attempts to get into the community. However i have always had the same kind of problems keeping it going. The first and most prominent of those what that I didn't think I had a useful contribution to make. There were peeople going on .NET Rocks and talking about big frameworks and I felt that my voice wasn't going to be useful in the same crowd as those. Working at a consulting firm meant the cool stuff I did was proprietary and secret so it would have just been opinions. 
+In the interim i have made other attempts to get into the community. However, I have always had the same kind of 
+problems keeping it going. The first and most prominent of those what that I didn't think I had a useful contribution to make. There were peeople going on .NET Rocks and talking about big frameworks and I felt that my voice wasn't going to be useful in the same crowd as those. Working at a consulting firm meant the cool stuff I did was proprietary and secret so it would have just been opinions. 
 
 ## Doubling down on social
 About a year ago my role changed and I took a leadership role for Avanade in North America. I am not the leader of our Software Architecture Center of Excellence. As a group we are charged with helping sales (as all groups in consulting firms normally are) but, perhaps more importantly, 'Technical Enablement'. That means that while an important part of my role is solving customer problems, it is also to do training and create recommendations for people across the company. 
