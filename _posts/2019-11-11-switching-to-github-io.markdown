@@ -6,6 +6,7 @@ date:   2019-11-11   19:43:00 -0500
 excerpt: Over the last few months I have tried out a number of different blogging options from self hosting to hosted services. Recently I found out about github.io and decided to give it a try. This is how I did that
 categories: [posts]
 comments: true
+toc: true
 tags: [github, blogging, hosting, dns, social]
 ---
 
