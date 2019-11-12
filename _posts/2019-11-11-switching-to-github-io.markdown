@@ -30,9 +30,13 @@ proprietary and secret so it would have just been opinions.
 ## Doubling down on social
 About a year ago my role changed and I took a leadership role for Avanade in North America. I am now the leader 
 of our Software Architecture Center of Excellence. As a group we are charged with helping sales (as all
- groups in consulting firms normally are) but, perhaps more importantly, 'Technical Enablement'. That means that while an important part of my role is solving customer problems, it is also to do training and create recommendations for people across the company. 
+ groups in consulting firms normally are) but, perhaps more importantly, 'Technical Enablement'. 
+ That means that while an important part of my role is solving customer problems, it is also to do training and 
+ create recommendations for people across the company. 
 
-Over the last year I have been creating this training and enablement content and at first, it was close to my least favorite activity in my role. I felt the same pressure I had felt for years, that it was crazy that I would have something to teach all of Avanades 20+ thousands of consultants. However I have come to learn an important lesson:
+Over the last year I have been creating this training and enablement content and, at first, it was maybe my least 
+favorite activity in my role. I felt the same pressure I had felt for years, that it was crazy that I would have 
+something to teach all of Avanade's 20,000+ consultants. However I have come to learn an important lesson:
 
 **Everyone has something to contribute!** 
 
