@@ -88,3 +88,13 @@ Through the Github website:
 
 When you hit that open in desktop button in the UI it will launch the Github desktop and that will allow you
 to clone the repo. 
+![Clone repo in github desktop](../images/2019-11-12-settingUpGitHubBlog/github-clone-repo.png)
+
+Once the repo is cloned you'll have some options on the right of the github desktop window. 
+One of which should be open the folder in your favorite editor. I have mine configured as Visual Studio Code. 
+If you don't have Visual Studio Code I would recommend it. 
+
+![Clone repo in github desktop](../images/2019-11-12-settingUpGitHubBlog/github-open-in-editor.png)
+
+## Creating the Site
+
