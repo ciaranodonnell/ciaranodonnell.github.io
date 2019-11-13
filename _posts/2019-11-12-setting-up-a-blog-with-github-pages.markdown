@@ -19,3 +19,72 @@ I normally don't arrive at a perfect destination in one go so its hard to make t
 
 First you need a Github account. If you don't have one, go sign-up. I caution you though that your github account name will be the thing people see when they find you
 on github and also it will be in the URL for your blog, so choose wisely. 
+Going to the website without an account will mean you get a sign up form on the front screen. Thats where you enter your email, password, and username. Your profile will
+be at https://www.github.com/YOUR_USERNAME and your blog will be at https://YOUR_USERNAME.github.io
+
+I'm not going to show a bunch of GitHub screen shots right now because I am not in control of when that flow will change. Its also hard for to me to capture that flow
+seeing as how I already have a github account and don't want to create a new one.
+
+## Wait, what is Github?
+
+I am not going to dive into a full breakdown of what Github is. If you don't have any clue about version control and 
+source code management, you should go read 
+[the wikipedia article on Revision Control](https://en.wikipedia.org/wiki/Version_control).
+
+If you do know what version control but you're not sure about Git, you should read some about Git. It's a version control
+system written by Linus Torvalds (the person that made Linux) and its pretty good. It's a distributed system, which means
+it keeps a copy of everything on your machine, the whole history, and you can work that way entirely autonomously. 
+However, it also has a way to synchronize two seperate Git repositories (databases of source code) between two seperate 
+machines. This can be your machine and a server, or your machine and a friend, or your machine and a server and any 
+number of friends machines all sharing this database. Thats what makes it so cool.
+
+Github is a server for Git. It can act like a central repository for you and your team to sync source code to. It's 
+free for public repositories. Which means source code databases that anybody can read from. This is why its the main
+place open source software development happens. It can be a problem for companies hosting their source code on, 
+but I quite like open by default kind of culture. 
+
+## Creating your Repo
+
+
+Github makes it pretty simple to create a Repository - you simply hit the green button:
+![GitHub page header showing the green New button](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-1.png)
+
+Once you hit that button, you have to type in the details of the repository:
+
+![GitHub New Repo Page](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-2.png)
+
+There are three important things to fill in on this page. 
+1. **Repository Name**: You need to have this be your YOURUSERNAME.github.io
+2. **Visibility**: For the free github pages it will need to be a public repository
+3. **gitignore**: This isn't essential but can save headaches, you should pick Jekyll from the gitignore list. This will
+add a file to your repository called .gitignore which lets Git know what files should NOT be committed to the
+repository. These are often temp files made by Jekyll.
+4. *Description*: You can also add a Description here for the Repo. Its not that important, mine simple says 'Github Blog'
+
+## Cloning your new Repo
+
+Once you create the repository you need to clone it to your local machine. In order for this to work you need to have Git
+installed on your machine. If you dont have it, go get it from [https://git-scm.com/](https://git-scm.com/). Install the 
+latest one for your platform.
+
+After you have Git, I also recommend getting Github Desktop. It's a graphical tool that works cross platform and prevents 
+from having to remember all the basic git commands, and also all the advanced git commands you need when you realize
+you did a basic command wrong and want to undo it. This is available for free at 
+[https://desktop.github.com/](https://desktop.github.com/)
+
+Once you have cool tools installed you are ready to clone the repo. This can be done a bunch of ways:
+
+Through the command line:
+``` 
+
+cd %USERPROFILE%\source\github\YOUR_USERNAME
+git clone git://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io
+
+```
+
+Through the Github website:
+
+![GitHub Open In Desktop](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-3.png)
+
+When you hit that open in desktop button in the UI it will launch the Github desktop and that will allow you
+to clone the repo. 
