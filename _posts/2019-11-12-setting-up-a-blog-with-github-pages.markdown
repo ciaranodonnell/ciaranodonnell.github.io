@@ -7,7 +7,7 @@ excerpt: While there is a pretty good walk through of the GitHub things you need
 categories: [posts]
 comments: true
 toc: true
-tags: [github, blogging, hosting, dns, social]
+tags: [github, blogging, hosting, dns, social, jekyll]
 ---
 
 While there is a pretty good walk through of the GitHub Pages on [https://github.io](https://github.io), it really focuses on how to setup GitHub to publish your site. 
@@ -98,3 +98,19 @@ If you don't have Visual Studio Code I would recommend it.
 
 ## Creating the Site
 
+### Installing Jekyll
+I personally found the Jekyll installation confusing when I tried to do it on my Windows development machine
+I followed the process to install Jekyll for Windows and although 
+The documentation didn't match up with the experience, it seemed to have worked
+However, once i got further down the road and was trying to install themes and plug ins for Jekyll it failed. They depended on different Jekyll versions that weren't compatiable with version 4.0.0 and those other versions didn't have windows builds available. It was quite confusing. 
+
+I decided that now would be as good as time as any to start using my WSL installation. 
+I have WSL installed, currently on a Windows Insider build but eventually that will be normal and I dont think it makes a difference anyway. 
+I am using the Ubuntu distribution from the Windows store. 
+So I tried to install Jekyll using apt-get and it didnt work, it complained about missing dependencies. 
+So for each of those I had to install them first, namely: gcc, gc++, make, and perhaps some others. 
+This worked well 
+for me and gave me an excuse to use WSL. I might go back and explore the Windows installation option and make sure that
+works. 
+
+So at this point I had WSL2 running with Jekyll installed. 
