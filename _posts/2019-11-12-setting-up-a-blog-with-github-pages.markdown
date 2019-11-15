@@ -10,7 +10,7 @@ toc: true
 tags: [github, blogging, hosting, dns, social, jekyll]
 ---
 
-While there is a pretty good walk through of the GitHub Pages on [https://github.io](https://github.io), it really focuses on how to setup GitHub to publish your site. 
+While there is a pretty good walk through of the GitHub Pages on [https://github.io](https://github.io){:target="_blank"}, it really focuses on how to setup GitHub to publish your site. 
 I found that there was slightly more knowledge needed to get to get it all working how I wanted it on my windows development machine. 
 While i was going through this process I should have been taking notes and screenshots, but I didn't. 
 I normally don't arrive at a perfect destination in one go so its hard to make that work. Anyway, this is pretty much what I did to get to the end state of a working blog.
@@ -29,7 +29,7 @@ seeing as how I already have a github account and don't want to create a new one
 
 I am not going to dive into a full breakdown of what Github is. If you don't have any clue about version control and 
 source code management, you should go read 
-[the wikipedia article on Revision Control](https://en.wikipedia.org/wiki/Version_control).
+[the wikipedia article on Revision Control](https://en.wikipedia.org/wiki/Version_control){:target="_blank"}.
 
 If you do know what version control but you're not sure about Git, you should read some about Git. It's a version control
 system written by Linus Torvalds (the person that made Linux) and its pretty good. It's a distributed system, which means
@@ -64,13 +64,13 @@ repository. These are often temp files made by Jekyll.
 ## Cloning your new Repo
 
 Once you create the repository you need to clone it to your local machine. In order for this to work you need to have Git
-installed on your machine. If you dont have it, go get it from [https://git-scm.com/](https://git-scm.com/). Install the 
+installed on your machine. If you dont have it, go get it from [https://git-scm.com/](https://git-scm.com/){:target="_blank"}. Install the 
 latest one for your platform.
 
 After you have Git, I also recommend getting Github Desktop. It's a graphical tool that works cross platform and prevents 
 from having to remember all the basic git commands, and also all the advanced git commands you need when you realize
 you did a basic command wrong and want to undo it. This is available for free at 
-[https://desktop.github.com/](https://desktop.github.com/)
+[https://desktop.github.com/](https://desktop.github.com/){:target="_blank"}
 
 Once you have cool tools installed you are ready to clone the repo. This can be done a bunch of ways:
 
@@ -106,11 +106,11 @@ However, once i got further down the road and was trying to install themes and p
 
 I decided that now would be as good as time as any to start using my WSL installation. 
 
-Just for reference, [the official Jekyll documentation for installation on Ubuntu is here - https://jekyllrb.com/docs/installation/ubuntu/](https://jekyllrb.com/docs/installation/ubuntu/).
+Just for reference, [the official Jekyll documentation for installation on Ubuntu is here - https://jekyllrb.com/docs/installation/ubuntu/](https://jekyllrb.com/docs/installation/ubuntu/){:target="_blank"}.
 
 
 I have WSL installed, currently on a Windows Insider build but eventually that will be normal and I dont think it makes a difference anyway.
-I am using the Ubuntu distribution from the Windows store. Once you have enabled WSL on Windows you should be able to find it in the store and enable it like a normal app. The Microsoft documentation for that is here: [Installation Instructions for WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+I am using the Ubuntu distribution from the Windows store. Once you have enabled WSL on Windows you should be able to find it in the store and enable it like a normal app. The Microsoft documentation for that is here: [Installation Instructions for WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install){:target="_blank"}.
 
 So once you have WSL installed and running, you need to get Jekyll installed. 
 Jekyll runs on Ruby, so you need that installed first. Ruby uses the native C compilers so install Ruby you need to install those first. 
