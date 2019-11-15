@@ -105,12 +105,84 @@ The documentation didn't match up with the experience, it seemed to have worked
 However, once i got further down the road and was trying to install themes and plug ins for Jekyll it failed. They depended on different Jekyll versions that weren't compatiable with version 4.0.0 and those other versions didn't have windows builds available. It was quite confusing. 
 
 I decided that now would be as good as time as any to start using my WSL installation. 
-I have WSL installed, currently on a Windows Insider build but eventually that will be normal and I dont think it makes a difference anyway. 
-I am using the Ubuntu distribution from the Windows store. 
-So I tried to install Jekyll using apt-get and it didnt work, it complained about missing dependencies. 
-So for each of those I had to install them first, namely: gcc, gc++, make, and perhaps some others. 
-This worked well 
-for me and gave me an excuse to use WSL. I might go back and explore the Windows installation option and make sure that
-works. 
 
-So at this point I had WSL2 running with Jekyll installed. 
+Just for reference, [the official Jekyll documentation for installation on Ubuntu is here - https://jekyllrb.com/docs/installation/ubuntu/](https://jekyllrb.com/docs/installation/ubuntu/).
+
+
+I have WSL installed, currently on a Windows Insider build but eventually that will be normal and I dont think it makes a difference anyway.
+I am using the Ubuntu distribution from the Windows store. Once you have enabled WSL on Windows you should be able to find it in the store and enable it like a normal app. The Microsoft documentation for that is here: [Installation Instructions for WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+
+So once you have WSL installed and running, you need to get Jekyll installed. 
+Jekyll runs on Ruby, so you need that installed first. Ruby uses the native C compilers so install Ruby you need to install those first. 
+
+We can issue a single command give it a list of things to install. So in the Unbuntu terminal type this command:
+
+``` bash
+sudo apt-get install ruby-full build-essential zlib1g-dev
+```
+This is asking for the *apt-get* command to install ruby-full, build-essentials (which includes make and gcc), 
+and zlib1g-dev (which i think it uses for unzipping libraries or something). 
+It might ask you for your password in that box as you're using the sudo (super user do) command. 
+
+Now you have Ruby installed, you need to configure where the Ruby plugins, called Gems, are installed. 
+These commands will configure Ruby in your environment to install them in a User folder, not a system folder. (This means you wont need to be a super user to install or use them)
+
+``` bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Once that is configured you are ready to install Gems. Jekyll is a Gem. 
+So issuing this command will install it:
+``` bash
+gem install jekyll bundler
+```
+
+## Creating a Site with Jekyll
+
+So now we have Jekyll installed and a Repository in which we can build our site, we should build our site. 
+
+In Ubuntu/bash you should issue this command to make a new site:
+
+``` bash
+jekyll new .
+```
+
+That might also ask for your password in order to install bundles. Once its complete though you will have a template website in the folder. 
+
+You can check this by asking git if it sees all the files. 
+``` bash
+git status
+```
+This should give you output like:
+![Git Status Output](../images/2019-11-12-settingUpGitHubBlog/new-jekyll-git-status.png)
+
+If that shows the correct output you can now test it with the local web server built into jekyll. Run this:
+``` bash
+bundle exec jekyll serve
+```
+
+That runs a webserver that publishes the template site on port 4000. Once thats running you should be able to open a browser and go to [http://127.0.0.1:4000](http://127.0.0.1:4000) to view the template site. 
+
+![Jekyll sample site](../images/2019-11-12-settingUpGitHubBlog/new-jekyll-site.png)
+
+## Publishing to Github Pages
+
+Now that you have the site on your machine and it's running, you can publish it to github and make sure it's publicly visible.
+Running the Guthub Desktop client should should you that you have files that need committing. 
+
+You need to enter a commit message and commit the changes to Git. That will save them to your local copy of the Git repository. 
+
+However, as we talked about earlier, Git is a distributed system and Github is our server copy. 
+So we need to 'push' our changes from our local repository to Github. 
+Luckily the Github Desktop app makes that a click of a button, so click it.
+
+It will push the changes to Github and within about 20 seconds (although the SLA is longer) you shoud be able to see your sample site on YOUR_USERNAME.github.io
+
+## Editing the Site
+
+That's the end of this post. The next will focus on how to edit the site, apply themes, add posts etc.
+
+
