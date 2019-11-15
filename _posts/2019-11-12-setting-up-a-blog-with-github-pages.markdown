@@ -175,9 +175,14 @@ Running the Guthub Desktop client should should you that you have files that nee
 
 You need to enter a commit message and commit the changes to Git. That will save them to your local copy of the Git repository. 
 
+![Git Commit Message](../images/2019-11-12-settingUpGitHubBlog/git-commit-message.png)
+
+
 However, as we talked about earlier, Git is a distributed system and Github is our server copy. 
 So we need to 'push' our changes from our local repository to Github. 
 Luckily the Github Desktop app makes that a click of a button, so click it.
+
+![Git Push Button](../images/2019-11-12-settingUpGitHubBlog/git-push-button.png)
 
 It will push the changes to Github and within about 20 seconds (although the SLA is longer) you shoud be able to see your sample site on YOUR_USERNAME.github.io
 
