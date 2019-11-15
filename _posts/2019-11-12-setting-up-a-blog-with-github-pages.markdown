@@ -47,11 +47,11 @@ but I quite like open by default kind of culture.
 
 
 Github makes it pretty simple to create a Repository - you simply hit the green button:
-![GitHub page header showing the green New button](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-1.png)
+![GitHub page header showing the green New button](/images/2019-11-12-settingUpGitHubBlog/github-create-repo-1.png)
 
 Once you hit that button, you have to type in the details of the repository:
 
-![GitHub New Repo Page](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-2.png)
+![GitHub New Repo Page](/images/2019-11-12-settingUpGitHubBlog/github-create-repo-2.png)
 
 There are three important things to fill in on this page. 
 1. **Repository Name**: You need to have this be your YOURUSERNAME.github.io
@@ -84,17 +84,17 @@ git clone git://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io
 
 Through the Github website:
 
-![GitHub Open In Desktop](../images/2019-11-12-settingUpGitHubBlog/github-create-repo-3.png)
+![GitHub Open In Desktop](/images/2019-11-12-settingUpGitHubBlog/github-create-repo-3.png)
 
 When you hit that open in desktop button in the UI it will launch the Github desktop and that will allow you
 to clone the repo. 
-![Clone repo in github desktop](../images/2019-11-12-settingUpGitHubBlog/github-clone-repo.png)
+![Clone repo in github desktop](/images/2019-11-12-settingUpGitHubBlog/github-clone-repo.png)
 
 Once the repo is cloned you'll have some options on the right of the github desktop window. 
 One of which should be open the folder in your favorite editor. I have mine configured as Visual Studio Code. 
 If you don't have Visual Studio Code I would recommend it. 
 
-![Clone repo in github desktop](../images/2019-11-12-settingUpGitHubBlog/github-open-in-editor.png)
+![Clone repo in github desktop](/images/2019-11-12-settingUpGitHubBlog/github-open-in-editor.png)
 
 ## Creating the Site
 
@@ -157,7 +157,7 @@ You can check this by asking git if it sees all the files.
 git status
 ```
 This should give you output like:
-![Git Status Output](../images/2019-11-12-settingUpGitHubBlog/new-jekyll-git-status.png)
+![Git Status Output](/images/2019-11-12-settingUpGitHubBlog/new-jekyll-git-status.png)
 
 If that shows the correct output you can now test it with the local web server built into jekyll. Run this:
 ``` bash
@@ -166,7 +166,7 @@ bundle exec jekyll serve
 
 That runs a webserver that publishes the template site on port 4000. Once thats running you should be able to open a browser and go to [http://127.0.0.1:4000](http://127.0.0.1:4000) to view the template site. 
 
-![Jekyll sample site](../images/2019-11-12-settingUpGitHubBlog/new-jekyll-site.png)
+![Jekyll sample site](/images/2019-11-12-settingUpGitHubBlog/new-jekyll-site.png)
 
 ## Publishing to Github Pages
 
@@ -175,14 +175,14 @@ Running the Guthub Desktop client should should you that you have files that nee
 
 You need to enter a commit message and commit the changes to Git. That will save them to your local copy of the Git repository. 
 
-![Git Commit Message](../images/2019-11-12-settingUpGitHubBlog/git-commit-message.png)
+![Git Commit Message](/images/2019-11-12-settingUpGitHubBlog/git-commit-message.png)
 
 
 However, as we talked about earlier, Git is a distributed system and Github is our server copy. 
 So we need to 'push' our changes from our local repository to Github. 
 Luckily the Github Desktop app makes that a click of a button, so click it.
 
-![Git Push Button](../images/2019-11-12-settingUpGitHubBlog/git-push-button.png)
+![Git Push Button](/images/2019-11-12-settingUpGitHubBlog/git-push-button.png)
 
 It will push the changes to Github and within about 20 seconds (although the SLA is longer) you shoud be able to see your sample site on YOUR_USERNAME.github.io
 
