@@ -7,5 +7,6 @@ excerpt: My last post was to get you setup with a github pages blog, this one wi
 categories: [posts]
 comments: true
 toc: true
-tags: [github, blogging, hosting, dns, social, jekyll]
+tags: [github, blogging, themes, social, jekyll]
 ---
+
