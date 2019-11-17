@@ -2,7 +2,7 @@
 layout: single
 title:  "IT innovation requires a Technology Strategy"
 permalink: 
-date:   2019-11-12   19:43:00 -0500
+date:   2015-07-29   19:43:00 -0500
 excerpt: A simple piece of logic seems to recur in business-advice articles that always populate the Internet. Whatever the current hot trend, the writers dispense similar advice to the companies that want to capitalize on it. The basic idea is "Companies that want to change the way they operate in some way need to actually change the way they operate.”
 categories: [posts]
 comments: true
