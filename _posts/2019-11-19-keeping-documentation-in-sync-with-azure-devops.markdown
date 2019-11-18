@@ -50,3 +50,39 @@ Enter the project information as you want:
 
 ![New Project Button](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/new-project-form.png)
 
+Now you have a new Azure Devops project, we need to put some code in there to document. So we can switch to the Repo tab and clone our new Repository.
+When you switch to the repository you'll see the address to git clone under "Clone to your computer"
+Copy that address and a command prompt to where you want the code to be. 
+You can do this by opening an Explorer window (Win+E) and navigating to the folder you want to hold your code folder. 
+Then type cmd into the address bar. That will launch the command prompt in that folder. 
+You should then be able to type:
+
+``` cmd
+git clone https://YOUR_ACCOUNT@dev.azure.com/YOUR_ORGANIZATION/YOUR_PROJECT/_git/YOUR_REPO YOUR_FOLDER_NAME
+```
+
+That will create a git clone of the Azure Devops repository. In my example I called that folder DocumentationAsCodeExample.
+When I do this it pops up a login box for my account that I use for Azure Devops.
+It also gives me a warning that I have cloned an empty repository, don't worry about that, we're about to make it not empty.
+
+## Creating the Code Project
+
+I like to Open Visual Studio and create a new Empty Solution in that code folder.
+To do that I click "Create a new project" on the VS2019 launch windows.
+Then on the search box for project type, I type in 'solution' and select 'Blank Solution' from the project types.
+
+![Blank Solution](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/blank-solution-picked.png)
+
+I make sure to create that new solution in the folder I just created when I cloned my repository.
+
+In that empty solution I create two solution folders: *Code* and *Docs*.
+
+Now in the Code folder I put all my, yes you guessed it, Code.
+
+In the Docs folder I add a Class Library project and call it *Documentation*.
+Once this project is created, I delete the *Class1.cs* that comes part of it and I add a *Readme.md* file. 
+This *md* extension is short for MarkDown.
+Its the format that people use to write wikis and other simple formated text things.
+It's the format I use to write this blog. 
+
+If you don't have it installed already, I recommend installing a MarkDown previewer extension into Visual Studio.
