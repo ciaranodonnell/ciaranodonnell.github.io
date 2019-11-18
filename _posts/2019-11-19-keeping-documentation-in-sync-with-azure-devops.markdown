@@ -80,9 +80,9 @@ In that empty solution I create two solution folders: *Code* and *Docs*.
 Now in the Code folder I put all my, yes you guessed it, Code.
 
 In the Docs folder I add a Class Library project and call it *Documentation*.
-Once this project is created, I delete the *Class1.cs* that comes part of it and I add a *Readme.md* file. 
+Once this project is created, I delete the *Class1.cs* that comes part of it and I add a *Readme.md* file.
 This *md* extension is short for MarkDown.
 Its the format that people use to write wikis and other simple formated text things.
-It's the format I use to write this blog. 
+It's the format I use to write this blog.
 
 If you don't have it installed already, I recommend installing a MarkDown previewer extension into Visual Studio.
