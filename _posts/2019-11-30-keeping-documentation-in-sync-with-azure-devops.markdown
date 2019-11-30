@@ -48,11 +48,11 @@ While I am a big fan of GitHub, I typically use Azure Devops (AzDo) for my work 
 
 Open Azure Devops and login to your account. If you don't have an account you should create a free one.
 
-![New Project Button](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/create-new-project-button.png)
+![New Project Button](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/create-new-project-button.png)
 
 Enter the project information as you want:
 
-![New Project Button](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/new-project-form.png)
+![New Project Button](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/new-project-form.png)
 
 Now you have a new Azure Devops project, we need to put some code in there to document. So we can switch to the Repo tab and clone our new Repository.
 When you switch to the repository you'll see the address to git clone under "Clone to your computer"
@@ -75,7 +75,7 @@ I like to Open Visual Studio and create a new Empty Solution in that code folder
 To do that I click "Create a new project" on the VS2019 launch windows.
 Then on the search box for project type, I type in 'solution' and select 'Blank Solution' from the project types.
 
-![Blank Solution](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/blank-solution-picked.png)
+![Blank Solution](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/blank-solution-picked.png)
 
 I make sure to create that new solution in the folder I just created when I cloned my repository.
 
@@ -108,7 +108,7 @@ Once you have created the Markdown structure you want to get started with, commi
 
 An Example project structure might look like this:
 
-![Exampled Solution Explorer](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/example-solution-explorer.png)
+![Exampled Solution Explorer](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/example-solution-explorer.png)
 
 
 Notice in the Documentation project I have a folder called *Domain-Logic*.
@@ -121,20 +121,20 @@ This will be the page displayed when somone clicks on the Domain-Logic folder.
 Open Azure DevOps and go to the overview section for your repository.
 There is a sub item in the menu called *Wiki*. Click that section and it should look like the below screenshot:
 
-![Azure DevOps Create Wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/creating-wiki-1.png)
+![Azure DevOps Create Wiki](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/creating-wiki-1.png)
 
 From here you need to pick **Publish Code as Wiki**.
 
 You'll click that option and get a dialog up that asks for what you want to publish.
 
-![Publish code as wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/publish-code-as-wiki.png)
+![Publish code as wiki](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/publish-code-as-wiki.png)
 
 You need to pick the folder that has the root of the Documentation that we have created.
 This is probably in the Master branch.
 You then need to create a name for the Wiki. I normally stick with something simple like 'Documentation', but you can put anything in to identify the documentation.
 If you have lots of Repos for microservices then you can put the service/repo name in the title, like 'Customer Service Docs'
 
-![Published Wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/published-wiki.png)
+![Published Wiki](/images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/published-wiki.png)
 
 ## Branches
 
