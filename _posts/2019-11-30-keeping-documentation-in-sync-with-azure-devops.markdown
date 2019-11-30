@@ -13,13 +13,17 @@ permalink:
 tags: [documentation, azure devops, azdo, git, agile]
 ---
 
-There is a debate I see a lot in software engineering circles about whether code should be self documenting or not. This is normally argued by people that don't want to spend the time writing good comments or updating documentation. I think these people lack a level of empathy for their future team members, including their future selves, and I can't help but think that they hvaen't been on a complex project for long enough to have to support it over time.
+There is a debate I see a lot in software engineering circles about whether code should be self documenting or not. This is normally argued by people that don't want to spend the time writing good comments or updating documentation.
+
+Personally I think these people lack a level of empathy for their future team members, including their future selves, and I can't help but think that they hvaen't been on a complex project for long enough to have to support it over time.
 
 As you can probably tell, I don't think complex software **can** be self documenting through the code. The codebases become too large and they often they have real complexity in them.
 
-Dont get me wrong thought, I think trying to write simple code that is easy to understand just by looking at it is a good idea.
-Keeping Loops short enough so you can see the open and close braces at the same time, breaking things out to clearly named functions, and making our variable names explicit, these are all good ideas and we should do them.
+Dont get me wrong though, I think trying to write simple code that is easy to understand just by looking at it is a good idea. 
+Keeping Loops short enough so you can see the start and end at the same time, breaking things out to clearly named functions, and making our variable names explicit, these are all good ideas and we should all do them.
+
 However, that isn't enough to make entire enterprise applications devoid of comments and documentation.
+
 There are other types of documentation, such as:
 
 1. High level design documentations
@@ -38,7 +42,7 @@ The major issue with both of these is keepign them up to date as the project mov
 
 I think the best solution for keeping the documentation and application code in sync is to treat them the exact same way. I really want to be able to use the same tools to edit the documentation as you do code. The documentation and code should live together, be edited in the same tools, managed in the same source control tools, and branch and merge along with the code.
 
-While I am a big fan of GitHub, I typically use Azure Devops for my work code repository. Therefore this example is designed around making this work in AzDo.
+While I am a big fan of GitHub, I typically use Azure Devops (AzDo) for my work code repository. Therefore this example is designed around making this work in AzDo.
 
 ## Setting Up and Azure DevOps Project
 
@@ -87,14 +91,15 @@ It's the format I use to write this blog.
 
 If you don't have it installed already, I recommend installing a MarkDown previewer extension into Visual Studio.
 I have a couple in Visual Studio Code and they make a pretty big difference in helping you understand how what you're writing is going to come out.
-I think the best one I have is [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one). It has a bunch of great features and keyboard shortcuts that make it easier.
-In Visual Studio I have [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor).
+I think the best one I have for Visual Studio Code is [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one). It has a bunch of great features and keyboard shortcuts that make it easier.
+In Visual Studio Proper I have [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor).
 
 ## Making Documentation
 
 Now as you create your actual applicaiton, you can start to create documentation in the same Visual Studio window.
 As you write code you can write documents that describe it.
 It doesnt have to be explicit line by line documentation, but there is a structure where you can explain the high lever purposes.
+
 Markdown is pretty versatile and allows for Headings, tables, links, images, etc. You can create all those things and in whatever structure works for you.
 
 I have used this approach on multiple projects and it makes it much easier for people that are looking at commits to be able to see the documentation evolve inline with the code base.
@@ -104,6 +109,12 @@ Once you have created the Markdown structure you want to get started with, commi
 An Example project structure might look like this:
 
 ![Exampled Solution Explorer](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/example-solution-explorer.png)
+
+
+Notice in the Documentation project I have a folder called *Domain-Logic*.
+When we commit that, Azure Devops will remove the - and put in a space.
+Next to (not in) that folder I have a markdown file with the same name: *Domain-Logic.md*.
+This will be the page displayed when somone clicks on the Domain-Logic folder.
 
 ## Creating the Azure DevOps Wiki
 
