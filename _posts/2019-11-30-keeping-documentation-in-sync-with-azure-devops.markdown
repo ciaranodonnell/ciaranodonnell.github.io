@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Keeping Documentation in sync with Azure Devops"
-date:   2019-11-19 13:43:00 -0500
+date:   2019-11-30 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
@@ -38,7 +38,7 @@ The major issue with both of these is keepign them up to date as the project mov
 
 I think the best solution for keeping the documentation and application code in sync is to treat them the exact same way. I really want to be able to use the same tools to edit the documentation as you do code. The documentation and code should live together, be edited in the same tools, managed in the same source control tools, and branch and merge along with the code.
 
-While I am a big fan of GitHub, I typically use Azure Devops for my work code repository. Therefore this example is designed around making this work in AzDo. 
+While I am a big fan of GitHub, I typically use Azure Devops for my work code repository. Therefore this example is designed around making this work in AzDo.
 
 ## Setting Up and Azure DevOps Project
 
@@ -52,9 +52,9 @@ Enter the project information as you want:
 
 Now you have a new Azure Devops project, we need to put some code in there to document. So we can switch to the Repo tab and clone our new Repository.
 When you switch to the repository you'll see the address to git clone under "Clone to your computer"
-Copy that address and a command prompt to where you want the code to be. 
-You can do this by opening an Explorer window (Win+E) and navigating to the folder you want to hold your code folder. 
-Then type cmd into the address bar. That will launch the command prompt in that folder. 
+Copy that address and a command prompt to where you want the code to be.
+You can do this by opening an Explorer window (Win+E) and navigating to the folder you want to hold your code folder.
+Then type cmd into the address bar. That will launch the command prompt in that folder.
 You should then be able to type:
 
 ``` cmd
@@ -86,3 +86,63 @@ Its the format that people use to write wikis and other simple formated text thi
 It's the format I use to write this blog.
 
 If you don't have it installed already, I recommend installing a MarkDown previewer extension into Visual Studio.
+I have a couple in Visual Studio Code and they make a pretty big difference in helping you understand how what you're writing is going to come out.
+I think the best one I have is [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one). It has a bunch of great features and keyboard shortcuts that make it easier.
+In Visual Studio I have [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor).
+
+## Making Documentation
+
+Now as you create your actual applicaiton, you can start to create documentation in the same Visual Studio window.
+As you write code you can write documents that describe it.
+It doesnt have to be explicit line by line documentation, but there is a structure where you can explain the high lever purposes.
+Markdown is pretty versatile and allows for Headings, tables, links, images, etc. You can create all those things and in whatever structure works for you.
+
+I have used this approach on multiple projects and it makes it much easier for people that are looking at commits to be able to see the documentation evolve inline with the code base.
+
+Once you have created the Markdown structure you want to get started with, commit it to Azure DevOps git repository.
+
+An Example project structure might look like this:
+
+![Exampled Solution Explorer](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/example-solution-explorer.png)
+
+## Creating the Azure DevOps Wiki
+
+Open Azure DevOps and go to the overview section for your repository.
+There is a sub item in the menu called *Wiki*. Click that section and it should look like the below screenshot:
+
+![Azure DevOps Create Wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/creating-wiki-1.png)
+
+From here you need to pick **Publish Code as Wiki**.
+
+You'll click that option and get a dialog up that asks for what you want to publish.
+
+![Publish code as wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/publish-code-as-wiki.png)
+
+You need to pick the folder that has the root of the Documentation that we have created.
+This is probably in the Master branch.
+You then need to create a name for the Wiki. I normally stick with something simple like 'Documentation', but you can put anything in to identify the documentation.
+If you have lots of Repos for microservices then you can put the service/repo name in the title, like 'Customer Service Docs'
+
+![Published Wiki](../images/2019-11-19-keeping-documentation-in-sync-with-azure-devops/published-wiki.png)
+
+## Branches
+
+One other thing I like about using technique to hold the documentation for our code is Branching.
+Having a clear understanding about state of an application in each branch or at each point in your application history is challenging.
+Commiting the documentation as a wiki with your source code means you have versioning and branching capability the same as you do with the code itself.
+
+You can event actually publish different branches of the code as branches of the wiki.
+Below the name of the Wiki, you can see a drop down list that currently has master in it.
+Also in that list is the option to publish a new branch.
+
+Here you could put *develop*, or specific release branches such as *release/release-1*.
+Whatever your branch naming convention and git workflow looks like.
+
+This easily enables people to understand the differences between your branches, especially when they are previous relesaes that your team are looking to support.
+
+## Summary
+
+I really think including the documentation of your application/service in the same workflow and tooling as the actual development itself gives a lot of benefits.
+The largest of which is preventing it getting stale.
+
+This does however require discipline in the team, code reviews to ensure compliance, and good documentation writing to make it valuable to the team.
