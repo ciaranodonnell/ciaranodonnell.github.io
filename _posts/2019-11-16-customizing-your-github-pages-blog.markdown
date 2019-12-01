@@ -12,14 +12,15 @@ tags: [github, blogging, themes, social, jekyll]
 
 ## Getting tools Setup
 
-I use [Visual Studio Code](https://code.visualstudio.com/) for editing my blog. It allows me to open the blog folder, edit the files, use an extension for MarkDown authoring, and has cool Git integration. 
+I use [Visual Studio Code](https://code.visualstudio.com/) for editing my blog. It allows me to open the blog folder, edit the files, use an extension for MarkDown authoring, and has cool Git integration.
+
 - The MarkDown extension I use is [Markdown All In One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - I use [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) for getting source control information in VSCode
 - On one of my machines I use [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles). This tool makes the preview look like Github Markdown.
 
 Once you have Visual Studio Code installed and configured with the extensions, open the folder for the jekyll site.
 
-Remember from the previous post on using Jekyll, you can preview the site locally by opening a Terminal/Console/Ubuntu window, navigating to the folder with your site in it, and running: ``` bundle exec jekyll serve ```. 
+Remember from the previous post on using Jekyll, you can preview the site locally by opening a Terminal/Console/Ubuntu window, navigating to the folder with your site in it, and running: ```bundle exec jekyll serve```.
 Then in your browser navigating to [http://localhost:4000](http://localhost:4000)
 
 ## Naming your blog
@@ -27,7 +28,7 @@ Then in your browser navigating to [http://localhost:4000](http://localhost:4000
 So it's great that you have the domain name from GitHub and the blog is recognizable. 
 What we need to do first is setup out Jekyll site so it has the right name etc for out blog. 
 
-In order to make this make sense as we go through it, I'm going to assume your name is **Felicity Smoak**. 
+In order to make this make sense as we go through it, I'm going to assume your name is **Felicity Smoak**.
 So we'll call your blog **Felicty Smoaks Blog** and put it at **TeamArrow.github.io**.
 
 The basic attibutes of you site are stored in the *_config.yml* file. Open this file and it should look like this:
