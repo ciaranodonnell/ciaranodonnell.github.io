@@ -60,5 +60,30 @@ combined with the raised expectations of consumers.
 
 While the POS of sale screens may be able to keep running while the internet is offline, lots of other systems are beginning to have the same requirements.
 
-The data required for the experiences that we're creating is also going up.
-Customer information but be usable. 
+Some of these experiences now potentially required a lot more information or intelligences to be able to work offline.
+In the Employment Agency - it might not be OK to only cache that offices jobs, you might need them for the whole city, or the whole state. Much more data than was synchronized before.
+
+One other thing thats different is that different systems in the same location are now expected to continue to integrate and interact while offline:
+
+- Kiosks need to be able to put orders into the POS while offline.
+- Digital signage needs to be able to remove out of stock items from the menu board.
+- Customers while still want to be able to scan offers from their mobile devices for rewards and discounts when the internet is out.
+
+## Do we need a new solution&quest;
+
+Again, I will stress that this idea of Occasionally Connected Services is not entire new.
+There are systems across the world that already achieve this functionality today, and have done for years.
+
+I do think however, that given the larger datasets, and the more integrations that need to happen locally, we should look at modern ways to achieve this. 
+
+## Modern Approaches
+
+### Event Driven Systems
+
+#### Local Brokers
+
+### Containers at the Edge
+
+### DevOps at Geographical Scale
+
+### Monitoring and Observability
