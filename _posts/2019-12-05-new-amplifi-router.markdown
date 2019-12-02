@@ -24,7 +24,7 @@ We have an increasing number of internet capable devices: Laptops, Phones, TVs, 
 For a long time (10 years perhaps) I've had a Netgear router.
 I changed models about 5 or 6 years ago to a Netgear Nighthawk R6700. 
 
-![Nighthawk R6700 Image](../images/2019-12-05-new-amplifi-router/netgearr6700.jpg)
+![Nighthawk R6700 Image](/images/2019-12-05-new-amplifi-router/netgearr6700.jpg)
 
 For the most part it was a pretty good router. We had a few phones, some laptops, and an Xbox 360 which needed access to our 25Mbps internet connection.
 
@@ -87,7 +87,7 @@ Today.
 
 ## AmpliFi ALIEN
 
-![ALIEN Router](../images/2019-12-05-new-amplifi-router/AFi-ALN-R_Front_1024x1024.png)
+![ALIEN Router](/images/2019-12-05-new-amplifi-router/AFi-ALN-R_Front_1024x1024.png)
 The ALIEN router was packaged very nicely, and very simple to setup.
 Plug in the Ethernet cable from your ISP router (mine was from the Coax adapter) and plug in the power. 
 Download the App from your phone's App Store and it handles the setup pretty well. 
