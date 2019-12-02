@@ -88,6 +88,7 @@ Today.
 ## AmpliFi ALIEN
 
 ![ALIEN Router](/images/2019-12-05-new-amplifi-router/AFi-ALN-R_Front_1024x1024.png)
+
 The ALIEN router was packaged very nicely, and very simple to setup.
 Plug in the Ethernet cable from your ISP router (mine was from the Coax adapter) and plug in the power. 
 Download the App from your phone's App Store and it handles the setup pretty well. 
