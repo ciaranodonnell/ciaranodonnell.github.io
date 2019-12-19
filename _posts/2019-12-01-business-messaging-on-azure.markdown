@@ -74,5 +74,38 @@ If it hasn't read before it can start at the beginning.
 
 Because of this difference, anyone at any point can chose to read from any point in the Topic. Messages arent deleted when they are read, they are left there for a certain amount of time (up to a week on Event Hubs, indefinitely on Kafka).
 
+## So What do I mean by Business Messaging?
+
+As I said before, a lot of new *cloud native* software that we are building for our customers who want to do *digital transformation* are *Event Driven*.
+We can look at the difference between Event Driven and not by thinking about them as seperate programming styles, or even mental models. 
+
+### Imperative Programming 
+
+A more traditional style of thinking about systems programming. Object Oriented languages are imperative. They have commands that change the state of the application as they run. They often run from start to finish taking inputs and running through the program till they're done.
+
+This method of thinking works well for small blocks of functionality. It's very normal for batch style processing, where you have all the inputs and the business logic you've coded does something to that input to generate output.
+
+### Reactive Programming
+
+The Reactive programming paradigm is concerned with data streams and the propagation of change. 
+Some things in the system emit events, and others receive and react to them. 
+While there are languages to build everything in this style, it's also possible to program like this in our Object Oriented languages. HighlLevel Windows programming is based on events (although there is an imperative message loop underneath). Buttons get Clicked, Textboxes have TextChanged, lots of windows components generate events as the user interacts with them and we program the responses to them.
+
+This model of Events allows us a great degree of reuse. 
+We don't have to code a specific button for each of the different actions we want to have happen when a button is clicked. 
+The button raises the event and other code can react to it as necessary.
+
+### Reactive Business Systems
+
+So building reactive business systems is one way of solving problems using smaller reusable components. These small components are what we mean by *microservices*. 
+While a lot of microservices implementations are not event driven, I think many or them should be.
+Let's talk through an example of a system like this
+
+#### Example: 
+
+
+## Service Bus
+
+
 ## Event Hubs
 
