@@ -41,7 +41,7 @@ An AMQP broker is the more traditional style message broker, sometimes (formerly
 
 The below is an image I made for internal training (it was a powerpoint animation) that showed 
 
-![AMQP Broker](../images/2019-12-01-business-messaging-on-azure/amqpbroker.gif)
+![AMQP Broker](/images/2019-12-01-business-messaging-on-azure/amqpbroker.gif)
 
 Although the internal implementations vary, the basic idea is still the same across these brokers. 
 
@@ -66,7 +66,7 @@ The underlying basic idea of all these types of brokers is the _Commit Log_. Thi
 
 In order to help it scale, all of these brokers actually break the file up into partitions. This lets you group similar events together by source or relevant key, so you can scale the writing and reading, but also maintain some ordering where important.
 
-![Distributed Log Broker](../images/2019-12-01-business-messaging-on-azure/distlogbroker.gif)
+![Distributed Log Broker](/images/2019-12-01-business-messaging-on-azure/distlogbroker.gif)
 
 With this type of broker, as the message Producer sends the message to the broker, it writes it to the end of the Topic Partition file on disk. It also probably gives a copy to two back broker instances who write a copy too. 
 When they Consumer of the message wants to receive it, it can ask for the next message on the Topic but passing the 'offset' (like a message number) that it's read before. 
