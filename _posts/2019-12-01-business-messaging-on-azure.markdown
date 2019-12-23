@@ -74,159 +74,6 @@ If it hasn't read before it can start at the beginning.
 
 Because of this difference, anyone at any point can chose to read from any point in the Topic. Messages arent deleted when they are read, they are left there for a certain amount of time (up to a week on Event Hubs, indefinitely on Kafka).
 
-## So What do I mean by Business Messaging?
-
-As I said before, a lot of new *cloud native* software that we are building for our customers who want to do *digital transformation* are *Event Driven*.
-We can look at the difference between Event Driven and not by thinking about them as seperate programming styles, or even mental models. 
-
-### Imperative Programming 
-
-A more traditional style of thinking about systems programming. Object Oriented languages are imperative. They have commands that change the state of the application as they run. They often run from start to finish taking inputs and running through the program till they're done.
-
-This method of thinking works well for small blocks of functionality. It's very normal for batch style processing, where you have all the inputs and the business logic you've coded does something to that input to generate output.
-
-### Reactive Programming
-
-The Reactive programming paradigm is concerned with data streams and the propagation of change. 
-Some things in the system emit events, and others receive and react to them. 
-While there are languages to build everything in this style, it's also possible to program like this in our Object Oriented languages. HighlLevel Windows programming is based on events (although there is an imperative message loop underneath). Buttons get Clicked, Textboxes have TextChanged, lots of windows components generate events as the user interacts with them and we program the responses to them.
-
-This model of Events allows us a great degree of reuse. 
-We don't have to code a specific button for each of the different actions we want to have happen when a button is clicked. 
-The button raises the event and other code can react to it as necessary.
-
-### Reactive Business Systems
-
-So building reactive business systems is one way of solving problems using smaller reusable components. These small components are what we mean by *microservices*. 
-While a lot of microservices implementations are not event driven, I think many or them should be.
-Let's talk through an example of a system like this
-
-#### Example: 
-
-Let's take a process for onboarding someone to a membership program. This could be something like health insurance, or even a gym membership, or could be adapted to employee onboarding. 
-
-The basic idea: Someone completes a paper form and hands it to an employee. The enter the form into a computer and create an account. The system needs to be able to print a membership card and mail it to them with a welcome letter. 
-
-This is pretty simple to build as a web application. 
-There is a form that people fill in, some validation on the form to make sure everything is ok. 
-If it is we save the record to our database. 
-But we need to make sure we can complete the multistep process of getting a card printed, a welcome letter printed, and envelope printed, and getting them put together and mailed out. 
-
-There are 3 ways to solve this problem.
-
-##### RPC Solution
-
-The first is what I think of as the older, RPC based, orchestrated way. 
-This has a function, probably in the Form button click handler that looks something like:
-
-``` csharp
-void  OnBoardCustomer(Customer newCustomerData)
-{
-    SaveCustomerToDatabase(newCustomerData);
-    PrintMembershipCard(newCustomerData);
-    PrintWelcomeLetter(newCustomerData);
-    PrintEnvelope(newCustomerData.Address);
-}
-```
-
-Each one of the those methods (lets hope its been factored into separate methods) calls a service or API somewhere to accomplish the tasks. If the developer is good, it could be more like:
-
-``` csharp
-void  OnBoardCustomer(Customer newCustomerData)
-{
-    SaveCustomerToDatabase(newCustomerData);
-    var membershipCardPrintResult = PrintMembershipCard(newCustomerData);
-    SaveCardPrintResult(newCustomerData, membershipCardPrintResult);
-
-    var welcomeLetterPrintResult = PrintWelcomeLetter(newCustomerData);
-    SaveCardPrintResult(newCustomerData, welcomeLetterPrintResult);
-    
-    var envelopePrintResult = PrintEnvelope(newCustomerData.Address);
-    SaveEnvelopePrintResult(newCustomerData, envelopePrintResult);
-}
-```
-
-This is better because in the event that there is a failure in the process we can understand where we got to. 
-We might even be able to recover.
-However, this method is hard to change because we have hard coded the actions and the order.
-If anything changes, we need to come and change this method and re-test the whole process.
-
-##### Event Orchestration Solution
-
-In the Event Orchestration way we follow the same 'my process has these 3 steps, in this order' approach. 
-But we can at least make these steps independent and concurrent.
-
-In this example we will publish events on a message broker that describe what we need and subscribe to events that other services will publish that tell us what we need has happened. 
-The message broker will give us some resiliancy in terms of handling failures and trying again. 
-We'll obviously have to pay for that with idempotency efforts and poison message detection etc, but we wont think about that here as its complex but solvable.
-
-Instead of the function above, we might have a few like this:
-
-``` csharp
-
-void  OnBoardCustomer(Customer newCustomerData)
-{
-    SaveCustomerToDatabase(newCustomerData);
-    
-    SubscribeToMessage(typeof(MembershipCardPrintedEvent), OnMembershipCardPrintedEvent);
-    SubscribeToMessage(typeof(WelcomeLetterPrintedEvent), OnWelcomeLetterPrintedEvent);
-    SubscribeToMessage(typeof(EvenlopePrintedEvent), OnEvenlopePrintedEvent);
-
-    PublishMembershipCardRequestedEvent(newCustomerData);
-}
-
-void OnMembershipCardPrintedEvent(MembershipCardPrintedEvent eventData)
-{
-    SaveCardPrintResult(eventData);
-    PublishWelcomeLetterRequestedEvent(eventData.Customer);
-}
-
-void OnWelcomeLetterPrintedEvent(WelcomeLetterPrintedEvent eventData)
-{
-    SaveCardPrintResult(eventData);
-    PublishEnvelopeRequested(eventData.Customer.Address);
-}
-
-void OnEvenlopePrintedEvent(EvenlopePrintedEvent eventData)
-{
-    SaveEnvelopePrintResult(eventData);
-}
-
-```
-
-This is more complicated now and it still hasn't really helped a lot with the complexity.
-What this will have done is made it so we dont have to know what service is doing what we ask. 
-We don't need to know even if it is a single service, or another collaboration. 
-We blindly request from the rest of the system, and we wait for it to comply. 
-
-We are also able here to 'wiretap' these messages and extend them if we want. 
-This could help us with some changes that come in the future. 
-The one I have seen most is people want a welcome _Email_ along with the letter. 
-This lets people get their confirmation faster.
-
-We can now start a second service, the _Email Service_ that can listen for WelcomeLetterRequested events, and can generate and send off a welcome email. 
-We can make that change without changing any of the above code. 
-We could change the above, and allow us to capture in the same database that the email was sent. 
-But we arent dependent on that change for the email service to start working. 
-
-However, this isnt ideal. Lots of other potential new requirements, like generating website credentials, telling partners required information, perhaps setting up welcome phone calls in a customer care team calendar, these all would require changes to the process.
-
-##### Event Choreography Solution
-
-Now this is like that above, but different. We will still need elements of the above, but we think about it a little differently.
-This is the way to get _microservices_ communicating through events effectively. 
-
-In _microservices_ we still have services that represent business concepts, like Customer, or Order, that have complex lifecycles. 
-We can, and should, model these as [state machines](https://en.wikipedia.org/wiki/Event-driven_finite-state_machine). 
-We can then use the events to trigger the state changes, but we shift our thinking to think about the states of the object. We can then actually draw out some [state tranistion diagrams](https://www.stickyminds.com/article/state-transition-diagrams) that will make it much easier for us to understand. 
-
-In the microservices world, we can actually think about our state machine as being the driver of our public API. 
-We need to be able to publish events from our service to notify others about our state transitions.
-We should subscribe to other servies state transition events to be our input events for our state transitions.
-
-So when thinking about microservices, I personally like to 'size' them as a service that manages a single state machine. This is normally Order, or Customer, or something like that.
-Even though those might have multiple deployed components to be fully functional and useful, perhaps with the state machine implementation and a query API at a minimum.
-
 
 
 
@@ -234,7 +81,90 @@ Even though those might have multiple deployed components to be fully functional
 
 ### Service Bus
 
-Azure Service Bus is the primary mechanism for "Business Eventing". When every event is important, and makes a different to a business state machine. 
+Azure Service Bus is the primary mechanism for "Business Eventing". 
+When every event is important, and makes a different to a business state machine. 
+When you are building a microservices, and they need to communicate with each other through messages. 
+
+In lots of microservice implementations I have seen and worked on, we have used Event messages to propagate state change. 
+One of the ways of keeping each microservice database in sync in through these events. 
+We can replicate data changes from on service into 'cache' records in other microservices databases in order for each service to own its own up time.
+
+I have also built systems that use the Saga pattern for distributed transaction management. 
+There are command, or request, type messages that trigger actions. 
+There are response, or event, type messages that say that things were successful or failed. 
+These are all important messages that need to be processed. 
+They need to be distributed to and received by our services that need them in a reliable way.
+
+These are very traditional use cases for Event Brokers. 
+They are the sort of things that you might be doing with your on premise brokers right now, like RabbitMQ or ActiveMQ.
+These use-cases continue to be the target for Azure Service Bus. 
+
+#### But what about message retention?
+
+I have had this question come up a few times about message retention on Azure Service Bus. 
+It's a Distributed Log feature that people seme to really like the idea of. 
+You can tell your message receiver to rewind in the Log and start reading events again, from the beginning, or from whereever you like. 
+
+This is a cool feature, and I can think of lots of ways to get benefit from it:
+
+1. The ability to test & debug services with a set of production messages. Thats pretty cool
+2. The ability to copy the entire log to another environment and rebuild the state in that environment
+3. The ability to add services to an ecosystem and use the log as a way for them to 'catch up' with what they missed.
+
+These are all cool sounding features of the Distributed Log. However, they aren't all as clear cut easy as you think. Here is a counter to each:
+1. You normally can't do this because of PII, HIPAA, PCI, GDPR, or other regulatory requirement to scrub data
+2. The Distributed Log is not normally retained forever, that could be a LOT of disk space. Plus see #1
+3. See #2 - the log normally isn't long enough to do full and complete event sourcing. It's often easier to purposely do event sourcing and then abstract the message source away to enable it to be a database priming tool.
+   
+Another side note for #1 and #2 - Distributed Log is generally considered 'Data at Rest' (because its stored in a file in a persistant disk) and therefore needs to be able to be encrypted, secured, backed up, and purposely forgotten in line with regulations.
 
 ### Event Hubs
 
+Event Hubs is effectively Kafka on Azure. 
+That is to say whatever you do with Kafka, Event Hub should be there for you. 
+That also means that Event Hub is good for the same things. 
+So what is Kafka and Event Hub good for?
+
+**BIG DATA**
+
+Well that's a bit cliche! It's good for getting LOTS of similar of data pumped through a system. 
+Remember Kafka was created in order to get Log information from lots of machines to come together in a single place. 
+Event Hub is good for that same thing.
+The log doesnt have to be weblogs, or service process logs (but it can).
+It can be IoT data, weather data samples, database change data, website orders, anything.
+
+The difference between ASB and Event Hubs is that Event Hub is really designed for a one way type of thing.
+Getting lots of data from A to B.
+Not so much from B back to A, sometimes to C, with a little from D, E, F, G, all in an ellaborate choreography.
+It's like a huge funnel to take lots of stuff from lots of places and make it available to relatively few. 
+
+A good example is using it to ingest all the searches that happen across a large ecommerce website and what gets clicked on.
+This data can all get pumped into a data lake for storage, plus it can simultaneously be pumped into a stream analytics job to try and do some live calculations on demand. 
+
+This is where the storage comes in useful.
+They models can be AI driven, they can be adapted and re-run, across all the data if need be.
+I could write new ones from scratch and run them across the data too.
+It wont matter that I only have 7 days of history, I am more about trends than specific records.
+In fact, thats a key point: **Event Hub will delete data that is too old, even if nobody read it**. That might be a problem for business messaging.
+It can hold up to 7 days of data though, you should spot can outage before that :) 
+
+#### But people use Kafka for business messaging all the time
+
+Yes. Yes they do. And that's ok. Event Hubs can do that too. In fact, you can point the Kafka client in your system at an Event Hubs **Namespace** and it will work like a Kafka broker. 
+Creating topics people publish too as needed, storaging messages the same way, and scaling out pretty well. 
+If you are going to use Event Hubs this way, you should be thinking of the Dedicated plan.
+In the same way you would have a dedicated Kafka cluster.
+
+So Event Hubs can do this, natively and through the Kafka API, but it isn't really what Kafka or Event Hubs was intended for. 
+Infact, it reminds me a lot of the early MongoDB sales talk: "use Mongo because joins are slow, Mongo doesn't join so it's fast". Joins weren't actually that slow. Mongo was talking about early MySQL that only had nested loop joins. SQL Server had other join types like hashmap joins which were much faster. I feel like a lot of people use Kafka because their single machine, default configuration ActiveMQ machine didn't scale how they wanted, so they pick up a 6 machine Kafka & ZooKeeper cluster and it runs faster. 
+I'm not saying Mongo isnt useful and Kafka/Distributed Logs aren't very fast, but they aren't the solution to every problem.
+
+## Summary
+
+When you have business processes, state machines, Sagas, Request Response, or anything other complex messaging patterns default to Azure Service Bus
+
+When you have data ingestion, large scale event streams, change data capture, IoT, event stream replay use cases, or other bigger data requirements - use Event Hubs.
+
+If you have Kafka and want to point to a PaaS service - use Event Hubs
+
+If you need Store & Forward type functionality from a local/on-prem messaging platform to a cloud one - You'll need something like Solace or ActiveMQ rather than Service Bus, or Kafka combined with Event Hubs.
