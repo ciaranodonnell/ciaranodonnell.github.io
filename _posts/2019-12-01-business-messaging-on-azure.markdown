@@ -103,6 +103,118 @@ Let's talk through an example of a system like this
 
 #### Example: 
 
+Let's take a process for onboarding someone to a membership program. This could be something like health insurance, or even a gym membership, or could be adapted to employee onboarding. 
+
+The basic idea: Someone completes a paper form and hands it to an employee. The enter the form into a computer and create an account. The system needs to be able to print a membership card and mail it to them with a welcome letter. 
+
+This is pretty simple to build as a web application. 
+There is a form that people fill in, some validation on the form to make sure everything is ok. 
+If it is we save the record to our database. 
+But we need to make sure we can complete the multistep process of getting a card printed, a welcome letter printed, and envelope printed, and getting them put together and mailed out. 
+
+There are 3 ways to solve this problem.
+
+##### RPC Solution
+
+The first is what I think of as the older, RPC based, orchestrated way. 
+This has a function, probably in the Form button click handler that looks something like:
+
+``` csharp
+void  OnBoardCustomer(Customer newCustomerData)
+{
+    SaveCustomerToDatabase(newCustomerData);
+    PrintMembershipCard(newCustomerData);
+    PrintWelcomeLetter(newCustomerData);
+    PrintEnvelope(newCustomerData.Address);
+}
+```
+
+Each one of the those methods (lets hope its been factored into separate methods) calls a service or API somewhere to accomplish the tasks. If the developer is good, it could be more like:
+
+``` csharp
+void  OnBoardCustomer(Customer newCustomerData)
+{
+    SaveCustomerToDatabase(newCustomerData);
+    var membershipCardPrintResult = PrintMembershipCard(newCustomerData);
+    SaveCardPrintResult(newCustomerData, membershipCardPrintResult);
+
+    var welcomeLetterPrintResult = PrintWelcomeLetter(newCustomerData);
+    SaveCardPrintResult(newCustomerData, welcomeLetterPrintResult);
+    
+    var envelopePrintResult = PrintEnvelope(newCustomerData.Address);
+    SaveEnvelopePrintResult(newCustomerData, envelopePrintResult);
+}
+```
+
+This is better because in the event that there is a failure in the process we can understand where we got to. 
+We might even be able to recover.
+However, this method is hard to change because we have hard coded the actions and the order.
+If anything changes, we need to come and change this method and re-test the whole process.
+
+##### Event Orchestration Solution
+
+In the Event Orchestration way we follow the same 'my process has these 3 steps, in this order' approach. 
+But we can at least make these steps independent and concurrent.
+
+In this example we will publish events on a message broker that describe what we need and subscribe to events that other services will publish that tell us what we need has happened. 
+The message broker will give us some resiliancy in terms of handling failures and trying again. 
+We'll obviously have to pay for that with idempotency efforts and poison message detection etc, but we wont think about that here as its complex but solvable.
+
+Instead of the function above, we might have a few like this:
+
+``` csharp
+
+void  OnBoardCustomer(Customer newCustomerData)
+{
+    SaveCustomerToDatabase(newCustomerData);
+    
+    SubscribeToMessage(typeof(MembershipCardPrintedEvent), OnMembershipCardPrintedEvent);
+    SubscribeToMessage(typeof(WelcomeLetterPrintedEvent), OnWelcomeLetterPrintedEvent);
+    SubscribeToMessage(typeof(EvenlopePrintedEvent), OnEvenlopePrintedEvent);
+
+    PublishMembershipCardRequestedEvent(newCustomerData);
+}
+
+void OnMembershipCardPrintedEvent(MembershipCardPrintedEvent eventData)
+{
+    SaveCardPrintResult(eventData);
+    PublishWelcomeLetterRequestedEvent(eventData.Customer);
+}
+
+void OnWelcomeLetterPrintedEvent(WelcomeLetterPrintedEvent eventData)
+{
+    SaveCardPrintResult(eventData);
+    PublishEnvelopeRequested(eventData.Customer.Address);
+}
+
+void OnEvenlopePrintedEvent(EvenlopePrintedEvent eventData)
+{
+    SaveEnvelopePrintResult(eventData);
+}
+
+```
+
+This is more complicated now and it still hasn't really helped a lot with the complexity.
+What this will have done is made it so we dont have to know what service is doing what we ask. 
+We don't need to know even if it is a single service, or another collaboration. 
+We blindly request from the rest of the system, and we wait for it to comply. 
+
+We are also able here to 'wiretap' these messages and extend them if we want. 
+This could help us with some changes that come in the future. 
+The one I have seen most is people want a welcome _Email_ along with the letter. 
+This lets people get their confirmation faster.
+
+We can now start a second service, the _Email Service_ that can listen for WelcomeLetterRequested events, and can generate and send off a welcome email. 
+We can make that change without changing any of the above code. 
+We could change the above, and allow us to capture in the same database that the email was sent. 
+But we arent dependent on that change for the email service to start working. 
+
+However, this isnt ideal. Lots of other potential new requirements, like generating website credentials, telling partners required information, perhaps setting up welcome phone calls in a customer care team calendar, these all would require changes to the process.
+
+##### Event Choreography 
+
+
+
 
 ## Service Bus
 
