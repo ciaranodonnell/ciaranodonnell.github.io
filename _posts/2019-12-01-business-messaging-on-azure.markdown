@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Business Messaging on Azure"
-date:   2019-12-03 13:43:00 -0500
+date:   2019-12-23 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
