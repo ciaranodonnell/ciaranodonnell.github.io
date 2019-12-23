@@ -211,13 +211,30 @@ But we arent dependent on that change for the email service to start working.
 
 However, this isnt ideal. Lots of other potential new requirements, like generating website credentials, telling partners required information, perhaps setting up welcome phone calls in a customer care team calendar, these all would require changes to the process.
 
-##### Event Choreography 
+##### Event Choreography Solution
+
+Now this is like that above, but different. We will still need elements of the above, but we think about it a little differently.
+This is the way to get _microservices_ communicating through events effectively. 
+
+In _microservices_ we still have services that represent business concepts, like Customer, or Order, that have complex lifecycles. 
+We can, and should, model these as [state machines](https://en.wikipedia.org/wiki/Event-driven_finite-state_machine). 
+We can then use the events to trigger the state changes, but we shift our thinking to think about the states of the object. We can then actually draw out some [state tranistion diagrams](https://www.stickyminds.com/article/state-transition-diagrams) that will make it much easier for us to understand. 
+
+In the microservices world, we can actually think about our state machine as being the driver of our public API. 
+We need to be able to publish events from our service to notify others about our state transitions.
+We should subscribe to other servies state transition events to be our input events for our state transitions.
+
+So when thinking about microservices, I personally like to 'size' them as a service that manages a single state machine. This is normally Order, or Customer, or something like that.
+Even though those might have multiple deployed components to be fully functional and useful, perhaps with the state machine implementation and a query API at a minimum.
 
 
 
 
-## Service Bus
+## So What do we use?
 
+### Service Bus
 
-## Event Hubs
+Azure Service Bus is the primary mechanism for "Business Eventing". When every event is important, and makes a different to a business state machine. 
+
+### Event Hubs
 
