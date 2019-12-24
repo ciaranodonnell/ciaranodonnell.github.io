@@ -156,7 +156,9 @@ If you are going to use Event Hubs this way, you should be thinking of the Dedic
 In the same way you would have a dedicated Kafka cluster.
 
 So Event Hubs can do this, natively and through the Kafka API, but it isn't really what Kafka or Event Hubs was intended for. 
-Infact, it reminds me a lot of the early MongoDB sales talk: "use Mongo because joins are slow, Mongo doesn't join so it's fast". Joins weren't actually that slow. Mongo was talking about early MySQL that only had nested loop joins. SQL Server had other join types like hashmap joins which were much faster. I feel like a lot of people use Kafka because their single machine, default configuration ActiveMQ machine didn't scale how they wanted, so they pick up a 6 machine Kafka & ZooKeeper cluster and it runs faster. 
+Infact, it reminds me a lot of the early MongoDB sales talk: "use Mongo because joins are slow, Mongo doesn't join so it's fast".
+Joins weren't actually that slow. Mongo was talking about early MySQL that only had nested loop joins. SQL Server had other join types like hashmap joins which were much faster. 
+I feel like a lot of people use Kafka because their single machine, default configuration ActiveMQ machine didn't scale how they wanted, so they pick up a 6 machine Kafka & ZooKeeper cluster and it runs faster. 
 I'm not saying Mongo isnt useful and Kafka/Distributed Logs aren't very fast, but they aren't the solution to every problem.
 
 ## Summary
