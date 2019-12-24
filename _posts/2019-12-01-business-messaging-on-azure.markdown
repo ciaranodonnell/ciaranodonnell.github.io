@@ -21,7 +21,7 @@ This change in the relationship is often described as 'Choreography' over 'Orche
 Working at Avanade, most (not quite all) of our Clients are looking to build these systems on Azure using a native service. 
 One of the more challenging questions that I'm starting to see is:
 
-**Should I use Service Bus, Event Hubs?**
+**Should I use Service Bus or Event Hubs?**
 
 This is a tough question to answer, and it depends a lot on the requirements of the business problem you're trying to solve. 
 
