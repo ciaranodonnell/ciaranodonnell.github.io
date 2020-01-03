@@ -53,6 +53,12 @@ They cache the orders they have taken and send them in when they get a connectio
 Storing the menu or product catalog locally.
 Restaurant ones will also keep the kitchen displays and receipt printers working fine too.
 
+#### Common Architecture style
+
+
+![High Level View of current state. Servers central and experiences in remote locations connected through the internet](/images/occasionally-connected-servers/high-level-view.png)
+ 
+
 ## So what's new&quest;
 
 I think one of the changes that's happening across these indusctries is the type of experiences that are being created now,
@@ -67,7 +73,7 @@ One other thing thats different is that different systems in the same location a
 
 - Kiosks need to be able to put orders into the POS while offline.
 - Digital signage needs to be able to remove out of stock items from the menu board.
-- Customers while still want to be able to scan offers from their mobile devices for rewards and discounts when the internet is out.
+- Customers still want to be able to scan offers from their mobile devices for rewards and discounts when the internet is out.
 
 ## Do we need a new solution&quest;
 
@@ -76,14 +82,65 @@ There are systems across the world that already achieve this functionality today
 
 I do think however, that given the larger datasets, and the more integrations that need to happen locally, we should look at modern ways to achieve this. 
 
-## Modern Approaches
+## Occasionally Connected Servers
 
-### Event Driven Systems
+This is were we now see the Occasionally Connected Servers (OCS) pattern.
+This pattern is an amalgum on existing pattenrs that have been developing in the industry in order to solve this specific category of problems. 
 
-#### Local Brokers
 
-### Containers at the Edge
 
-### DevOps at Geographical Scale
+## Microservices
+
+The microservices pattern that has been evolving over the last decade or so in the software industry has solved a lot of the patterns that are relevant to this problem. 
+
+Microservices are a pattern that drives us to create a set of independent business focused services/applications.
+They should be independent from each other, storing their own data, and managing their own lifecycle through automated testing and deployment, and they should be observable
+
+### Storing their own data
+
+Microservices storing their own data gives us a problem: we need to keep that data in sync with the rest of the system. 
+We have solved that problem well with Event Driven Systems. 
+
+
+#### Event Driven Systems
+
+Event driven systems typically control their processes through the publication of and reaction to events. Whenever big data has changed in these systems events are published so that all other microservices in the ecosystem can see those changes.
+This is become very useful for keeping our microservices database synchronised, but there is no reason this style of application cannot be applied to geographically distributed systems.
+Even keeping different copies of the same microservices In Sync with data updates being published by the cloud version and consumed by all of the local deployed versions. 
+Event driven systems allow us a great deal of flexibility as long as we keep the contracts for the events standardised and use send a message in technology to distribute the data events .
+
+#### Message Brokers
+
+These message brokers now come in a number of different flavours, from the more traditional message oriented middleware, to the more recent development of distributed log platforms.
+There are cloud platform as a service offerings, container based offerings, as well as software you can install bare metal.
+They also ranged between free open source software and proprietary with the more common modern approach being free software and paid support.
+
+It is likely the successful occasionally connected server implementation would require a central message broker hosted in the cloud as well as our locally installed message broker in each of their remote locations.
+Some message brokers will even perform storm forward operations between these different instances for you. 
+If that isn't the case however you will need to implement synchronization logic between the brokers. 
+You'll need to receive messages from one broker and publish to the other while the Internet connection is available. 
+When the Internet connection is unavailable you'll need to periodically retry that synchronization until the connection is restored. 
+
+
+#### Local Microservices
+
+So using Event Driven principles with message oriented middleware, its possible that we can create microservices and deploy them in our remote locations.
+
+![High Level View of Microservices style. Services deployed centrally and remote, connected through Message Brokers and the internet](/images/occasionally-connected-servers/microservices-high-level-view.png)
+
+Experiences deployed in the remote locations will always use their services through synchronous APIs or messaging on their local message broker. 
+This simplifies their development as they can now assume that they are always online due to a reliable local area network.
+
+
+
+
+
+
+
+### Independent Deployments
+
+#### Containers at the Edge
+
+#### DevOps at Geographical Scale
 
 ### Monitoring and Observability
