@@ -45,5 +45,10 @@ This can still provide challenges as the devices potentially will have different
 
 As the name suggests, Occasionally Connected Servers, is a pattern for enabling servers to be deployed to locations to power the local experiences. These servers will cache data and content and serve it to local experiences. 
 
-The local experiences will therefore always 
-	
+
+![High Level View of Microservices style. Services deployed centrally and remote, connected through Message Brokers and the internet](./images/occasionally-connected-servers/microservices-high-level-view.png)
+
+The local experiences will therefore always be online to a backend service over the reliable local network. 
+(Obviously no network is reliable but the LAN is normally reliable enough for mostd business use cases to accept)
+
+This simplified the development
