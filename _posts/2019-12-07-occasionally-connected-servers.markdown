@@ -12,52 +12,83 @@ excerpt: A common trend I see in consumer facing industries is the need to have 
 permalink: 
 tags: [architecture, software engineering, retail, consumer, intelligent edge, occasionally connected servers]
 ---
+# Occasionally Connected Servers - A Whitepaper
+
+The Occasionally Connected Servers pattern is a solution for a modern set of problems that arises from the increasing
+desire of business to provide high quality, data and content rich, connected experiences for their customers and employees across a distributed set locations.
+
+This whitepaper describes a set of technology patterns that collectively solve this problem through the creation of server applications that are designed for the intermittent and high latency connectivity experienced in geographic distribution scenarios. 
+
+## What's the problem we have&quest;
 
 There are quite a few different industries that have a similar class of problem, requiring a similar class of solution.
-The basic summary is that there are different locations where the enterprise meets it's customers and it wants to create richer, more data driven experiences
-while catering to the high latency and lower reliability of its connections to it's central infrastructure.
+The basic summary is that there are different locations where the business meets it's customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to it's central infrastructure.
 
 Some examples:
 
 #### Retail
 
 Lots of retail companies are creating their own applications for customer use.
-These use to be a mobile app version of their website.
+These used to be a mobile app version of their website, but increasingly we are seeing demand for richer experiences.
 
-However, that experience is now becoming stale,
-and mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. (Think Kohls in US)
+Mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. (Think Kohls in US)
 
 They are become mobile POS apps that you can use to scan things as you put them in your cart to checkout without lining up. (Think Sams Club in US)
+
+The regular mobile apps have loyalty programs, discounts and rewards redemptions, and search features that give instore routing to the correct shelf when looking for a product. 
 
 #### Food Service
 
 An increasing number of food service locations have some form of Kiosk in their restuarants.
 McDonalds and Burger King have these for ordering, while Chilli's has them for table top drink ordering and payment.
 
-In some environments like airport restaurants there are increasinly tablet based ordering systems that allow you to order and pay without speaking to a person.
+In some environments like airport restaurants there are increasinly tablet based ordering systems that allow you to order and pay without speaking to a person. Paying the check through a mobile app is a great solution when a server is busy and people hear their flight called. 
 
 #### Franchised Agency Industries
 
 Employment agencies, Real Estate agencies, End of life services are examples of types of busines where the work is typically done locally by an office of a larger corporation.
 The systems need to be able to run the business locally while reporting everything to the corporate main systems.
 
-#### Common Problems
+#### Common Architecture style
+
+Commonly these experiences are being built using client/server patterns that have existed for decades. 
+The experience is built as client application that makes calls to server software across the network when it needs information. These are frequently HTTP based requests/responses with data transfered using JSON or XML. 
 
 For each of these types of business there is a local business process that happens at the location, and data that is managed centrally (e.g. Menu) and reported (e.g. Sales).
 
-There is a real desire for the local systems to be able to continue to work while unable to communicated with the central system.
-It's not normally considered OK for a restaurant to stop making food or taking orders because it lost its internet connection. 
+![High Level View of current state. Servers central and experiences in remote locations connected through the internet](/images/occasionally-connected-servers/high-level-view.png)
 
-Lot's of the existing systems in these industries have this capability. I know of several Point of Sale systems that are more than capable of operating for a couple of weeks without internet connection.
+
+#### Whats wrong with this Distributed Client/Server pattern&quest;
+
+##### Bandwidth and latency.
+
+This means that requests between the clients and the servers are slow and take a long time. Customers however i'm not patient and don't normally want to wait or tolerate slow experiences.
+This issue is compounded when there are quests involved the transfer of content like images or videos such as when shopping and their results include product images. 
+
+Latency and reliability issues could also be a major obstacle to businesses effectively implementing IoT strategies or automated system integration 
+
+##### Connection reliability 
+As well as being low bandwidth high latency these connections are often not reliable and can be lost entirely for periods of time. 
+Many of the locations in retail, travel, and food service have been around much longer than high speed networking and they don’t have the quality of Infrastructure in the location.
+This can be a major problem for customers he want to use experiences, redeem rewards, pay their check, etc. and can't.
+
+Oftentimes one of the benefits of these experiences to the business is that they enable them to reduce or reallocate stuffing, when the infrastructure is down they can't do this and the unreliability prevents them from realizing their cost savings.  
+
+#### Solving these problems
+
+Lot's of the existing systems in these industries have this capability. 
+Leading Point of Sale systems capable of operating for a couple of weeks without internet connection.
 They cache the orders they have taken and send them in when they get a connection again.
 Storing the menu or product catalog locally.
 Restaurant ones will also keep the kitchen displays and receipt printers working fine too.
 
-#### Common Architecture style
+However there are limitations to what is accomplished this way. 
+Restaurant POS systems typically can't receive orders from kiosks or mobile apps while offline. 
+They sometimes don't even interoperate between the POS terminals, e.g. Orders entered on one might not be visible on others because they each keep their own local cache. 
+This is commonly seen with marking items as Out of Stock or unavailable. It doesn't synchronize this between registers when offline.
 
 
-![High Level View of current state. Servers central and experiences in remote locations connected through the internet](/images/occasionally-connected-servers/high-level-view.png)
- 
 
 ## So what's new&quest;
 
