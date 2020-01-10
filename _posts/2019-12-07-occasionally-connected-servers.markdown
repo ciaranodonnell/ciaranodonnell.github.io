@@ -28,28 +28,42 @@ Some examples:
 
 #### Retail
 
-Lots of retail companies are creating their own applications for customer use.
-These used to be a mobile app version of their website, but increasingly we are seeing demand for richer experiences.
+Lots of retail companies are creating their own applications for staff and customer use.
+Staff are increasingly using phone based POS systems for POS and inventory searches. 
 
-Mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. (Think Kohls in US)
+Customer facing apps used to be a mobile app version of their website, but increasingly we are seeing demand for richer experiences:
 
-They are become mobile POS apps that you can use to scan things as you put them in your cart to checkout without lining up. (Think Sams Club in US)
+Mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. Kohls in the United States does this.
+
+Target lets you scan items as you put them in your cart and tells you if there are coupons for them. 
+Then when you check out you scan the app to apply all the coupons. 
+Some retailers (e.g. Sams Club) mobile apps let you scan things as you put them in your cart to checkout without lining up.
 
 The regular mobile apps have loyalty programs, discounts and rewards redemptions, and search features that give instore routing to the correct shelf when looking for a product. 
+
+There are many 'art of the possible' visions for retail that show digital signage personalizing to customers, digital changing rooms, drop boxes for online orders, even A.I. and computer vision based intelligent stores that automatically track shoppers, shelf inventory, and providing real time incentives and pricing.
 
 #### Food Service
 
 An increasing number of food service locations have some form of Kiosk in their restuarants.
 McDonalds and Burger King have these for ordering, while Chilli's has them for table top drink ordering and payment.
 
-In some environments like airport restaurants there are increasinly tablet based ordering systems that allow you to order and pay without speaking to a person. Paying the check through a mobile app is a great solution when a server is busy and people hear their flight called. 
+Increasinly we're seeing digital menu boards, kiosks, and mobile apps that can remove items from the menu automatically based on Out of Stock conditions.
+E.g. When a cafe runs out of bacon, it can remove it from the ingredients list on a salad, and entirely remove the Bason Cheeseburger from the menu.
+
+In some environments like airport restaurants there are increasinly tablet based ordering systems that allow you to order and pay without speaking to a person. 
+
+Paying the check through a mobile app is a great solution when a server is busy and people hear their flight called. 
+
 
 #### Franchised Agency Industries
 
 Employment agencies, Real Estate agencies, End of life services are examples of types of busines where the work is typically done locally by an office of a larger corporation.
 The systems need to be able to run the business locally while reporting everything to the corporate main systems.
 
-#### Common Architecture style
+### Common Architecture styles
+
+#### Client Server Distributed
 
 Commonly these experiences are being built using client/server patterns that have existed for decades. 
 The experience is built as client application that makes calls to server software across the network when it needs information. These are frequently HTTP based requests/responses with data transfered using JSON or XML. 
@@ -88,17 +102,24 @@ Restaurant POS systems typically can't receive orders from kiosks or mobile apps
 They sometimes don't even interoperate between the POS terminals, e.g. Orders entered on one might not be visible on others because they each keep their own local cache. 
 This is commonly seen with marking items as Out of Stock or unavailable. It doesn't synchronize this between registers when offline.
 
+So the geo-distributed client/server pattern is not suitable for these experiences.
 
+#### Seperate Local Systems
 
-## So what's new&quest;
+Another less common pattern people use to solve these problems is to have a seperate installations of complete systems that live at the distributed locations. 
+These systems operate independently from each other, and then periodically synchronize their data back to a central database system. 
 
-I think one of the changes that's happening across these indusctries is the type of experiences that are being created now,
-combined with the raised expectations of consumers.
+This pattern often provides local employees and customers with low latency access to local data, however some of the use cases, like operating on non-local data, such as searching for inventory in other locations, arent possible. 
+
+It can also be challenging to manage the batch uploads and downloads, manage software versions, and check the health fo the overall system.
+
+## What defines a good solution&quest;
 
 While the POS of sale screens may be able to keep running while the internet is offline, lots of other systems are beginning to have the same requirements.
 
 Some of these experiences now potentially required a lot more information or intelligences to be able to work offline.
-In the Employment Agency - it might not be OK to only cache that offices jobs, you might need them for the whole city, or the whole state. Much more data than was synchronized before.
+In the Employment Agency - it might not be OK to only cache that offices jobs, you might need them for the whole city, or the whole state. 
+Much more data than was synchronized before.
 
 One other thing thats different is that different systems in the same location are now expected to continue to integrate and interact while offline:
 
@@ -106,41 +127,46 @@ One other thing thats different is that different systems in the same location a
 - Digital signage needs to be able to remove out of stock items from the menu board.
 - Customers still want to be able to scan offers from their mobile devices for rewards and discounts when the internet is out.
 
+
+### Requirements list:
+We have a set of requirements that help us to define a good implementation of this kind of system:
+
+1. We want the system to be able to power experiences at the remote locations while disconnected from the central system.
+2. We want the local experiences to be responsive when online and offline
+3. We want the switch from Online to Offline to be invisible to the local experiences
+4. We want data to be replicated between central and remote stores, in both directions.
+   1. This should happen in close to real time
+   2. It should pause and automatically restart when the connection is lost/restored
+   3. It should restart from where it left off, not the beginning of the batch/hour/day.
+5. We want local systems to be able to integrate with each other without going through a central location (so this works offline too)
+6. We want interactions to happen in real time, so new orders are printed immediately, and out of stocks update menu boards and kiosks in real time.
+
+
+
 ## Do we need a new solution&quest;
 
-Again, I will stress that this idea of Occasionally Connected Services is not entire new.
-There are systems across the world that already achieve this functionality today, and have done for years.
+These distributed systems are not an entirely new, there are systems across the world that already achieve this functionality today, and have done for years.
 
 I do think however, that given the larger datasets, and the more integrations that need to happen locally, we should look at modern ways to achieve this. 
 
 ## Occasionally Connected Servers
 
 This is were we now see the Occasionally Connected Servers (OCS) pattern.
-This pattern is an amalgum on existing pattenrs that have been developing in the industry in order to solve this specific category of problems. 
+This pattern is a combination of existing patterns that have been developing in the industry. 
+Applying these together we can solve this specific category of problems and achieve these requirements.
+With these modern patterns and the software platforms that implement them it is now possible for any business to build systems that work this way.
+
+The patterns that are used to build Occasionally Connected Servers are:
 
 
-
-## Microservices
-
-The microservices pattern that has been evolving over the last decade or so in the software industry has solved a lot of the patterns that are relevant to this problem. 
-
-Microservices are a pattern that drives us to create a set of independent business focused services/applications.
-They should be independent from each other, storing their own data, and managing their own lifecycle through automated testing and deployment, and they should be observable
-
-### Storing their own data
-
-Microservices storing their own data gives us a problem: we need to keep that data in sync with the rest of the system. 
-We have solved that problem well with Event Driven Systems. 
-
-
-#### Event Driven Systems
+## Event Driven Systems
 
 Event driven systems typically control their processes through the publication of and reaction to events. Whenever big data has changed in these systems events are published so that all other microservices in the ecosystem can see those changes.
 This is become very useful for keeping our microservices database synchronised, but there is no reason this style of application cannot be applied to geographically distributed systems.
 Even keeping different copies of the same microservices In Sync with data updates being published by the cloud version and consumed by all of the local deployed versions. 
 Event driven systems allow us a great deal of flexibility as long as we keep the contracts for the events standardised and use send a message in technology to distribute the data events .
 
-#### Message Brokers
+### Message Brokers
 
 These message brokers now come in a number of different flavours, from the more traditional message oriented middleware, to the more recent development of distributed log platforms.
 There are cloud platform as a service offerings, container based offerings, as well as software you can install bare metal.
@@ -152,9 +178,25 @@ If that isn't the case however you will need to implement synchronization logic 
 You'll need to receive messages from one broker and publish to the other while the Internet connection is available. 
 When the Internet connection is unavailable you'll need to periodically retry that synchronization until the connection is restored. 
 
+## Microservices
 
-#### Local Microservices
+The microservices pattern that has been evolving over the last decade or so in the software industry has solved a lot of the patterns that are relevant to this problem. 
 
+Microservices are a pattern that drives us to create a set of independent business focused services/applications.
+They should be independent from each other, storing their own data, and managing their own lifecycle through automated testing and deployment, and they should be observable
+
+### Busines Domain Oriented
+
+A key principle of microservices, in fact the meaning behind 'micro' in the name, is that a microservice should be responsible for a single business domain, or bounded context. e.g. Customer or Product.
+
+Monoliths of the past typically managed all these different areas of functionality 
+
+### Storing their own data
+
+Microservices storing their own data gives us a problem: we need to keep that data in sync with the rest of the system. 
+We have solved that problem well with Event Driven Systems. 
+
+### Local Microservices
 So using Event Driven principles with message oriented middleware, its possible that we can create microservices and deploy them in our remote locations.
 
 ![High Level View of Microservices style. Services deployed centrally and remote, connected through Message Brokers and the internet](/images/occasionally-connected-servers/microservices-high-level-view.png)
@@ -162,16 +204,22 @@ So using Event Driven principles with message oriented middleware, its possible 
 Experiences deployed in the remote locations will always use their services through synchronous APIs or messaging on their local message broker. 
 This simplifies their development as they can now assume that they are always online due to a reliable local area network.
 
+## 
+
+## Independent Deployments
+
+One of the other principles of microservices is 'Independence'.
+Microservices should be able to be deployed and scaled independently from each other.
 
 
+### Containers and Orchestration
 
+It's increasingly common to solve this deployment problem with Containers. 
 
-
-
-### Independent Deployments
 
 #### Containers at the Edge
 
-#### DevOps at Geographical Scale
+
+## DevOps at Geographical Scale
 
 ### Monitoring and Observability
