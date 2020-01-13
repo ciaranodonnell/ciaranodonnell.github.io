@@ -190,7 +190,20 @@ They should be independent from each other, storing their own data, and managing
 A key principle of microservices, in fact the meaning behind 'micro' in the name, is that a microservice should be responsible for a single business domain, or bounded context. e.g. Customer or Product.
 
 Monoliths of the past typically managed all these different areas of functionality inside the same code base, which mean interdependency between them was unavoidable.
-This increases the complexity of building, testing and deploying these systems 
+This increases the complexity of building, testing and deploying these systems. 
+
+These larger monolithic systems made it much harder to manage a distributed environment. 
+While is the benefit that it's just one application to manage, its a larger update to propagate, and its failure scenario is all or nothing. 
+
+Creating our domain oriented microservices in some ways makes is simpler to do the distribution. 
+While there is the obvious challenge of the distribution, the fact that these services that need to communicate are in seperate processes, it becomes core to the design. 
+It stops being an edge case that the teams solves for after the primary implementation, and becomes the primary method for state change propagation.
+
+For example, in a monolithic system you make the assumption that state changes happen in the processing, and the database your code has access to has the most up to date information in it, controlled in a regular database transaction. While implementing this logic it is unusual for developers to pause and think about the fact that this monolith might be one of many, and they will have competing updates, and need ways to propagate it. It's not impossible to design monoliths like this, but it means having a duality of the local vs. remote models. 
+
+When builing microservices, you do away with the local transaciton model. You can't commit a sale, with order, inventory, payment and loyalty updates in a single database transaction. You don't have primary records of all those things in the same database and you don't (shouldn't) have access to the databases they are stored in. Therefore, the default mental model in this transaction implementation is distributed and collaborative. While distributed is harder to reason about than a local transaction, distributed is easier than distributed+local.
+
+
 
 ### Storing their own data
 
