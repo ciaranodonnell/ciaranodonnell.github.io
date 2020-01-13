@@ -189,7 +189,8 @@ They should be independent from each other, storing their own data, and managing
 
 A key principle of microservices, in fact the meaning behind 'micro' in the name, is that a microservice should be responsible for a single business domain, or bounded context. e.g. Customer or Product.
 
-Monoliths of the past typically managed all these different areas of functionality 
+Monoliths of the past typically managed all these different areas of functionality inside the same code base, which mean interdependency between them was unavoidable.
+This increases the complexity of building, testing and deploying these systems 
 
 ### Storing their own data
 
