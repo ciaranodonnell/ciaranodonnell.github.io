@@ -203,11 +203,12 @@ For example, in a monolithic system you make the assumption that state changes h
 
 When builing microservices, you do away with the local transaciton model. You can't commit a sale, with order, inventory, payment and loyalty updates in a single database transaction. You don't have primary records of all those things in the same database and you don't (shouldn't) have access to the databases they are stored in. Therefore, the default mental model in this transaction implementation is distributed and collaborative. While distributed is harder to reason about than a local transaction, distributed is easier than distributed+local.
 
-
-
 ### Storing their own data
 
-Microservices storing their own data gives us a problem: we need to keep that data in sync with the rest of the system. 
+As we just covered, Microservices store their own data for their own part of the business domain, their bounded context.
+However, they will almost always need data from other parts of the business domain and therefore will need to get it on demand, or store a cache of it. 
+
+Getting data on demand means tying the reliability of the system together, like a distributed monolith, so it's all up or all down. For this reason it's arguably better to have microservices cache the data they need from other bounded contexts. This gives us the problem that we need to keep that data in sync with the rest of the system. 
 We have solved that problem well with Event Driven Systems. 
 
 ### Local Microservices
