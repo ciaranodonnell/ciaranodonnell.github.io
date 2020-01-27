@@ -113,3 +113,9 @@ This is the hard part, changing cultures involves many things
 - Integration through Events
 - Microservices thinking
 
+- Caveat is that matrixing organizations for tech skills and tech communities makes sense. But the "WE" that is building software or the "WE" that does the business operations are both the same, all inclusive WE
+
+- Also, some stuff like email, printers etc, remain a common IT function. Possible with a better like Technology Facilities
+
+- I predict that in 30 years time, good business wont even have IT departments anymore. 'Big lump of IT' thinking will be gone. It will be business software in the cloud, and facilities will include the printers and cabling. 
+
