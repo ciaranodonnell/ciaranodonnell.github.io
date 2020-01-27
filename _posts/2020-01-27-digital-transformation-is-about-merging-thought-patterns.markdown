@@ -35,7 +35,10 @@ In order to explain Digital Transformation we should take a look at what a 'non-
 - businesses now want to change
 - they want to be like the startups that are disrupting them
 - They dont all know how to compete in that world or what it really means. 
-- But they want all the promises that they see in Agile, Open Source, Lean Startup and the rest. 
+- But they want all the promises that they see in Agile, Open Source, Lean Startup and the rest.
+  - They want to be able to amke decisions faster
+  - bring products to market faster
+  - get feedback and pivot faster 
 - They want to do 'Digital Transformation', they are being told thats the way to survive
 
 ## Whats the trouble?
