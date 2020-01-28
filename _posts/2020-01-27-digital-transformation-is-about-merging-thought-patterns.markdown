@@ -51,6 +51,7 @@ In order to explain Digital Transformation we should take a look at what a 'non-
   - Existing customers that need supporting
   - Existing organization structures that people like and are comfortable with
   - Existing leaders who know how the busines works and dont know how digital works
+  - Existing legacy systems that support the above, but can be difficult or expensive to change
 - All of their problems create an inertia - they find it hard to move the business
 
 
@@ -90,22 +91,23 @@ That structure is one org chart, with the overriding metrics of success being at
 I think in a Digital Business, there is no Chief Digital Officer, at least not as standard alone. If the CDO runs and organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition. 
 
 So a Digital Transformation is really about **cultural change**. It's about the way to think about technology as part of the business. 
-
+(Don comment: Culture is about much more than digital or how business integrates software, it includes values, norms, ideals, etc. most of which are independent of how we get there. I'd like to narrow the scope here to: "So a Digital Transformation is really about changing the way we think about technology as part of the business." and leave the reader to determine the cultural impact)
 
 ## So how do you get there?
 
-This is the hard part, changing cultures involves many things
+This is the hard part, changing ~~cultures~~a mindset involves many things
 
 - Software Engineering becomes a business concern, its not shadow IT, its business oriented software
-  - Software engineers need to think about business challenges and solutions, not technologies first.
-- Businesses have to develop their own products, even when they use COTS, its their product
+  - Software engineers need to think about business challenges and solutions, not technologies first
+- Businesses have to develop their own digital systems as _products_, even when they use COTS, its their product
 
-- Get software engineering to be truly DevOps and Agil enabled. 
-  - Dont metric on LOC, User Stories complete etc
-  - Metric on sales, reviews, sign-ups etc, whatever the business is trying to do.
-  - Create an open by default culture.
-    - People in businesses talk. They collaborate, and they share.
-    - People in these business should too, and coz its one team the business and software engineers should be doing that too.
+- Get software engineering to be truly DevOps and Agile enabled
+  - Don't metric on LOC, User Stories complete, etc.
+  - Metric on sales, reviews, sign-ups etc, whatever the business is trying to do
+  - Be open by default
+    - People in businesses talk, the work is collaborative, and they readaily share information
+    - By including software engineers in the business, they benefit and can contribute in the same way as other stakeholders
+    - The support the business, systems in these businesses must also talk, collaborate, and share information
 
 
 ## Software Patterns that support it
@@ -116,9 +118,10 @@ This is the hard part, changing cultures involves many things
 - Integration through Events
 - Microservices thinking
 
-- Caveat is that matrixing organizations for tech skills and tech communities makes sense. But the "WE" that is building software or the "WE" that does the business operations are both the same, all inclusive WE
+- Matrixing organizations for tech skills and tech communities makes sense. But the "WE" that is building software or the "WE" that does the business operations are both the same, all inclusive WE
 
-- Also, some stuff like email, printers etc, remain a common IT function. Possible with a better like Technology Facilities
+- Also, some stuff like email, printers etc, remain a common IT function. Possible with a better like Technology Facilities. These systems can be thought of as "support systems" -- critical to the functioning of the business, but not the focus of the business.
 
 - I predict that in 30 years time, good business wont even have IT departments anymore. 'Big lump of IT' thinking will be gone. It will be business software in the cloud, and facilities will include the printers and cabling. 
+  - Of course, 30 years from now _printing_ will continue to be viewed as critical to every business, as well as the cabling necessary to support it :D
 
