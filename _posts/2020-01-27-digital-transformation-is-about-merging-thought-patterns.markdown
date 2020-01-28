@@ -72,6 +72,8 @@ Existing established businesses also have challenges startups don't:
   - Existing customers that need supporting
   - Existing organization structures that people like and are comfortable with
   - Existing leaders who know how the busines works and dont know how digital works - they play to their strengths
+  - Existing legacy systems that support the above, but can be difficult or expensive to change
+
  
 The combination of all these challenges creates an *inertia* - they find it hard to move the business towards any goal.
 
@@ -126,20 +128,26 @@ So if these aren't the optimal strategies, what is Digital Transformation?
 
 ## What is Digital Transformation?
 
-My definition of Digital Transformation
+My definition of Digital Transformation:
 
 > A business is digitally transformed when there is no separation between the business structure, and the digital systems that operate that business. 
 
 I think when business get to this point, they are one structure that achieves the business outcome. 
-That structure is one org chart, with the overriding metrics of success being attaining the business goals
+That structure is one org chart, with the overarching metrics of success being attaining the business goals.
 
-- This means there is no 'Business + IT' group. There is a business group. That business group operates the business entirely, including the software that supports it. 
-- They dont have a process, and then adapt some COTS to it. 
+We need to stop thinking about a Business group that makes a request of IT, and the IT groups that decides to buy COTS and adapt or to implement it's own. 
+We need to start thinking about a combined group that operates the business entirely **and** owns the software that supports it. 
+
+(Note: This is reinforces and is reinforced by the modern architecture paradigms that software should mirror the business structure through domain oriented microservices.)
 
 
-I think in a Digital Business, there is no Chief Digital Officer, at least not as standard alone. If the CDO runs and organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition. 
 
-So a Digital Transformation is really about **cultural change**. It's about the way to think about technology as part of the business. 
+I think in a Digital Business, there is no Chief Digital Officer, at least not as standard alone C-Suite position. 
+We shouldn't think of Digital as being separate to Operating the business. 
+We should operate a digial business.
+If the CDO runs and organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition. 
+
+So a Digital Transformation is really about changing our mindset. It's about the way to think about technology as part of the business. 
 
 
 ## So how do you get there?
