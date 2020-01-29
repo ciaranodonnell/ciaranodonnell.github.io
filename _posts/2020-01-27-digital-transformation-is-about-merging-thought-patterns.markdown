@@ -141,44 +141,106 @@ We need to start thinking about a combined group that operates the business enti
 (Note: This is reinforces and is reinforced by the modern architecture paradigms that software should mirror the business structure through domain oriented microservices.)
 
 
-
 I think in a Digital Business, there is no Chief Digital Officer, at least not as standard alone C-Suite position. 
 We shouldn't think of Digital as being separate to Operating the business. 
-We should operate a digial business.
-If the CDO runs and organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition. 
+We should operate a digial business, using our digital and traditional channels, enabled by systems which map one to one with our business structure and processes. 
 
-So a Digital Transformation is really about changing our mindset. It's about the way to think about technology as part of the business. 
+If the CDO runs an organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition. 
+
+So a Digital Transformation is really about changing our mindset.
+It's about the belief that business technology is part of the business.
+We have already made movements towards this as an industry. Agile engineering, Product Ownership diciplin, microservices, Shadow IT initiatives. These are all common and successful movements because they more towards this more natural and successful mindset.
 
 
 ## So how do you get there?
 
-This is the hard part, changing cultures involves many things
+This is the hard part, changing the mindset involves many things:
 
-- Software Engineering becomes a business concern, its not shadow IT, its business oriented software
-  - Software engineers need to think about business challenges and solutions, not technologies first.
-- Businesses have to develop their own products, even when they use COTS, its their product
+#### Software Engineering becomes a business concern
+Its not shadow IT, its business oriented software. This is the mindset behind **microservices** and **Domain Driven Design**. Building software for the business *with* the busines invovled all along.
 
-- Get software engineering to be truly DevOps and Agil enabled. 
-  - Dont metric on LOC, User Stories complete etc
-  - Metric on sales, reviews, sign-ups etc, whatever the business is trying to do.
-  - Create an open by default culture.
-    - People in businesses talk. They collaborate, and they share.
-    - People in these business should too, and coz its one team the business and software engineers should be doing that too.
-    - references: Azure DevOps / Office 365 teams - metrics on customer usage
+#### Software engineers need to think about the business
+
+One of my great complaints about traditional IT is the propensity to concentrate on the tools you have/know, and look for ways to reuse them, along the lines of 'to a hammer everythings a nail'. 
+
+Specializing technology people into the SAP folks, the CRM folks, the custom dev folks encourages this thinking and reinforces the boundaries. Putting technologists inside the business organizations can help re-orient their goals. Have the think about business challenges and solutions, not technologies first.
 
 
+#### Businesses have to develop their own digital systems as *products*
+This is a really common theme in the Agile world and is also important for digital transformation. 
+The business team should think about their products to include their technology platform. 
+They should see them as the same thing, evolving together continually. 
 
-## Software Patterns that support it
+One of the main problem with IT projects is the baked in assumption that the software will be finished, the project will be over, and everyone will be happy. 
+We know that isn't true though, the business keeps evolving, they update their requirements, and they want more 'innovation'. 
+They need it to keep differentiating and competing in the market. 
 
-- Open by default software
-- API first
+Even when they use COTS, businesses should think of it as their product. Sometimes it wont need to differentiate too much. 
+HR software is an example of where people dont seek constant innovation to differentiate as much. 
+However they do need to think of the experiences they provide to employees: are they keeping them effective, or are they wasting their time with inefficient processes and software?
+
+#### Become an agile organization
+
+Get software engineering to be truly DevOps and Agile enabled. This means changing the mindset set around requirements definition. 
+Get the business to share in the ownership of software quality. 
+They need to work iteratively with the technology folks to keep evolving the 'product'.
+
+Get the software engineers to focus on the overall goals. Don't use metrics like Lines of Code written, User Stories complete, bugs fixed etc. Create metric on sales, reviews, sign-ups etc, whatever the business is trying to do.
+
+Create an open by default culture. People in businesses talk, they collaborate, and they share information and ideas. People in these new style businesses should too. 
+Because it's one team, the business and software engineers should be doing that too. 
+They should be working hand in hand all the time.
+One of my favourite teams to talk to about this is Microsofts Azure DevOps team. They completely moved away from traditional software engineering metrics and only look at metrics based on their customer usage goals.
+
+#### Create Modern Software
+
+We have lots of new (and some old) software patterns that support this structure. 
+
+- Microservices thinking
 - Domain Driven Design
 - Integration through Events
-- Microservices thinking
+- API first
+- Open by default software
 
-- Caveat is that matrixing organizations for tech skills and tech communities makes sense. But the "WE" that is building software or the "WE" that does the business operations are both the same, all inclusive WE
 
-- Also, some stuff like email, printers etc, remain a common IT function. Possible with a better like Technology Facilities
 
-- I predict that in 30 years time, good business wont even have IT departments anymore. 'Big lump of IT' thinking will be gone. It will be business software in the cloud, and facilities will include the printers and cabling. 
+## What happen's to IT?
+
+This might sound like its a big change, and it is. It called transformation. 
+These changes though are an evolution, they aren't all or nothing, but more like a continuum of improvement. 
+Every change you make towards the good sets you up for success, and the benefits are often cumilative. 
+
+It also might sound like I am forgetting about some important factors that IT also manages for the business:
+- Common infrastructure like Phones, Messaging, Collaboration etc.
+- User Management & Provisioning - New accounts, disabling leavers accounts, new Laptops, Desktops, etc
+- Common tech facilities - Printers, Meeting rooms etc
+- Infrastructure support and maintenance - the servers that these business systems run on for example.
+- Legacy, big package support
+
+I think a LOT of these responsiblities will go away eventually. 
+
+#### Phones, Messaging and Collaboration 
+These are being replaced by cloud offerings. Microsoft M365 offers Windows, Teams, Office 365 etc on this evergreen cloud hosted basis. There isn't really a lot of management here compared to how it used to be, and the amount is decreasing over time. 
+
+#### User Management & Provisioning
+This again is getting more automated, and that trend should continue.
+As we start to put more technology people in the HR business unit we can start to get more automation around this.
+I expect more outsourcing type services that can manage laptop provisioning the same way mobile companies can issue company linked mobile phones.
+
+#### Common Tech Facilities
+This can start to be treated like facilities. As workforces digitize and distribute the need for these services decreases, they are also simpler to setup and manage and could probably shift into a more traditional facilities group.
+
+#### Infrastructure and Legacy Support
+
+The move to cloud based modern systems over the next decade will greatly reduce, probably eliminate this need for most businesses. Instructure, security, networking - all these things are becoming automated through code in the cloud. These can all be managed by the businesses that want the software that needs them. 
+
+
+### So if IT dead?
+
+I predict that in 30 years time, good businesses wont even have IT departments anymore. 'Big lump of IT' thinking will be gone. It will be business software in the cloud, and physical things and common services will be managed like facilities. 
+
+The caveat I have here is that that matrixing organizations for tech skills and tech communities makes sense.
+Businesses will also benefit from common strategies for software development, integration etc. 
+
+I think the traditional CIO role will be replaced by a Chief Technology Office who will focus on these 'Center of Excellence' type concerns. 
 
