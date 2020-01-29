@@ -11,7 +11,7 @@ permalink:
 tags: [digital transformation, conways law, organization]
 ---
 
-Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people. I've been working with people on business and digital transformation for nearly a decade now and I have been trying to find a way to standardize the definition to help people understand what we are aiming for and what the journey is like. 
+Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people. I've been working with people on business and digital transformation for nearly a decade now, and I have been trying to find a way to standardize the definition to help people understand what we are aiming for and what the journey is like. 
 
 In order to explain Digital Transformation we should take a look at what a 'non-transformed' business looks like, what it struggles with, and why it wants to tranform. Then we can look at what changes businesses need to make to achieve that transformation.
 
@@ -20,14 +20,15 @@ In order to explain Digital Transformation we should take a look at what a 'non-
 Whenever you try to define normal, you're really trying to capture the center of a bell curve.
 While there are always exceptions, there is a large group of people near the middle with similar characteristics.
 
-Most business have some fundamental processes they follow to achieve their business outcome. They typically have been working that way for years.
+Most business have some fundamental processes they follow to achieve their business outcome.
+They typically have been working that way for years.
 They will have adopted technology over the last few decades and used it to facilitate how they work.
 They may have got CRM or ERP systems, perhaps websites with online ordering capability, or digital payment and receipt capabilities.
 
-Through the last few decades there has been a pendulum swing between custom software, which was the only choice in the early decades of computing, and commerical off the shelf software (COTS).
+Through the last 5 or 6 decades there was a swing from custom software, which was the only choice in the early decades of computing, to commerical off the shelf software (COTS).
 
-This shift to off the shelf software has made this culture that 'the Business' does the business, and IT just supports them in various ways, desktop support, Office productivity software, application management, and software development.
-Chargeback IT models have reinforced this idea, that Business and IT are seperate, independent concerns.
+This shift to off the shelf software has made a culture that 'the Business' does the business, and IT just supports them in various ways, desktop support, Office productivity software, application management, and software development.
+(Perhaps replace Chargeback IT with elevation of CIO position to C-Suite) Chargeback IT models have reinforced this idea, that Business and IT are seperate, independent concerns.
 
 The business asks for software to meet its requirements, IT gets tasked with a project to meet that requirement, either with COTS, or custom software. 
 Even as, more recently in this more digtal age, the pendulum has been swinging back towards the side of custom software over COTS, it's IT that has taken on the increase Software Engineering work because it's "technical stuff, not business stuff".
