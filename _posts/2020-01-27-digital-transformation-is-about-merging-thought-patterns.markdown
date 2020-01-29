@@ -37,9 +37,9 @@ The Digital Transformation pressures businesses are feeling now are increasing.
 The pace of technology revolution is ever increasing Consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT" and Intelligent Enterprise.
 Business now have agility challenges, they need to adapt to the evolving demographics - millenials. Those that can't adapt fast enough are losing relevance, and some are even dying.
 
-A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use etc has been "Shadow IT".
-Business groups creating their own 'IT' has increased to handle this, driven by Cloud and SaaS platforms that enable them to get software without tradition IT concerns.
-Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups eventually.
+A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use etc has been "Shadow IT". 
+This is the practice of Business groups creating their own pockets of 'IT'. Buying Cloud and SaaS platforms that enable them to get software without traditional IT concerns, like infratructure or procurement.
+Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups, or replaced with the ordained enterprise solution eventually.
 
 ## Whats the Desire
 
