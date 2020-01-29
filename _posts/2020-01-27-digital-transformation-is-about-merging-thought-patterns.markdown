@@ -235,7 +235,7 @@ This can start to be treated like facilities. As workforces digitize and distrib
 The move to cloud based modern systems over the next decade will greatly reduce, probably eliminate this need for most businesses. Instructure, security, networking - all these things are becoming automated through code in the cloud. These can all be managed by the businesses that want the software that needs them. 
 
 
-### So if IT dead?
+### So is IT dead?
 
 I predict that in 30 years time, good businesses wont even have IT departments anymore. 'Big lump of IT' thinking will be gone. It will be business software in the cloud, and physical things and common services will be managed like facilities. 
 
