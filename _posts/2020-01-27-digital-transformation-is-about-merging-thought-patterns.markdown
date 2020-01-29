@@ -44,7 +44,7 @@ Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/bad
 ## Whats the Desire
 
 Businesses now want to change, to evolve to a new way of working.
-They want to be like the startups that are disrupting their core business or other industries.
+They want to mimic the success of the startups that are disrupting their core business or other industries.
 They want to be able to differentiate their services and create unique and compelling experiences for their customers and their employees.
 
 
@@ -52,9 +52,9 @@ They are looking for the results that things like Agile,Lean Startup, and Open S
 
 - They want to be able to make decisions faster
 - bring products to market faster
-- Tighten the OODA cycle so they can act on feedback and pivot faster 
+- Tighten the [OODA](https://en.wikipedia.org/wiki/OODA_loop) loop so they can act on feedback and pivot faster 
 
-They want to 'do Digital Transformation', they are being told thats the way to evolve, in some cases survive.
+They want to 'do Digital Transformation', as they are being told thats the way to evolve, in some cases survive.
 
 
 ## Whats the trouble?
