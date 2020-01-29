@@ -34,7 +34,7 @@ The business asks for software to meet its requirements, IT gets tasked with a p
 Even as, more recently in this more digtal age, the pendulum has been swinging back towards the side of custom software over COTS, it's IT that has taken on the increase Software Engineering work because it's "technical stuff, not business stuff".
 
 The Digital Transformation pressures businesses are feeling now are increasing.
-The pace of technology revolution has increased. Consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT".
+The pace of technology revolution is ever increasing Consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT" and Intelligent Enterprise.
 Business now have agility challenges, they need to adapt to the evolving demographics - millenials. Those that can't adapt fast enough are losing relevance, and some are even dying.
 
 A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use etc has been "Shadow IT".
