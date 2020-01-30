@@ -1,14 +1,14 @@
 ---
 layout: single
 title:  "What is Digital Tranformation"
-date:   2019-12-23 13:43:00 -0500
+date:   2020-01-29 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
 author_profile: true
 excerpt: Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people. I've been working with people on business and digital transformation for nearly a decade now and I think digital transformation is...
 permalink: 
-tags: [digital transformation, conways law, organization]
+tags: [digital transformation, conways law, organization, transformation]
 ---
 
 Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people. I've been working with people on business and digital transformation for nearly a decade now, and I have been trying to find a way to standardize the definition to help people understand what we are aiming for and what the journey is like. 
@@ -23,7 +23,7 @@ While there are always exceptions, there is a large group of people near the mid
 Most business have some fundamental processes they follow to achieve their business outcome.
 They typically have been working that way for years.
 They will have adopted technology over the last few decades and used it to facilitate how they work.
-They may have got CRM or ERP systems, perhaps websites with online ordering capability, or digital payment and receipt capabilities.
+They may have implemented CRM or ERP systems, perhaps websites with online ordering capability, or digital payment and receipt capabilities.
 
 Through the last 5 or 6 decades there was a swing from custom software, which was the only choice in the early decades of computing, to commerical off the shelf software (COTS).
 
