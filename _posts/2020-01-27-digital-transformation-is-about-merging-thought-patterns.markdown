@@ -1,14 +1,15 @@
 ---
 layout: single
 title:  "What is Digital Tranformation"
-date:   2020-01-29 13:43:00 -0500
+date:   2019-12-23 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt: Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people. I've been working with people on business and digital transformation for nearly a decade now and I think digital transformation is...
-permalink: 
-tags: [digital transformation, conways law, organization, transformation]
+excerpt: Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people.
+I've been working with people on business and digital transformation for nearly a decade now and I think digital transformation is...
+permalink.
+tags: [digital transformation, conways law, organization]
 ---
 
 Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people.
@@ -25,24 +26,23 @@ While there are always exceptions, there is a large group of people near the mid
 Most business have some fundamental processes they follow to achieve their business outcome.
 They typically have been working that way for years.
 They will have adopted technology over the last few decades and used it to facilitate how they work.
-They may have implemented CRM or ERP systems, perhaps websites with online ordering capability, or digital payment and receipt capabilities.
+They may have got CRM or ERP systems, perhaps websites with online ordering capability, or digital payment and receipt capabilities.
 
 Through the last 5 or 6 decades there was a swing from custom software, which was the only choice in the early decades of computing, to commerical off the shelf software (COTS).
 
 This shift to off the shelf software has made a culture that 'the Business' does the business, and IT just supports them in various ways, desktop support, Office productivity software, application management, and software development.
 (Perhaps replace Chargeback IT with elevation of CIO position to C-Suite) Chargeback IT models have reinforced this idea, that Business and IT are seperate, independent concerns.
 
-The business asks for software to meet its requirements, IT gets tasked with a project to meet that requirement, either with COTS, or custom software.
-Even as, more recently in this more digtal age, the pendulum has been swinging back towards the side of custom software over COTS, it's IT that has taken on the increase Software Engineering work because it's "technical stuff, not business stuff".
+The business asks for software to meet its requirements, IT gets tasked with a project to meet those requirements, either with COTS, or custom software.
+Even as, more recently in this more digtal age, the pendulum has been swinging back towards the side of custom software over COTS, it's IT that has taken on the increase in Software Engineering work because it's "technical stuff, not business stuff".
 
 The Digital Transformation pressures businesses are feeling now are increasing.
-The pace of technology revolution is ever increasing Consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT" and Intelligent Enterprise.
-Business now have agility challenges, they need to adapt to the evolving demographics - millenials.Those that can't adapt fast enough are losing relevance, and some are even dying.
+The pace of technology revolution is ever increasing as consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT" and Intelligent Enterprise.
+Businesses now have agility challenges, they need to adapt to the evolving demographics - millenials.  Those that can't adapt fast enough are losing relevance, and some are even dying.
 
-A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use etc has been "Shadow IT".
-This is the practice of Business groups creating their own pockets of 'IT'.
-Buying Cloud and SaaS platforms that enable them to get software without traditional IT concerns, like infratructure or procurement.
-Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups, or replaced with the ordained enterprise solution eventually.
+A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use et.c has been "Shadow IT" -- the practice of Business groups creating their own pockets of 'IT' as a response to a lack of responsiveness from their own IT department.
+Shadow IT has been further enabled by Cloud and SaaS platforms that allow businesses to get software without traditional IT concerns, like infratructure or procurement.
+However, shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups, or replaced with the ordained enterprise solution.
 
 ## Whats the Desire
 
@@ -51,13 +51,13 @@ They want to mimic the success of the startups that are disrupting their core bu
 They want to be able to differentiate their services and create unique and compelling experiences for their customers and their employees.
 
 
-They are looking for the results that things like Agile,Lean Startup, and Open Source promise:
+They are looking for the results that things like Agile, Lean Startup, and Open Source promise. They want to:
 
-- They want to be able to make decisions faster
+- make decisions faster
 - bring products to market faster
-- Tighten the [OODA](https://en.wikipedia.org/wiki/OODA_loop) loop so they can act on feedback and pivot faster.
+- tighten the [OODA](https://en.wikipedia.org/wiki/OODA_loop) loop so they can act on feedback and pivot faster.
 
-They want to 'do Digital Transformation', as they are being told thats the way to evolve, in some cases survive.
+They want to 'do Digital Transformation', as they are being told thats the way to evolve, and in some cases, survive.
 
 
 ## Whats the trouble?
@@ -79,7 +79,7 @@ Existing established businesses also have challenges startups don't:
   - Existing legacy systems that support the above, but can be difficult or expensive to change
 
  
-The combination of all these challenges creates an *inertia* - they find it hard to move the business towards any goal.
+The combination of all these challenges creates *inertia* - they find it hard to move the business towards any goal.
 
 
 ## Common 'Go Digital' Strategies
@@ -97,9 +97,9 @@ It normally takes some time to get these things live, and while they're being bu
 
 Doing software development in an agile way will have benefits.
 If they do it well and really adopt the mindset, it can have a lot of benefits.
-However most of the times I have seen IT departments go agile, it's really waterfall planning with a planning session every 'sprint' to decide which bit to do next.
+However most of the times I have seen IT departments go agile, it's really waterfall planning with a planning session every 'sprint' to decide which bit to do next, and still constrained by fixed budgets, scope and timelines typical of traditional projects.
 
-So really, changing the way a team in IT organizes its todo list can provide localized benefit, but still isnt transformative
+So really, changing the way a team in IT organizes its todo list can provide localized benefit, but still isn't transformative for the business it supports
 
 #### Establish an Innovation group
 
@@ -115,8 +115,7 @@ Innovation teams sound good to the board/the street but how do you bring the inn
 
 The 'Digital group', increasingly led by new Chief Digital Officers is a more recent version of the Innovation group.
 Digital groups are often tasked with 'Digital Transformation'.
-Too Often they end up working between the business and the IT group, finding niches areas in the business process where 'digital' can have an impact.
-Creating similar point solutions or one-offs that Innovation groups did.
+Too often they end up working between the business and the IT group, finding niches areas in the business process where 'digital' can have an impact, creating similar point solutions or one-offs that Innovation groups did.
 Perhaps with a larger permanent staff of User Experience and Engineering they can do better at the support and maintenance of their solutions.
 
 #### Create an internal startup to disrupt yourself
@@ -162,7 +161,7 @@ If the CDO runs an organization that does something important, it means that imp
 So a Digital Transformation is really about changing our mindset.
 It's about the belief that business technology is part of the business.
 We have already made movements towards this as an industry.
-Agile engineering, Product Ownership diciplin, microservices, Shadow IT initiatives.
+Agile engineering, Product Ownership dicipline, microservices, Shadow IT initiatives.
 These are all common and successful movements because they more towards this more natural and successful mindset.
 
 ## So how do you get there?
@@ -181,7 +180,7 @@ One of my great complaints about traditional IT is the propensity to concentrate
 
 Specializing technology people into the SAP folks, the CRM folks, the custom dev folks encourages this thinking and reinforces the boundaries.
 Putting technologists inside the business organizations can help re-orient their goals.
-Have the think about business challenges and solutions, not technologies first.
+Have them think about business challenges and solutions, not technologies first.
 
 #### Businesses have to develop their own digital systems as *products*
 
@@ -189,8 +188,8 @@ This is a really common theme in the Agile world and is also important for digit
 The business team should think about their products to include their technology platform.
 They should see them as the same thing, evolving together continually.
 
-One of the main problem with IT projects is the baked in assumption that the software will be finished, the project will be over, and everyone will be happy.
-We know that isn't true though, the business keeps evolving, they update their requirements, and they want more 'innovation'.
+One of the main problems with IT projects is the baked in assumption that the software will be finished, the project will be over, and everyone will be happy.
+We know that isn't true; the business keeps evolving, they update their requirements, and they want more 'innovation'.
 They need it to keep differentiating and competing in the market.
 
 Even when they use COTS, businesses should think of it as their product.
