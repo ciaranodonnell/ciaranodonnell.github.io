@@ -11,10 +11,10 @@ permalink:
 tags: [digital transformation, conways law, organization, transformation]
 ---
 
-Digital Transformation is one of hot buzzwords at the moment but it means many different things to many different people.
+Digital Transformation is one of hot buzzwords at the moment, but it means many different things to many different people.
 I've been working with people on business and digital transformation for nearly a decade now, and I have been trying to find a way to standardize the definition to help people understand what we are aiming for and what the journey is like.
 
-In order to explain Digital Transformation we should take a look at what a 'non-transformed' business looks like, what it struggles with, and why it wants to tranform.
+In order to explain Digital Transformation, we should take a look at what a 'non-transformed' business looks like, what it struggles with, and why it wants to tranform.
 Then we can look at what changes businesses need to make to achieve that transformation.
 
 ## What's normal?
@@ -37,21 +37,20 @@ Even as, more recently in this more digtal age, the pendulum has been swinging b
 
 The Digital Transformation pressures businesses are feeling now are increasing.
 The pace of technology revolution is ever increasing Consumer (and employee) expectations are constantly rising thanks to trends like the "consumerization of IT" and Intelligent Enterprise.
-Business now have agility challenges, they need to adapt to the evolving demographics - millenials.Those that can't adapt fast enough are losing relevance, and some are even dying.
+Business now have agility challenges; they need to adapt to the evolving demographics - millennials. Those that can't adapt fast enough are losing relevance, and some are even dying.
 
 A natural consequence of the contention between businesses wanting change and IT wanting stability, supportability, platform re-use etc has been "Shadow IT".
 This is the practice of Business groups creating their own pockets of 'IT'.
 Buying Cloud and SaaS platforms that enable them to get software without traditional IT concerns, like infratructure or procurement.
-Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups, or replaced with the ordained enterprise solution eventually.
+Shadow IT is almost always frowned upon as its dangerous/disruptive/insecure/badly managed, and normally ends up being merged into the traditional IT groups or replaced with the ordained enterprise solution eventually.
 
-## Whats the Desire
+## What’s the Desire
 
 Businesses now want to change, to evolve to a new way of working.
 They want to mimic the success of the startups that are disrupting their core business or other industries.
 They want to be able to differentiate their services and create unique and compelling experiences for their customers and their employees.
 
-
-They are looking for the results that things like Agile,Lean Startup, and Open Source promise:
+They are looking for the results that things like Agile, Lean Startup, and Open Source promise:
 
 - They want to be able to make decisions faster
 - bring products to market faster
@@ -59,18 +58,15 @@ They are looking for the results that things like Agile,Lean Startup, and Open S
 
 They want to 'do Digital Transformation', as they are being told thats the way to evolve, in some cases survive.
 
-
-## Whats the trouble?
-
+## What’s the trouble?
 
 The challenge they have is understanding what that **really** means.
 They dont have a clear idea what's different between themselves and the industry disruption success stories.
 "What do they do differently?", "What causes the startup to be successful?".
 These are challenging questions for established businesses to get to grips with.
 
-Many times they have invested in 'digital', they have their CRM systems or their website, they are 'digital' assets.
+Many times, they have invested in 'digital', they have their CRM systems or their website, they are 'digital' assets.
 So that begs the question: "What's the tranformation part?", "Do we need a Digital Organization?", "Do we need an Innovation Organization?".
-
 
 Existing established businesses also have challenges startups don't:
   - Existing customers that need supporting
@@ -81,15 +77,14 @@ Existing established businesses also have challenges startups don't:
  
 The combination of all these challenges creates an *inertia* - they find it hard to move the business towards any goal.
 
-
 ## Common 'Go Digital' Strategies
 
-There are a number of common ideas that I have seen people jump to.
+There are several common ideas that I have seen people jump to.
 I've boiled them down to this list when I've ordered from bad to better:
 
 #### Get a new website / CRM / ERP
 
-This doesnt really transform anything.
+This doesn’t really transform anything.
 It's a new digital asset but it normally supports the same business processes.
 It normally takes some time to get these things live, and while they're being built the requirements can evolve like they did to the last iteration.
 
@@ -97,7 +92,7 @@ It normally takes some time to get these things live, and while they're being bu
 
 Doing software development in an agile way will have benefits.
 If they do it well and really adopt the mindset, it can have a lot of benefits.
-However most of the times I have seen IT departments go agile, it's really waterfall planning with a planning session every 'sprint' to decide which bit to do next.
+However, most of the times I have seen IT departments go agile, it's really waterfall planning with a planning session every 'sprint' to decide which bit to do next.
 
 So really, changing the way a team in IT organizes its todo list can provide localized benefit, but still isnt transformative
 
@@ -105,7 +100,7 @@ So really, changing the way a team in IT organizes its todo list can provide loc
 
 Innovation Teams are not a really new idea now, they have been common for a decade maybe.
 They are often some new group of people, with a charismatic leader and some strong technologists, that get tasks with 'innovation'.
-What's often lacking are things like success criteria, or plans for adopting output back into the business.
+What's often lacking are things like success criteria or plans for adopting output back into the business.
 
 The best outcomes I've seen from these are new point solutions, kiosks or mobile apps, that have cool interfaces or fix something for the business, but end up like a COTS product installed by traditional IT, and sometimes never getting another version as the innovation team has moved on to another product so they eventually get shutdown.
 
@@ -127,16 +122,14 @@ They work to create differentiated business processes, to create digital only ve
 They are separate from the traditional business and IT teams and have some autonomy over their business and technology choices.
 
 Where I've seen this fail is when people bring it back into the main business.
-They hand the new digital thing to the old non-digital business which uses it's existing mental models to run that new business.
+They hand the new digital thing to the old non-digital business which uses its existing mental models to run that new business.
 When this happens the 'magic' of the new bit fades away over time.
 
 I think they work when you move the old non-digital business to the start-up.
 They cannibalize the old business units and migrate the business itself to the new systems and processes.
 This is a much harder task and the inertia we talked about before fights this all the way.
 
-
-So if these aren't the optimal strategies, what is Digital Transformation?
-
+So, if these aren't the optimal strategies, what is Digital Transformation?
 
 ## What is Digital Transformation?
 
@@ -147,11 +140,10 @@ My definition of Digital Transformation:
 I think when business get to this point, they are one structure that achieves the business outcome.
 That structure is one org chart, with the overarching metrics of success being attaining the business goals.
 
-We need to stop thinking about a Business group that makes a request of IT, and the IT groups that decides to buy COTS and adapt or to implement it's own.
+We need to stop thinking about a Business group that makes a request of IT, and the IT groups that decides to buy COTS and adapt or to implement its own.
 We need to start thinking about a combined group that operates the business entirely **and** owns the software that supports it.
 
-(Note: This is reinforces and is reinforced by the modern architecture paradigms that software should mirror the business structure through domain oriented microservices.)
-
+(Note: This reinforces and is reinforced by the modern architecture paradigms that software should mirror the business structure through domain oriented microservices.)
 
 I think in a Digital Business, there is no Chief Digital Officer, at least not as standard alone C-Suite position.
 We shouldn't think of Digital as being separate to Operating the business.
@@ -159,7 +151,7 @@ We should operate a digial business, using our digital and traditional channels,
 
 If the CDO runs an organization that does something important, it means that important thing (normally providing some technology solution) is not part of the business, which breaks our definition.
 
-So a Digital Transformation is really about changing our mindset.
+So, a Digital Transformation is really about changing our mindset.
 It's about the belief that business technology is part of the business.
 We have already made movements towards this as an industry.
 Agile engineering, Product Ownership diciplin, microservices, Shadow IT initiatives.
@@ -171,7 +163,7 @@ This is the hard part, changing the mindset involves many things:
 
 #### Software Engineering becomes a business concern
 
-Its not shadow IT, its business oriented software.
+It’s not shadow IT, its business-oriented software.
 This is the mindset behind **microservices** and **Domain Driven Design**.
 Building software for the business *with* the busines invovled all along.
 
@@ -185,18 +177,18 @@ Have the think about business challenges and solutions, not technologies first.
 
 #### Businesses have to develop their own digital systems as *products*
 
-This is a really common theme in the Agile world and is also important for digital transformation.
+This is a common theme in the Agile world and is also important for digital transformation.
 The business team should think about their products to include their technology platform.
 They should see them as the same thing, evolving together continually.
 
-One of the main problem with IT projects is the baked in assumption that the software will be finished, the project will be over, and everyone will be happy.
+One of the main problems with IT projects is the baked in assumption that the software will be finished, the project will be over, and everyone will be happy.
 We know that isn't true though, the business keeps evolving, they update their requirements, and they want more 'innovation'.
 They need it to keep differentiating and competing in the market.
 
 Even when they use COTS, businesses should think of it as their product.
-Sometimes it wont need to differentiate too much.
+Sometimes it won’t need to differentiate too much.
 HR software is an example of where people dont seek constant innovation to differentiate as much.
-However they do need to think of the experiences they provide to employees: are they keeping them effective, or are they wasting their time with inefficient processes and software?
+However, they do need to think of the experiences they provide to employees: are they keeping them effective, or are they wasting their time with inefficient processes and software?
 
 #### Become an agile organization
 
@@ -227,9 +219,9 @@ We have lots of new (and some old) software patterns that support this structure
 - API first
 - Open by default software
 
-## What happen's to IT?
+## What happens to IT?
 
-This might sound like its a big change, and it is.
+This might sound like it’s a big change, and it is.
 It called transformation.
 These changes though are an evolution, they aren't all or nothing, but more like a continuum of improvement.
 Every change you make towards the good sets you up for success, and the benefits are often cumilative.
@@ -238,11 +230,11 @@ It also might sound like I am forgetting about some important factors that IT al
 
 - Common infrastructure like Phones, Messaging, Collaboration etc.
 - User Management & Provisioning - New accounts, disabling leavers accounts, new Laptops, Desktops, etc
-- Common tech facilities - Printers, Meeting rooms etc
+- Common tech facilities - Printers, Meeting rooms etc.
 - Infrastructure support and maintenance - the servers that these business systems run on for example.
 - Legacy, big package support
 
-I think a LOT of these responsiblities will go away eventually.
+I think a LOT of these responsibilities will go away eventually.
 
 #### Phones, Messaging, and Collaboration
 
@@ -253,7 +245,7 @@ There isn't really a lot of management here compared to how it used to be, and t
 #### User Management & Provisioning
 
 This again is getting more automated, and that trend should continue.
-As we start to put more technology people in the HR business unit we can start to get more automation around this.
+As we start to put more technology people in the HR business unit, we can start to get more automation around this.
 I expect more outsourcing type services that can manage laptop provisioning the same way mobile companies can issue company linked mobile phones.
 
 #### Common Tech Facilities
