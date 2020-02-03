@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Occasionally Connected Servers"
-date:   2019-11-30 13:43:00 -0500
+date:   2020-02-07 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
@@ -24,7 +24,7 @@ This whitepaper describes a set of technology patterns that collectively solve t
 There are quite a few different industries that have a similar class of problem, requiring a similar class of solution.
 The basic summary is that there are different locations where the business meets it's customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to it's central infrastructure.
 
-Some examples:
+### Some examples:
 
 #### Retail
 
@@ -141,8 +141,6 @@ We have a set of requirements that help us to define a good implementation of th
 5. We want local systems to be able to integrate with each other without going through a central location (so this works offline too)
 6. We want interactions to happen in real time, so new orders are printed immediately, and out of stocks update menu boards and kiosks in real time.
 
-
-
 ## Do we need a new solution&quest;
 
 These distributed systems are not an entirely new, there are systems across the world that already achieve this functionality today, and have done for years.
@@ -158,15 +156,14 @@ With these modern patterns and the software platforms that implement them it is 
 
 The patterns that are used to build Occasionally Connected Servers are:
 
-
-## Event Driven Systems
+### Event Driven Systems
 
 Event driven systems typically control their processes through the publication of and reaction to events. Whenever big data has changed in these systems events are published so that all other microservices in the ecosystem can see those changes.
 This is become very useful for keeping our microservices database synchronised, but there is no reason this style of application cannot be applied to geographically distributed systems.
 Even keeping different copies of the same microservices In Sync with data updates being published by the cloud version and consumed by all of the local deployed versions. 
 Event driven systems allow us a great deal of flexibility as long as we keep the contracts for the events standardised and use send a message in technology to distribute the data events .
 
-### Message Brokers
+#### Message Brokers
 
 These message brokers now come in a number of different flavours, from the more traditional message oriented middleware, to the more recent development of distributed log platforms.
 There are cloud platform as a service offerings, container based offerings, as well as software you can install bare metal.
@@ -178,14 +175,14 @@ If that isn't the case however you will need to implement synchronization logic 
 You'll need to receive messages from one broker and publish to the other while the Internet connection is available. 
 When the Internet connection is unavailable you'll need to periodically retry that synchronization until the connection is restored. 
 
-## Microservices
+### Microservices
 
 The microservices pattern that has been evolving over the last decade or so in the software industry has solved a lot of the patterns that are relevant to this problem. 
 
 Microservices are a pattern that drives us to create a set of independent business focused services/applications.
 They should be independent from each other, storing their own data, and managing their own lifecycle through automated testing and deployment, and they should be observable
 
-### Busines Domain Oriented
+#### Busines Domain Oriented
 
 A key principle of microservices, in fact the meaning behind 'micro' in the name, is that a microservice should be responsible for a single business domain, or bounded context. e.g. Customer or Product.
 
@@ -203,7 +200,7 @@ For example, in a monolithic system you make the assumption that state changes h
 
 When builing microservices, you do away with the local transaciton model. You can't commit a sale, with order, inventory, payment and loyalty updates in a single database transaction. You don't have primary records of all those things in the same database and you don't (shouldn't) have access to the databases they are stored in. Therefore, the default mental model in this transaction implementation is distributed and collaborative. While distributed is harder to reason about than a local transaction, distributed is easier than distributed+local.
 
-### Storing their own data
+#### Storing their own data
 
 As we just covered, Microservices store their own data for their own part of the business domain, their bounded context.
 However, they will almost always need data from other parts of the business domain and therefore will need to get it on demand, or store a cache of it. 
@@ -211,30 +208,55 @@ However, they will almost always need data from other parts of the business doma
 Getting data on demand means tying the reliability of the system together, like a distributed monolith, so it's all up or all down. For this reason it's arguably better to have microservices cache the data they need from other bounded contexts. This gives us the problem that we need to keep that data in sync with the rest of the system. 
 We have solved that problem well with Event Driven Systems. 
 
-### Local Microservices
+Event Driven systems use events to publish 
+
+#### Local Microservices
 So using Event Driven principles with message oriented middleware, its possible that we can create microservices and deploy them in our remote locations.
 
 ![High Level View of Microservices style. Services deployed centrally and remote, connected through Message Brokers and the internet](/images/occasionally-connected-servers/microservices-high-level-view.png)
 
-Experiences deployed in the remote locations will always use their services through synchronous APIs or messaging on their local message broker. 
+Experiences deployed in the remote locations will always use their local services through synchronous APIs or messaging on their local message broker. 
 This simplifies their development as they can now assume that they are always online due to a reliable local area network.
 
-## 
+The local services will synchronize the data and transactions with the centralized cloud version of the services.
+They will do this through the publication of events which can flow up to the central services across the connected message broker platform.
+The central services can receive and process these events and keep the central databases up to date. 
 
-## Independent Deployments
+
+### Independent Deployments
 
 One of the other principles of microservices is 'Independence'.
 Microservices should be able to be deployed and scaled independently from each other.
+This is facilitated by having clear boundaries and interfaces between the services to reduce coupling. 
+When we build our Event Driven services in Business Oriented groups we can get this independence by treating out Events as our contracts. 
+Our Message Broker becomes our service discovery platform, removing the temporal coupling of synchronous calls and the configuration coupling of having to know the address of other services. 
+
+With that lower coupling we should be able to deploy services independently, allowing our product teams to work at their own pace and delivery functionality as soon as it's ready.
+
+This will provide a big benefit for our distributed deployments. We will be able to deploy smaller components, which means the bit transfer over the network will be shorter, the install should be faster, and we should be able to do this with little to no downtime. 
 
 
-### Containers and Orchestration
+#### Containers and Orchestration
 
-It's increasingly common to solve this deployment problem with Containers. 
+Getting our small components copied to each of our remote locations, installed, and up and running is a challenge on it's own. 
+Luckily it's actually similar to the challenge we have getting our code from developer machines up to the cloud and running. 
+It's increasingly common to solve this deployment problem with Containers and Container Orchestration. 
+
+Running a Container Orchestrator in our remote locations can give us many benefits.
+If our development teams can publish their microservies as images to a registry, we can get our orchestrator to:
+1. Automatically download new copies of images
+2. Start our new images
+3. Health check our new images
+4. Turn off the old images
+5. Keep a minimum number of instances running across our remote machines
+6. Report the health status of our remote clusters to our central locations
+
+All of those tasks would be quite a bit of work for us to implement manually. 
+We should be able to run all of our remote infrastructure in containers too, from our databases to our message brokers. 
 
 
-#### Containers at the Edge
+### DevOps at Geographical Scale
 
 
-## DevOps at Geographical Scale
 
 ### Monitoring and Observability
