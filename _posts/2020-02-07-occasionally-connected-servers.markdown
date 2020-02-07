@@ -15,21 +15,21 @@ tags: [architecture, software engineering, retail, consumer, intelligent edge, o
 # Occasionally Connected Servers - A Whitepaper
 
 The Occasionally Connected Servers pattern is a solution for a modern set of problems that arises from the increasing
-desire of business to provide high quality, data and content rich, connected experiences for their customers and employees across a distributed set locations.
+desire of business to provide high quality, data and content rich, connected experiences for their customers and employees across a distributed set of locations.
 
 This whitepaper describes a set of technology patterns that collectively solve this problem through the creation of server applications that are designed for the intermittent and high latency connectivity experienced in geographic distribution scenarios. 
 
 ## What's the problem we have&quest;
 
 There are quite a few different industries that have a similar class of problem, requiring a similar class of solution.
-The basic summary is that there are different locations where the business meets it's customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to it's central infrastructure.
+The basic summary is that there are different locations where the business meets its customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to its central infrastructure.
 
 ### Some examples:
 
 #### Retail
 
 Lots of retail companies are creating their own applications for staff and customer use.
-Staff are increasingly using phone based POS systems for POS and inventory searches. 
+Staff are increasingly using phone-based POS systems for POS and inventory searches. 
 
 Customer facing apps used to be a mobile app version of their website, but increasingly we are seeing demand for richer experiences:
 
@@ -46,15 +46,14 @@ There are many 'art of the possible' visions for retail that show digital signag
 #### Food Service
 
 An increasing number of food service locations have some form of Kiosk in their restaurants.
-McDonalds and Burger King have these for ordering, while Chilli's has them for table top drink ordering and payment.
+McDonalds and Burger King have these for ordering, while Chilli's has them for tabletop drink ordering and payment.
 
 Increasingly we're seeing digital menu boards, kiosks, and mobile apps that can remove items from the menu automatically based on Out of Stock conditions.
 E.g. When a café runs out of bacon, it can remove it from the ingredients list on a salad, and entirely remove the Bacon Cheeseburger from the menu.
 
 In some environments like airport restaurants there are increasingly tablet based ordering systems that allow you to order and pay without speaking to a person. 
 
-Paying the check through a mobile app is a great solution when a server is busy and people hear their flight called. 
-
+Paying the check through a mobile app is a great solution when a server is busy, and people hear their flight called. 
 
 #### Franchised Agency Industries
 
@@ -72,12 +71,11 @@ For each of these types of business there is a local business process that happe
 
 ![High Level View of current state. Servers central and experiences in remote locations connected through the internet](/images/occasionally-connected-servers/high-level-view.png)
 
-
-#### Whats wrong with this Distributed Client/Server pattern&quest;
+#### What's wrong with this Distributed Client/Server pattern&quest;
 
 ##### Bandwidth and latency.
 
-This means that requests between the clients and the servers are slow and take a long time. Customers however i'm not patient and don't normally want to wait or tolerate slow experiences.
+This means that requests between the clients and the servers are slow and take a long time. Customers however I'm not patient and don't normally want to wait or tolerate slow experiences.
 This issue is compounded when there are quests involved the transfer of content like images or videos such as when shopping and their results include product images. 
 
 Latency and reliability issues could also be a major obstacle to businesses effectively implementing IoT strategies or automated system integration 
@@ -85,9 +83,9 @@ Latency and reliability issues could also be a major obstacle to businesses effe
 ##### Connection reliability 
 As well as being low bandwidth high latency these connections are often not reliable and can be lost entirely for periods of time. 
 Many of the locations in retail, travel, and food service have been around much longer than high speed networking and they don’t have the quality of Infrastructure in the location.
-This can be a major problem for customers he want to use experiences, redeem rewards, pay their check, etc. and can't.
+This can be a major problem for customers who want to use experiences, redeem rewards, pay their check, etc. and can't.
 
-Oftentimes one of the benefits of these experiences to the business is that they enable them to reduce or reallocate stuffing, when the infrastructure is down they can't do this and the unreliability prevents them from realizing their cost savings.  
+Oftentimes one of the benefits of these experiences to the business is that they enable them to reduce or reallocate stuffing, when the infrastructure is down, they can't do this, and the unreliability prevents them from realizing their cost savings.  
 
 #### Solving these problems
 
@@ -97,12 +95,12 @@ They cache the orders they have taken and send them in when they get a connectio
 Storing the menu or product catalog locally.
 Restaurant ones will also keep the kitchen displays and receipt printers working fine too.
 
-However there are limitations to what is accomplished this way. 
+However, there are limitations to what is accomplished this way. 
 Restaurant POS systems typically can't receive orders from kiosks or mobile apps while offline. 
 They sometimes don't even interoperate between the POS terminals, e.g. Orders entered on one might not be visible on others because they each keep their own local cache. 
 This is commonly seen with marking items as Out of Stock or unavailable. It doesn't synchronize this between registers when offline.
 
-So the geo-distributed client/server pattern is not suitable for these experiences.
+So, the geo-distributed client/server pattern is not suitable for these experiences.
 
 #### Separate Local Systems
 
@@ -127,7 +125,6 @@ One other thing that's different is that different systems in the same location 
 - Digital signage needs to be able to remove out of stock items from the menu board.
 - Customers still want to be able to scan offers from their mobile devices for rewards and discounts when the internet is out.
 
-
 ### Requirements list:
 We have a set of requirements that help us to define a good implementation of this kind of system:
 
@@ -143,7 +140,7 @@ We have a set of requirements that help us to define a good implementation of th
 
 ## Do we need a new solution&quest;
 
-These distributed systems are not an entirely new, there are systems across the world that already achieve this functionality today, and have done for years.
+These distributed systems are not an entirely new, there are systems across the world that already achieve this functionality today and have done for years.
 
 I do think however, that given the larger datasets, and the more integrations that need to happen locally, we should look at modern ways to achieve this. 
 
@@ -160,26 +157,26 @@ The patterns that are used to build Occasionally Connected Servers are:
 
 Event driven systems typically control their processes through the publication of and reaction to events. Whenever big data has changed in these systems events are published so that all other microservices in the ecosystem can see those changes.
 This is become very useful for keeping our microservices database synchronized, but there is no reason this style of application cannot be applied to geographically distributed systems.
-Even keeping different copies of the same microservices In Sync with data updates being published by the cloud version and consumed by all of the local deployed versions. 
-Event driven systems allow us a great deal of flexibility as long as we keep the contracts for the events standardized and use send a message in technology to distribute the data events .
+Even keeping different copies of the same microservices In Sync with data updates being published by the cloud version and consumed by all the local deployed versions. 
+Event driven systems allow us a great deal of flexibility if we keep the contracts for the events standardized and use send a message in technology to distribute the data events.
 
 #### Message Brokers
 
-These message brokers now come in a number of different flavors, from the more traditional message oriented middleware, to the more recent development of distributed log platforms.
-There are cloud platform as a service offerings, container based offerings, as well as software you can install bare metal.
+These message brokers now come in several different flavors, from the more traditional message-oriented middleware, to the more recent development of distributed log platforms.
+There are cloud Platform-as-a-Service offerings, container-based offerings, as well as software you can install bare metal.
 They also ranged between free open source software and proprietary with the more common modern approach being free software and paid support.
 
 It is likely the successful occasionally connected server implementation would require a central message broker hosted in the cloud as well as our locally installed message broker in each of their remote locations.
 Some message brokers will even perform storm forward operations between these different instances for you. 
 If that isn't the case however you will need to implement synchronization logic between the brokers. 
 You'll need to receive messages from one broker and publish to the other while the Internet connection is available. 
-When the Internet connection is unavailable you'll need to periodically retry that synchronization until the connection is restored. 
+When the Internet connection is unavailable, you'll need to periodically retry that synchronization until the connection is restored. 
 
 ### Microservices
 
 The microservices pattern that has been evolving over the last decade or so in the software industry has solved a lot of the patterns that are relevant to this problem. 
 
-Microservices are a pattern that drives us to create a set of independent business focused services/applications.
+Microservices are a pattern that drives us to create a set of independent, business focused, services/applications.
 They should be independent from each other, storing their own data, and managing their own lifecycle through automated testing and deployment, and they should be observable
 
 #### Business Domain Oriented
@@ -194,7 +191,7 @@ While is the benefit that it's just one application to manage, its a larger upda
 
 Creating our domain oriented microservices in some ways makes is simpler to do the distribution. 
 While there is the obvious challenge of the distribution, the fact that these services that need to communicate are in separate processes, it becomes core to the design. 
-It stops being an edge case that the teams solves for after the primary implementation, and becomes the primary method for state change propagation.
+It stops being an edge case that the teams solve for after the primary implementation and becomes the primary method for state change propagation.
 
 For example, in a monolithic system you make the assumption that state changes happen in the processing, and the database your code has access to has the most up to date information in it, controlled in a regular database transaction. While implementing this logic it is unusual for developers to pause and think about the fact that this monolith might be one of many, and they will have competing updates, and need ways to propagate it. It's not impossible to design monoliths like this, but it means having a duality of the local vs. remote models. 
 
@@ -203,9 +200,9 @@ When building microservices, you do away with the local transaction model. You c
 #### Storing their own data
 
 As we just covered, Microservices store their own data for their own part of the business domain, their bounded context.
-However, they will almost always need data from other parts of the business domain and therefore will need to get it on demand, or store a cache of it. 
+However, they will almost always need data from other parts of the business domain and therefore will need to get it on demand or store a cache of it. 
 
-Getting data on demand means tying the reliability of the system together, like a distributed monolith, so it's all up or all down. For this reason it's arguably better to have microservices cache the data they need from other bounded contexts. This gives us the problem that we need to keep that data in sync with the rest of the system. 
+Getting data on demand means tying the reliability of the system together, like a distributed monolith, so it's all up or all down. For this reason, it's arguably better to have microservices cache the data they need from other bounded contexts. This gives us the problem that we need to keep that data in sync with the rest of the system. 
 We have solved that problem well with Event Driven Systems. 
 
 Event Driven systems use events to publish changes in state from each bounded context.
@@ -216,9 +213,8 @@ It works quite well for Products in an ecommerce website, where the product cata
 It can be more of challenge for very large datasets, especially when they change frequently but are looked up infrequently.
 It that case you'll need to make a tradeoff decision between effort to maintain a cache and temporal coupling with the system of record for it. 
 
-
 #### Local Microservices
-So using Event Driven principles with message oriented middleware, its possible that we can create microservices and deploy them in our remote locations.
+So, using Event Driven principles with message-oriented middleware, its possible that we can create microservices and deploy them in our remote locations.
 
 ![High Level View of Microservices style. Services deployed centrally and remote, connected through Message Brokers and the internet](/images/occasionally-connected-servers/microservices-high-level-view.png)
 
@@ -229,27 +225,25 @@ The local services will synchronize the data and transactions with the centraliz
 They will do this through the publication of events which can flow up to the central services across the connected message broker platform.
 The central services can receive and process these events and keep the central databases up to date. 
 
-Likewise, remote services will be able to receive updates from central systems, new records, changes to records, etc. This gives us the ability to do 2 way data synchronization, with auto stop/restart capability with minimal duplication, in close to real time. 
+Likewise, remote services will be able to receive updates from central systems, new records, changes to records, etc. This gives us the ability to do 2-way data synchronization, with auto stop/restart capability with minimal duplication, in close to real time. 
 The bonus good news here is that all the complexity of managing that can be outsourced to a Message Broker vendor.
-
 
 ### Independent Deployments
 
 One of the other principles of microservices is 'Independence'.
 Microservices should be able to be deployed and scaled independently from each other.
 This is facilitated by having clear boundaries and interfaces between the services to reduce coupling. 
-When we build our Event Driven services in Business Oriented groups we can get this independence by treating out Events as our contracts. 
+When we build our Event Driven services in Business Oriented groups, we can get this independence by treating out Events as our contracts. 
 Our Message Broker becomes our service discovery platform, removing the temporal coupling of synchronous calls and the configuration coupling of having to know the address of other services. 
 
 With that lower coupling we should be able to deploy services independently, allowing our product teams to work at their own pace and delivery functionality as soon as it's ready.
 
 This will provide a big benefit for our distributed deployments. We will be able to deploy smaller components, which means the bit transfer over the network will be shorter, the install should be faster, and we should be able to do this with little to no downtime. 
 
-
 #### Containers and Orchestration
 
-Getting our small components copied to each of our remote locations, installed, and up and running is a challenge on it's own. 
-Luckily it's actually similar to the challenge we have getting our code from developer machines up to the cloud and running. 
+Getting our small components copied to each of our remote locations, installed, and up and running is a challenge on its own. 
+Luckily, it's similar to the challenge we have getting our code from developer machines up to the cloud and running. 
 It's increasingly common to solve this deployment problem with Containers and Container Orchestration. 
 
 Running a Container Orchestrator in our remote locations can give us many benefits.
@@ -261,24 +255,23 @@ If our development teams can publish their microservices as images to a registry
 5. Keep a minimum number of instances running across our remote machines
 6. Report the health status of our remote clusters to our central locations
 
-All of those tasks would be quite a bit of work for us to implement manually. 
-We should be able to run all of our remote infrastructure in containers too, from our databases to our message brokers. 
-
+All those tasks would be quite a bit of work for us to implement manually. 
+We should be able to run all our remote infrastructure in containers too, from our databases to our message brokers. 
 
 
 ### Monitoring and Observability
 
-Keeping very distributed systems like this running reliably and knowing when they are not is a challenge too. How do I track the uptime of my services, the completeness of my data synchronization.
+Keeping very distributed systems like this running reliably and knowing when they are not is a challenge too. How do I track the uptime of my services, the completeness of my data synchronization?
 There are lots of options for monitoring, tools which can watch machine stats, check for running processes etc. 
 If you use Containers and Orchestrators, they will do a lot of that monitoring for you too, reporting health of the clusters back for you. 
 
-However I think it's important to also aim for Observability in our system. To make it so it's easy to see from the outside what's happening in the inside.
+However, I think it's important to also aim for Observability in our system. To make it so it's easy to see from the outside what's happening in the inside.
 Our eventing idea can be used for this also. 
 We can monitor our subscription's queue length to see if things are being picked up, but we can also publish event's specifically detailing health. 
 We can publish performance counters, database call lengths, anything we think will be helpful in predicting, discovering, or diagnosing a problem. 
 
 Centralized systems in the cloud have many tools for managing this already, they have Azure App Insights for example, a service that you can publish all this data too. 
-There are also common microservices tools like Prometheus that help to ship log files back to a central locations. 
+There are also common microservices tools like Prometheus that help to ship log files back to a central location. 
 
 These are valuable tools and will help you, but these remote systems won't always have access to them. If the internet is down, reporting to Azure App Insights is going to hard. Prometheus will likely still be using, but it will have difficulty bringing things together when disconnected. 
 
@@ -286,12 +279,13 @@ Our eventing system won't achieve the impossible here, but it will piggyback on 
 
 We could then record them anyway we like once they reach our cloud environment, even in App Insights at that point. 
 
-
 ## Summary
 
-Occasionally Connected Servers isn't a completely new problem, or a completely new solution. It is a growing trend of having geographically distributed services wanted to provide functionality close to the user, but needing as good data as we can possibly get. 
+Occasionally Connected Servers isn't a completely new problem, or a completely new solution. It is a growing trend of having geographically distributed services wanted to provide functionality close to the user but needing as good data as we can possibly get. 
 
 Event Driven Microservices running in Container clusters at the edge isn't wholly unique either.
 Its a combination of technical approaches for solving this specific problem. 
 
 These won't be the ideal solve for every problem in world, and there will continue to be advances on the tools and platforms that are available to support his. I am very exited about this growing trend as both a technologist, and as a user who wants good experiences wherever I go. 
+
+
