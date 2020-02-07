@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Messaging Brokers as a Single Point of Failure"
-date:   2019-12-23 13:43:00 -0500
+date:   2020-01-17 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
