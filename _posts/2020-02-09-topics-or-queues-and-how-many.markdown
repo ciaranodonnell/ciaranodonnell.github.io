@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Queues or Topics, and how many?"
-date:   2019-12-23 13:43:00 -0500
+date:   2020-02-09 23:01:00 -0500
 categories: posts
 comments: true
 toc: true
