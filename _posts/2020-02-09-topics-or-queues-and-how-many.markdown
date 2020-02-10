@@ -46,7 +46,7 @@ The message broker will not send the same message to both consumers.
 This is useful for when the consumers are doing the same thing with the message.
 It's how message brokers easily enable scaling our message consumers.
 
-There is **no way** to have a Queue send the same message to multiple consumers. 
+There is **no way** to have a Queue send the same message to multiple consumers.
 
 ## What's a Topic?
 
@@ -58,3 +58,25 @@ When a Consumer wants to receive messages that have been published to a **Topic*
 
 A Subscription is like a Consumers inbound queue.
 When a message is published to a Topic, it is copied to each of the subscriptions that have been setup against that topic.
+
+### Competing Consumers
+
+Because Subscriptions are effectively Queues in most brokers, you can have competing consumers on them.
+Different consumers can connect to a subscription to receive messages and the semantics will work the same way they do for a Queue. 
+The message broker will distribute messages to each consumer and not give the same message to more than one consumer.
+
+Unlike Queues, if you want to have more than one consumer receive **all** the messages that are sent to a topics, they can each have their own subscription.
+Each of their subscriptions can have competing consumers too.
+
+This makes Topics and Subscriptions able to do everything a Queue can do, but they can also transparently expand to fan out the messages to other consumers.
+
+## So what do you use?
+
+Well hopefully at this point you're starting to see this answer, but in short - **use Topics and Subscriptions**.
+
+Getting 'always do this' advice from someones blog is generally a bad idea, but in this case you should go with.
+Now it's not impossible that there is a good reason in some cases to use Queues over Topics, but in my many years of building brokered systems I havent encountered it. Topics and Subscriptions can do exactly what Queues do - they can take messages from one Producer and queue them up for receipt to a single consumer. They can then expand to do more too, without the original message flow being disrupted. 
+
+If you have a real requirement to only ever deliver messages to one single place, and thats not the absent of a second consumer, but a specific directive that there must only ever be one, then maybe use a Queue. Unless you can enforce that with permissions on the broker, in which case use Topics and remove permissions to make new subscriptions in case the requirements change.
+
+## So how many topics?
