@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Occasionally Connected Servers"
+title:  "Occasionally Connected Servers - A Whitepaper"
 date:   2020-02-07 13:43:00 -0500
 categories: posts
 comments: true
@@ -17,29 +17,29 @@ tags: [architecture, software engineering, retail, consumer, intelligent edge, o
 The Occasionally Connected Servers pattern is a solution for a modern set of problems that arises from the increasing
 desire of business to provide high quality, data and content rich, connected experiences for their customers and employees across a distributed set of locations.
 
-This whitepaper describes a set of technology patterns that collectively solve this problem through the creation of server applications that are designed for the intermittent and high latency connectivity experienced in geographic distribution scenarios. 
+This whitepaper describes a set of technology patterns that collectively solve this problem through the creation of server applications that are designed for the intermittent and high latency connectivity experienced in geographic distribution scenarios.
 
 ## What's the problem we have&quest;
 
 There are quite a few different industries that have a similar class of problem, requiring a similar class of solution.
-The basic summary is that there are different locations where the business meets its customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to its central infrastructure.
+A high-level summary is that there are different locations where the business meets its customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to its central infrastructure.
 
 ### Some examples:
 
 #### Retail
 
-Lots of retail companies are creating their own applications for staff and customer use.
-Staff are increasingly using phone-based POS systems for POS and inventory searches. 
+Lots of retail companies are creating their own applications for both staff and customer use.
+Staff are increasingly using phone and tablet based POS systems for checkout and inventory searches.
 
 Customer facing apps used to be a mobile app version of their website, but increasingly we are seeing demand for richer experiences:
 
 Mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. Kohls in the United States does this.
 
-Target lets you scan items as you put them in your cart and tells you if there are coupons for them. 
+[Target](www.target.com) lets you scan items as you put them in your cart and tells you if there are coupons for them.
 Then when you check out you scan the app to apply all the coupons. 
-Some retailers (e.g. Sam's Club) mobile apps let you scan things as you put them in your cart to checkout without lining up.
+Some retailers (e.g. [Sam's Club](https://www.samsclub.com/content/scan-and-go)) mobile apps let you scan things as you put them in your cart to checkout without lining up.
 
-The regular mobile apps have loyalty programs, discounts and rewards redemptions, and search features that give instore routing to the correct shelf when looking for a product. 
+The regular mobile apps have loyalty programs, discounts and rewards redemptions, and search features that give instore routing to the correct shelf when looking for a product.
 
 There are many 'art of the possible' visions for retail that show digital signage personalizing to customers, digital changing rooms, drop boxes for online orders, even A.I. and computer vision based intelligent stores that automatically track shoppers, shelf inventory, and providing real time incentives and pricing.
 
