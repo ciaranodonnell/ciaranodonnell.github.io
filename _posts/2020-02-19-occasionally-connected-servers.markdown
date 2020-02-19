@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Occasionally Connected Servers - A Whitepaper"
-date:   2020-02-07 13:43:00 -0500
+date:   2020-02-19 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
