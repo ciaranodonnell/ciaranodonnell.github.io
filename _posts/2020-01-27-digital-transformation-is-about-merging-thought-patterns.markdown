@@ -82,13 +82,13 @@ The combination of all these challenges creates an *inertia* - they find it hard
 There are several common ideas that I have seen people jump to.
 I've boiled them down to this list when I've ordered from bad to better:
 
-#### Get a new website / CRM / ERP
+### Get a new website / CRM / ERP
 
 This doesn’t really transform anything.
 It's a new digital asset but it normally supports the same business processes.
 It normally takes some time to get these things live, and while they're being built the requirements can evolve like they did to the last iteration.
 
-#### Go Agile
+### Go Agile
 
 Doing software development in an agile way will have benefits.
 If they do it well and really adopt the mindset, it can have a lot of benefits.
@@ -96,7 +96,7 @@ However, most of the times I have seen IT departments go agile, it's really wate
 
 So really, changing the way a team in IT organizes its todo list can provide localized benefit, but still isnt transformative
 
-#### Establish an Innovation group
+### Establish an Innovation group
 
 Innovation Teams are not a really new idea now, they have been common for a decade maybe.
 They are often some new group of people, with a charismatic leader and some strong technologists, that get tasks with 'innovation'.
@@ -106,7 +106,7 @@ The best outcomes I've seen from these are new point solutions, kiosks or mobile
 
 Innovation teams sound good to the board/the street but how do you bring the innovation back to the business.
 
-#### Get a Digital Group
+### Get a Digital Group
 
 The 'Digital group', increasingly led by new Chief Digital Officers is a more recent version of the Innovation group.
 Digital groups are often tasked with 'Digital Transformation'.
@@ -114,7 +114,7 @@ Too Often they end up working between the business and the IT group, finding nic
 Creating similar point solutions or one-offs that Innovation groups did.
 Perhaps with a larger permanent staff of User Experience and Engineering they can do better at the support and maintenance of their solutions.
 
-#### Create an internal startup to disrupt yourself
+### Create an internal startup to disrupt yourself
 
 This is by far the coolest sounding idea, and a much bigger bet than any of the others and it works well where i've seen it done properly.
 You basically get people to make a startup version of your own company.
@@ -161,13 +161,13 @@ These are all common and successful movements because they more towards this mor
 
 This is the hard part, changing the mindset involves many things:
 
-#### Software Engineering becomes a business concern
+### Software Engineering becomes a business concern
 
 It’s not shadow IT, its business-oriented software.
 This is the mindset behind **microservices** and **Domain Driven Design**.
 Building software for the business *with* the busines invovled all along.
 
-#### Software engineers need to think about the business
+### Software engineers need to think about the business
 
 One of my great complaints about traditional IT is the propensity to concentrate on the tools you have/know, and look for ways to reuse them, along the lines of 'to a hammer everythings a nail'.
 
@@ -175,7 +175,7 @@ Specializing technology people into the SAP folks, the CRM folks, the custom dev
 Putting technologists inside the business organizations can help re-orient their goals.
 Have the think about business challenges and solutions, not technologies first.
 
-#### Businesses have to develop their own digital systems as *products*
+### Businesses have to develop their own digital systems as *products*
 
 This is a common theme in the Agile world and is also important for digital transformation.
 The business team should think about their products to include their technology platform.
@@ -190,7 +190,7 @@ Sometimes it won’t need to differentiate too much.
 HR software is an example of where people dont seek constant innovation to differentiate as much.
 However, they do need to think of the experiences they provide to employees: are they keeping them effective, or are they wasting their time with inefficient processes and software?
 
-#### Become an agile organization
+### Become an agile organization
 
 Get software engineering to be truly DevOps and Agile enabled.
 This means changing the mindset set around requirements definition.
@@ -209,7 +209,7 @@ They should be working hand in hand all the time.
 One of my favourite teams to talk to about this is Microsofts Azure DevOps team.
 They completely moved away from traditional software engineering metrics and only look at metrics based on their customer usage goals.
 
-#### Create Modern Software
+### Create Modern Software
 
 We have lots of new (and some old) software patterns that support this structure.
 
@@ -236,30 +236,30 @@ It also might sound like I am forgetting about some important factors that IT al
 
 I think a LOT of these responsibilities will go away eventually.
 
-#### Phones, Messaging, and Collaboration
+### Phones, Messaging, and Collaboration
 
 These are being replaced by cloud offerings.
 Microsoft M365 offers Windows, Teams, Office 365 etc on this evergreen cloud hosted basis.
 There isn't really a lot of management here compared to how it used to be, and the amount is decreasing over time.
 
-#### User Management & Provisioning
+### User Management & Provisioning
 
 This again is getting more automated, and that trend should continue.
 As we start to put more technology people in the HR business unit, we can start to get more automation around this.
 I expect more outsourcing type services that can manage laptop provisioning the same way mobile companies can issue company linked mobile phones.
 
-#### Common Tech Facilities
+### Common Tech Facilities
 
 This can start to be treated like facilities.
 As workforces digitize and distribute the need for these services decreases, they are also simpler to setup and manage and could probably shift into a more traditional facilities group.
 
-#### Infrastructure and Legacy Support
+### Infrastructure and Legacy Support
 
 The move to cloud based modern systems over the next decade will greatly reduce, probably eliminate this need for most businesses.
 Instructure, security, networking - all these things are becoming automated through code in the cloud.
 These can all be managed by the businesses that want the software that needs them.
 
-### So is IT dead?
+## So is IT dead?
 
 I predict that in 30 years time, good businesses wont even have IT departments anymore.
 'Big lump of IT' thinking will be gone.
