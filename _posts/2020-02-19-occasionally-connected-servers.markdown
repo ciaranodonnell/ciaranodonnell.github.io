@@ -19,7 +19,7 @@ desire of business to provide high quality, data and content rich, connected exp
 
 This whitepaper describes a set of technology patterns that collectively solve this problem through the creation of server applications that are designed for the intermittent and high latency connectivity experienced in geographic distribution scenarios.
 
-## What's the problem we have&quest;
+## What's the problem we have?
 
 There are quite a few different industries that have a similar class of problem, requiring a similar class of solution.
 A high-level summary is that there are different locations where the business meets its customers and it wants to create richer, more data driven experiences while catering to the high latency and lower reliability of its connections to its central infrastructure.
@@ -36,7 +36,7 @@ Customer facing apps used to be a mobile app version of their website, but incre
 Mobile apps are replacing the simple price checker machines that used to be screwed to various columns in a larger store. Kohls in the United States does this.
 
 [Target](www.target.com) lets you scan items as you put them in your cart and tells you if there are coupons for them.
-Then when you check out you scan the app to apply all the coupons. 
+Then when you check out you scan the app to apply all the coupons.
 
 Some retailers (e.g. [Sam's Club](https://www.samsclub.com/content/scan-and-go)) mobile apps let you scan things as you put them in your cart to checkout without lining up.
 
@@ -73,7 +73,7 @@ For each of these types of business there is a local business process that happe
 
 ![High Level View of current state. Servers central and experiences in remote locations connected through the internet](/images/occasionally-connected-servers/high-level-view.png)
 
-#### What's wrong with this Distributed Client/Server pattern&quest;
+#### What's wrong with this Distributed Client/Server pattern?
 
 ##### Bandwidth and latency
 
@@ -117,7 +117,7 @@ This pattern often provides local employees and customers with low latency acces
 
 It can also be challenging to manage the batch uploads and downloads, manage software versions, and check the health of the overall system.
 
-## What defines a good solution&quest;
+## What defines a good solution?
 
 While the POS of sale screens may be able to keep running while the internet is offline, lots of other systems are beginning to have the same requirements.
 
@@ -145,7 +145,7 @@ We have a set of requirements that help us to define a good implementation of th
 5. We want local systems to be able to integrate with each other without going through a central location (so this works offline too)
 6. We want interactions to happen in real time, so new orders are printed immediately, and out of stocks update menu boards and kiosks in real time.
 
-## Do we need a new solution&quest;
+## Do we need a new solution?
 
 These distributed systems are not an entirely new, there are systems across the world that already achieve this functionality today and have done for years.
 
