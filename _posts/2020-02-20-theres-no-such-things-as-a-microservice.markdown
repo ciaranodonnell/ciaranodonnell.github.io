@@ -8,7 +8,7 @@ toc: true
 author_profile: true
 excerpt: Microservices are often thought as the modern way to build cloud native applications, so are containers. The question addressed here is whether microservices means containers, or containers means microservices. 
 #header:
-#  teaser: /images/KinesisWithDotNet_DiagramOfKinesis.png
+teaser: /images/Gartner_Hype_Cycle.svg
 permalink: 
 tags: [microservices, containers, architecture, software engineering]
 ---
