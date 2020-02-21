@@ -113,3 +113,11 @@ Microservices is a way of designing a service, that you then build and deploy.
 A microservice isn't a container in a containerized application, whatever the orchestrator that runs it, or the cloud it runs in. Containers are a hosting model, like a lightweight VM. I could take any monolithic application, that hasnt been decomplosed to bounded contexts, that has low cohesion and lots of coupling, is developed by any number of teams, and run that in a container. Being the container won't make it a microservice.
 
 Now I'll be honest, I do often call services, that I have developed in a microservices way, a microservice. I do this as shorthand to show the architectural mindset I used to design it, and often the operational model I envision to continue it's development long term.
+
+## Get more information
+
+As I was finishing this article I was talking with colleagues about the idea and I said I planned to publish this and perhaps make a talk titled the same. She put the title into google and discovered that I am not the first person to argue this point, or use this title for it. 
+
+Chris Richardson of [microservices.io](https://microservices.io) excellence actually has a really detiled and fantastic talk on this topic which I recommend EVERYONE to go and watch:
+
+[There's no such thing as a microservice - Chris Richardson](https://www.youtube.com/watch?v=sL320gRD2dU)
