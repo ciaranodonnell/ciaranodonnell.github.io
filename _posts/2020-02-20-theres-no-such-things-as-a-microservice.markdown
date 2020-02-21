@@ -27,11 +27,11 @@ To begin with there is a *Technology Trigger* - the new thing that happens. This
 
 This new technology starts to generate interest and as that builds, there is a lot of hype around it. People start describing it as the panacea, the next big this, a game changer. This is the *peak of inflated expectations*.
 
-Once people try and adopt the new technology, they start to become dissapointed that it isnt magic. It doesn't change the world the way the hype promised. This is the *trough of disillusionment*.
+Once people try and adopt the new technology, they start to become disappointed that it isn't magic. It doesn't change the world the way the hype promised. This is the *trough of disillusionment*.
 
 Then as the technology stabilizes and matures people start to figure out what it's truly good for.
 This is the *Slope of Enlightenment*.
-Some technologies dont reach this phase and they fall out of favor.
+Some technologies don't reach this phase and they fall out of favor.
 This is a problem for the people that implemented them and now have these systems built on them.
 
 Over time technology settles into long term use, the *Plateau of Productivity*. This is the long term state of successful use of software.
@@ -53,13 +53,13 @@ These products now do more than just the pattern, they provide features around A
 
 I generally like the fact these products make life easier for us.
 Writing an API Management layer is hard, so products are good.
-The challenge we as an industry have with this hype cycle pattern is when people start to conflat the product with the patterns.
+The challenge we as an industry have with this hype cycle pattern is when people start to conflate the product with the patterns.
 It's quite hard to talk to people about API Gateways without people defaulting to thinking about their favorite product.
-Similarly it was hard to get people to talk about their SOA strategy without them thinking abou their ESB or BPM tool that did it for them.
+Similarly it was hard to get people to talk about their SOA strategy without them thinking about their ESB or BPM tool that did it for them.
 
-The microservices trend in the industry has suffered from a recurring problem: Architecture Princples get conflated with implementing technology.
+The microservices trend in the industry has suffered from a recurring problem: Architecture Principles get conflated with implementing technology.
 It has happened before with Service Oriented Architecture. We had technology venders pushing a specific platform as the way to do SOA. Enterprise Service Buses and Business Process Management/Orchestration tools became the default assumption for what that technology meant.
-The end of the this processes is that people start to think that implementing the technology is the same as implementing the pattern. There are a lot of enterprises that have ESBs and BPM tools and believe they are using SOA, even though they don't have a coherrent understanding on the SOA pattern.
+The end of the this processes is that people start to think that implementing the technology is the same as implementing the pattern. There are a lot of enterprises that have ESBs and BPM tools and believe they are using SOA, even though they don't have a coherent understanding on the SOA pattern.
 
 Similarly with microservices people are starting to associate Containers, Docker, and Kubernetes with microservices. We are already arriving at the stage where people assume that microservices are deployed in containers, and very soon we'll see a common pattern of people thinking that if they have containers, they are doing microservices already.
 
@@ -103,14 +103,14 @@ It's about the thought process you use to design the overall software you're bui
 In my personal view the most important aspect of a microservice is that it's oriented around a single business capability, often a departments role in the larger system.
 We can break down larger business models into smaller sections using Domain Driven Design.
 We 'decompose' the business domain into these sub-domains/bounded contexts and we can use that as our guidelines for the services we need to build.
-We cant then follow our other princples of loose coupling, and independent deployability to deliver scalable, resilient services.
+We cant then follow our other principles of loose coupling, and independent deployability to deliver scalable, resilient services.
 
 ### What microservices aren't
 
 So microservices isn't a thing you build or deploy.
 Microservices is a way of designing a service, that you then build and deploy.
 
-A microservice isn't a container in a containerized application, whatever the orchestrator that runs it, or the cloud it runs in. Containers are a hosting model, like a lightweight VM. I could take any monolithic application, that hasnt been decomplosed to bounded contexts, that has low cohesion and lots of coupling, is developed by any number of teams, and run that in a container. Being the container won't make it a microservice.
+A microservice isn't a container in a containerized application, whatever the orchestrator that runs it, or the cloud it runs in. Containers are a hosting model, like a lightweight VM. I could take any monolithic application, that hasn't been decomposed to bounded contexts, that has low cohesion and lots of coupling, is developed by any number of teams, and run that in a container. Being the container won't make it a microservice.
 
 Now I'll be honest, I do often call services, that I have developed in a microservices way, a microservice. I do this as shorthand to show the architectural mindset I used to design it, and often the operational model I envision to continue it's development long term.
 
@@ -118,6 +118,6 @@ Now I'll be honest, I do often call services, that I have developed in a microse
 
 As I was finishing this article I was talking with colleagues about the idea and I said I planned to publish this and perhaps make a talk titled the same. She put the title into google and discovered that I am not the first person to argue this point, or use this title for it. 
 
-Chris Richardson of [microservices.io](https://microservices.io) excellence actually has a really detiled and fantastic talk on this topic which I recommend EVERYONE to go and watch:
+Chris Richardson of [microservices.io](https://microservices.io) excellence actually has a really detailed and fantastic talk on this topic which I recommend EVERYONE to go and watch:
 
 [There's no such thing as a microservice - Chris Richardson](https://www.youtube.com/watch?v=sL320gRD2dU)
