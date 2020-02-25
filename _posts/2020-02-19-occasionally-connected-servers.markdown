@@ -12,7 +12,6 @@ excerpt: A common trend I see in consumer facing industries is the need to have 
 permalink: 
 tags: [architecture, software engineering, retail, consumer, intelligent edge, occasionally connected servers]
 ---
-# Occasionally Connected Servers - A Whitepaper
 
 The Occasionally Connected Servers pattern is a solution for a modern set of problems that arises from the increasing
 desire of business to provide high quality, data and content rich, connected experiences for their customers and employees across a distributed set of locations.
