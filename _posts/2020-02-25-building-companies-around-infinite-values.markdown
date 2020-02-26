@@ -13,6 +13,10 @@ permalink:
 tags: [microservices,evolutionary architecture, architecture, software engineering]
 ---
 
+Recently, a couple of coincidental but seperate iteractions in my life had led me to a view about company culture.
+
+
+## The Infinite Game
 A few weeks ago, while at work, a friend sent me a link to a video called [How to Make a Cultural Transformation](https://www.youtube.com/watch?v=N9d0NqSztWA).
 I watched it, and I liked it.
 I'd never heard of Simon Sinek before.
@@ -25,8 +29,13 @@ I liked the way he presented and I wanted to hear what else he had to say.
 The next video I watched was called [Be an Infinite Player](https://www.youtube.com/watch?v=KbYzF6Zy5tY). The videos full title claims it to be "one of the best speeches ever".
 That's not an usually 'clickbaity' title for YouTube so left judgement till I watched it.
 
-Well holy shit!
+Well, Holy Shit!
+
 While I have not seen nearly enough speeches to agree its one of the best ever, I did think it was very powerful.
 The idea of the Infinte Game was amazing.
 It's not the first time I had thought such thoughts.
-I am not formally educated in business, I did Computer Science at University 
+I am not formally educated in business, I did Computer Science at University.
+But I have worked with lots of companies while consulting and I had felt these feelings before, noticed these problems, but I never had the coherrent language to describe them.
+This video made an impact on me by giving a way to describe what I felt for the first time.
+
+
