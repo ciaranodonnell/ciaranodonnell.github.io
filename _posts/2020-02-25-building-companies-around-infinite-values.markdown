@@ -22,19 +22,19 @@ I watched it, and I liked it.
 I'd never heard of Simon Sinek before.
 The video is an abbreviation of a longer talk he had given about cultrual change, and the [Law of Diffusion of Innovation](https://en.wikipedia.org/wiki/Diffusion_of_innovations).
 He talks about how you use that law to target your efforts to Innovators and Early Adopters, which leads to transformation efforts crossing the tipping point where the majority will follow.
-Its a **great** video and I strongly recommend you watch it.
+It’s a **great** video and I strongly recommend you watch it.
 
-Anyway, I watched the video I was sent and YouTube did it's job of presenting me with a list of other videos featuring Simon Sinek.
-I liked the way he presented and I wanted to hear what else he had to say.
+Anyway, I watched the video I was sent, and YouTube did it's job of presenting me with a list of other videos featuring Simon Sinek.
+I liked the way he presented, and I wanted to hear what else he had to say.
 The next video I watched was called [Be an Infinite Player](https://www.youtube.com/watch?v=KbYzF6Zy5tY). The videos full title claims it to be "one of the best speeches ever".
-That's not an usually 'clickbaity' title for YouTube so I wasn't put off and thought I'd give it a watch too.
+That's not an unusually 'clickbaity' title for YouTube so I wasn't put off and thought I'd give it a watch too.
 
 Well, Holy Shit!
 
 While I have not seen nearly enough speeches to agree its one of the best ever, I did think it was very powerful.
-The idea of the Infinte Game was amazing.
+The idea of the Infinite Game was amazing.
 It's not the first time I had thought such thoughts.
-I am not formally educated in business, I did Computer Science at University.
+I am not formally educated in business; I did Computer Science at University.
 But I have worked with lots of companies while consulting and I had felt these feelings before, noticed these problems, but I never had the coherrent language to describe them.
 This video made an impact on me by giving a way to describe what I felt for the first time.
 
@@ -44,7 +44,7 @@ The video gives this basic story:
 
 Game Theory is the modelling on human interaction strategies, and how people act to get what they want. There are all sorts of games/models that have been classified based on out behaviour.
 
-Generally though, Simon says, there are 2 types of games **Finite Games** and **Infinite Games**.
+Generally, though, Simon says, there are 2 types of games **Finite Games** and **Infinite Games**.
 
 ### Finite Games
 
@@ -67,7 +67,7 @@ These are games (remember Games = Interactions) with:
 
 The purpose of an Infinite game is to continue playing the game.
 
-So this is like Conversations, or Marriage. You can't *win* marriage, you just aim to purpetuate it, to keep it going as long as you can and to enjoy doing it.
+So, this is like Conversations, or Marriage. You can't *win* marriage, you just aim to purpetuate it, to keep it going as long as you can and to enjoy doing it.
 
 ## What kind of game is Business
 
@@ -76,14 +76,14 @@ Executives around the world talk about how they want to Win, be the Best, be #1!
 
 But **business isn't a Finite game**.
 
-- Business doesn't have a fixed set of players. People are always starting new companies, and competing in new ways. 
+- Business doesn't have a fixed set of players. People are always starting new companies and competing in new ways. 
 - There isn't a fixed set of rules. People innovate, cross industries, do partnerships. All kinds of new ways of doing business and competing happen, all the time. 
-- But most importantly, business doesnt have an agreed upon outcome. There is no date when business stops and we all get scored. Every day business continues, and we have to keep working to stay in business.
+- But most importantly, business doesnt have an agreed upon outcome. There is no date when business ends and we all get scored. Every day business continues, and we have to keep working to stay in business.
 
 So **Business is an Infinite game**!
 
-Now that we have correctly understood the type of the game we're playing, we can actually start to play it better.
-We don't have to focus on winning now. We shouldn't be focusing on being number 1 every day, or playing to out do whatever move we just saw our competitors do.
+Now that we have correctly understood the type of the game we're playing; we can actually start to play it better.
+We don't have to focus on winning now. We shouldn't be focusing on being number 1 every day or playing to out do whatever move we just saw our competitors do.
 
 Knowing that business is an Infinite game lets us start thinking about how we can play to stay in the game longest.
 How we can make our practices sustainable.
@@ -115,7 +115,7 @@ It becomes more obvious to business that training and employee growth are import
 
 People get to make more reasonable and rational decisions about their work, not abandon valuable things because they won't finish inside the fiscal year.
 
-I'd say that Infinite minded business normally have a higher purpose, something beyond business that they work towards.
+I'd say that Infinite minded businesses normally have a higher purpose, something beyond business that they work towards.
 I worked at a software consultancy called Infusion.
 Infusion had values:
 
@@ -123,9 +123,9 @@ Infusion had values:
 2. Grow your people
 3. Empower yourself
 
-We called these our immutables.
+We called these our immutable.
 We obviously had to do Finite things to stay in business, we needed to win work and complete projects with the staffing provided.
-What the immutables did was provide us with a value framework to judge our every day actions against the long term.
+What the immutables did was provide us with a value framework to judge our everyday actions against the long term.
 
 "Well I could sell this contract now, but is it in the best interests of the client? Is it best for the people that would get staffed?"
 
@@ -133,12 +133,12 @@ If you took actions that weren't 100% in the pursuit of chargeability, but they 
 Infusion used to have annual holiday parties, and at those parties we gave out awards. None of the awards were for biggest sales number.
 We gave awards for successful projects completed, even when they didn't go as planned. But most importantly we called out the people that best portrayed our Immutables that year and gave them awards. Every office did this, and we did it globally with our 'Global Mission and Vision' award.
 
-## So what can we do with this knowledge
+## So, what can we do with this knowledge
 
 I am glad I got to watch Simon's video. It didn't teach me anything I didnt already kind of know, but it did give me a clarity around it that i didnt have before. 
 It made it obvious to me that I should start approaching business as an Infinite player.
 
 I have also been thinking about how this specifically aligns to what I do every day, Technology Consulting.
-How should we approach technology, software, and innovation when playing the Infinite game. I'll write more on this as I explore the topic.
+How should we approach technology, software, and innovation when playing the Infinite game? I'll write more on this as I explore the topic.
 
-For now I encourage people to watch the videos and think about whether they want to work at a Finite or Infinite minded company.
+For now, I encourage people to watch the videos and think about whether they want to work at a Finite or Infinite minded company.
