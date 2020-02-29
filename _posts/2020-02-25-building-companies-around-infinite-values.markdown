@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Building Companies around Infinite Values"
-date:   2020-02-26 13:43:00 -0500
+title:  "What kind of game is business?"
+date:   2020-02-29 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
