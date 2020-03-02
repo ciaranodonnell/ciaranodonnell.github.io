@@ -6,7 +6,7 @@ categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt:  
+excerpt: Recently, a couple of coincidental but separate interactions in my life had led me to a view about company culture.
 #header:
 #teaser: /images/Gartner_Hype_Cycle.svg
 permalink: 
