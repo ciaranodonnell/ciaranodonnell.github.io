@@ -13,21 +13,21 @@ permalink:
 tags: [microservices,evolutionary architecture, architecture, software engineering]
 ---
 
-Recently, a couple of coincidental but seperate iteractions in my life had led me to a view about company culture.
+Recently, a couple of coincidental but separate interactions in my life had led me to a view about company culture.
 
 ## The Infinite Game
 
 A few weeks ago, while at work, a friend sent me a link to a video called [How to Make a Cultural Transformation](https://www.youtube.com/watch?v=N9d0NqSztWA).
 I watched it, and I liked it.
 I'd never heard of Simon Sinek before.
-The video is an abbreviation of a longer talk he had given about cultrual change, and the [Law of Diffusion of Innovation](https://en.wikipedia.org/wiki/Diffusion_of_innovations).
+The video is an abbreviation of a longer talk he had given about cultural change, and the [Law of Diffusion of Innovation](https://en.wikipedia.org/wiki/Diffusion_of_innovations).
 He talks about how you use that law to target your efforts to Innovators and Early Adopters, which leads to transformation efforts crossing the tipping point where the majority will follow.
 It’s a **great** video and I strongly recommend you watch it.
 
 Anyway, I watched the video I was sent, and YouTube did it's job of presenting me with a list of other videos featuring Simon Sinek.
 I liked the way he presented, and I wanted to hear what else he had to say.
 The next video I watched was called [Be an Infinite Player](https://www.youtube.com/watch?v=KbYzF6Zy5tY). The videos full title claims it to be "one of the best speeches ever".
-That's not an unusually 'clickbaity' title for YouTube so I wasn't put off and thought I'd give it a watch too.
+That's not an unusually clickbaity title for YouTube so I wasn't put off and thought I'd give it a watch too.
 
 Well, Holy Shit!
 
@@ -35,14 +35,14 @@ While I have not seen nearly enough speeches to agree its one of the best ever, 
 The idea of the Infinite Game was amazing.
 It's not the first time I had thought such thoughts.
 I am not formally educated in business; I did Computer Science at University.
-But I have worked with lots of companies while consulting and I had felt these feelings before, noticed these problems, but I never had the coherrent language to describe them.
+But I have worked with lots of companies while consulting and I had felt these feelings before, noticed these problems, but I never had the coherent language to describe them.
 This video made an impact on me by giving a way to describe what I felt for the first time.
 
 The video gives this basic story:
 
 ### Game Theory
 
-Game Theory is the modelling on human interaction strategies, and how people act to get what they want. There are all sorts of games/models that have been classified based on out behaviour.
+Game Theory is the modelling on human interaction strategies, and how people act to get what they want. There are all sorts of games/models that have been classified based on out behavior.
 
 Generally, though, Simon says, there are 2 types of games **Finite Games** and **Infinite Games**.
 
@@ -67,7 +67,7 @@ These are games (remember Games = Interactions) with:
 
 The purpose of an Infinite game is to continue playing the game.
 
-So, this is like Conversations, or Marriage. You can't *win* marriage, you just aim to purpetuate it, to keep it going as long as you can and to enjoy doing it.
+So, this is like Conversations, or Marriage. You can't *win* marriage, you just aim to perpetuate it, to keep it going as long as you can and to enjoy doing it.
 
 ## What kind of game is Business
 
@@ -78,7 +78,7 @@ But **business isn't a Finite game**.
 
 - Business doesn't have a fixed set of players. People are always starting new companies and competing in new ways. 
 - There isn't a fixed set of rules. People innovate, cross industries, do partnerships. All kinds of new ways of doing business and competing happen, all the time. 
-- But most importantly, business doesnt have an agreed upon outcome. There is no date when business ends and we all get scored. Every day business continues, and we have to keep working to stay in business.
+- But most importantly, business doesn't have an agreed upon outcome. There is no date when business ends and we all get scored. Every day business continues, and we have to keep working to stay in business.
 
 So **Business is an Infinite game**!
 
@@ -98,7 +98,7 @@ Making decisions to spend money on something that sounds flashy or cool rather t
 In the consulting world, Finite business thinking leads to companies focusing on chargeability above all else, including training. But long term, training is essential to the sustainability of the business.
 Technology moves on and people must learn.
 
-At Kodak, Finite thinking meant that even though they invented the digital camera, they didn't capitalize on it because it would have hurt their immediate busienss - film.
+At Kodak, Finite thinking meant that even though they invented the digital camera, they didn't capitalize on it because it would have hurt their immediate business - film.
 
 I think Finite thinking is the problem behind [The Innovators Dilemma](https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation/dp/1633691780/). Innovators start thinking with an Infinite mindset, as they need to build a company that lasts long enough to succeed.
 As they grow and make profit thought, innovators get sucked into the trap of protecting their revenue streams, and switch to Finite thinking.
@@ -131,11 +131,11 @@ What the immutables did was provide us with a value framework to judge our every
 
 If you took actions that weren't 100% in the pursuit of chargeability, but they moved us towards the immutables, that was probably ok. In fact, sometimes more than OK.
 Infusion used to have annual holiday parties, and at those parties we gave out awards. None of the awards were for biggest sales number.
-We gave awards for successful projects completed, even when they didn't go as planned. But most importantly we called out the people that best portrayed our Immutables that year and gave them awards. Every office did this, and we did it globally with our 'Global Mission and Vision' award.
+We gave awards for successful projects completed, even when they didn't go as planned. But most importantly we called out the people that best portrayed our immutables that year and gave them awards. Every office did this, and we did it globally with our 'Global Mission and Vision' award.
 
 ## So, what can we do with this knowledge
 
-I am glad I got to watch Simon's video. It didn't teach me anything I didnt already kind of know, but it did give me a clarity around it that i didnt have before. 
+I am glad I got to watch Simon's video. It didn't teach me anything I didn't already kind of know, but it did give me a clarity around it that i didn't have before. 
 It made it obvious to me that I should start approaching business as an Infinite player.
 
 I have also been thinking about how this specifically aligns to what I do every day, Technology Consulting.
