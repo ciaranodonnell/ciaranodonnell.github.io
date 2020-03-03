@@ -80,22 +80,19 @@ But **business isn't a Finite game**.
 - There isn't a fixed set of rules. People innovate, cross industries, do partnerships. All kinds of new ways of doing business and competing happen, all the time. 
 - But most importantly, business doesn't have an agreed upon outcome. There is no date when business ends and we all get scored. Every day business continues, and we have to keep working to stay in business.
 
-So **Business is an Infinite game**!
+So **Business is an Infinite game!**
 
 Now that we have correctly understood the type of the game we're playing; we can actually start to play it better.
 We don't have to focus on winning now. We shouldn't be focusing on being number 1 every day or playing to out do whatever move we just saw our competitors do.
 
-Knowing that business is an Infinite game lets us start thinking about how we can play to stay in the game longest.
-How we can make our practices sustainable.
+Knowing that business is an Infinite game lets us start thinking about how we can play to stay in the game longest and how we can make our practices sustainable.
 We can stop chasing short term profit as a method 'scoring'.
 
 ### Finite business is no fun
 
-Chasing short term profit makes business crap.
-Having the end of year goals that you must hit.
-Making decisions to spend money on something that sounds flashy or cool rather than invest in long term innovation.
+Chasing short term profit makes business a crappy game to play; having the end of year goals that you must hit, making decisions to spend money on something that sounds flashy or cool rather than invest in long term innovation.
 
-In the consulting world, Finite business thinking leads to companies focusing on chargeability above all else, including training. But long term, training is essential to the sustainability of the business.
+In the consulting world, finite business thinking leads to companies focusing on utilization/chargeability above all else, including training. But long term, training is essential to the sustainability of the business.
 Technology moves on and people must learn.
 
 At Kodak, Finite thinking meant that even though they invented the digital camera, they didn't capitalize on it because it would have hurt their immediate business - film.
@@ -109,7 +106,7 @@ The '[Rank and Yank](https://en.wikipedia.org/wiki/Vitality_curve)' tactics caus
 ## Infinite business is more fun
 
 What's like to work in an Infinite minded business?
-I would say its more rewarding.
+I would say it's more rewarding.
 Focusing on long term sustainability, and strategic goals to stay in business encourage a different way of working.
 It becomes more obvious to business that training and employee growth are important.
 
@@ -123,7 +120,7 @@ Infusion had values:
 2. Grow your people
 3. Empower yourself
 
-We called these our immutable.
+We called these our immutables.
 We obviously had to do Finite things to stay in business, we needed to win work and complete projects with the staffing provided.
 What the immutables did was provide us with a value framework to judge our everyday actions against the long term.
 
