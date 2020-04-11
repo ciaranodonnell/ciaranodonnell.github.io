@@ -97,7 +97,7 @@ From there you can see the breadcrumb, which for me says *Documents > Applicatio
 
 In Windows Explorer you'll see the folders in the left pane under your organization name. - Avanade for me.
 
-![Windows Explorer](/images/2020-03-30-wfh/explorer-view.png)
+![Windows Explorer](/images/2020-03-30-wfh/windows-explorer-view.png)
 
 ### Get yourself the technology you need
 
