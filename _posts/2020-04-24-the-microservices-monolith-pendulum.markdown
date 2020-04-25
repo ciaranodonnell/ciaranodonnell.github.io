@@ -17,9 +17,32 @@ tags: [microservices, containers, architecture, software engineering]
 
 Microservices is **the** cool architecture buzzword of the last 5 years.
 There are thousands of blog posts, conference talks, and books that dig into microservices in different ways.
-I think there are a lot of different takes about what it really means.
-I have mine, you might have yours, and lots of luminaries like Sam Newman, Martin Fowler and others have theirs. 
+A lot of these talks and books focus on the core principles that define microservices, and lots of them are fairly common.
+In training that I created for Avanade I summed the important characteristics up as:
 
+1. Highly Cohesive Components
+2. Organized around business capabilities
+3. Autonomous
+4. Designed for Failure
+5. Smart endpoint, dumb pipes
+6. Use Infrastructure Automation
+
+These principles are pretty well known now and lots of people talk about them, or a similar list when advising on microservices.
+
+The challenge with them is that they are a little abstract.
+I could write a similar set of rules about automobiles needing wheels, seats, engines, windows, being made of metal, burning gas, etc.
+I could then follow all of those and still get hatchbacks, mini-vans, ferraris, buses, and Hummers. All very different vehicles with different good points and bad points.
+
+I think something similar to this has happened with microservices. Lots of people have followed the guidelines in different ways, and they end up with something unique. Sometimes they are Hummers, all expensive to run, and sometimes theyre like little japanese hatchbacks, efficient to run but not as fast or powerful.
+Everyone then talks about the pros and cons of microservices, debating the various points, but talking about different things.
+
+Now I am not the original inventor of the term microservice, so I don't claim to know what their intention was, nor what the exact problems they were solving that caused them to create microservices. But, I have written systems this way, evolving my own path to microservices style architectures through my career.
+In my current role I am tasked with leading software architecture for a consultancy, and therefore I see lots of problems and solutions being designed and built using microservices approaches.
+
+I have refinements, or perhaps more specific guidelines one designing microservices for enterprise systems. I say enterprise systems as I don't often solve problems like Twitter, or Netflix, where its a relatively simple business, but a large technical challenge around scale, performance, or throughput. 
+
+
+## The pendulum
 
 I'm seeing an increasing number of anti microservices posts recently.
 I still think, like SOA, most people trying it don't understand it.
