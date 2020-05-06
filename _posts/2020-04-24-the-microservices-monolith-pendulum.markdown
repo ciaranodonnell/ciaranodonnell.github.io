@@ -142,8 +142,6 @@ They struggle to get the automation level, and observability they need to make i
 
 There are a lot of blog posts about the success, and the wins bug companies have had with microservices, but the people in existing enterprises don't operate in the same environment.
 
-
-
 > *NOT SURE ABOUT THIS SECTION*
 
 Most of corporate America has a IT departments that grew up in the older way of thinking, before devops, before cloud, in a period where software releases were very infrequent, and production stability was paramount. Developers couldn't be trusted to take care of IT, it needed to be protected from them at all costs. Lots of the companies boasting big success stories aren't like that.
@@ -182,6 +180,17 @@ That's how they get so complex and stay fragile.
 
 IMO Microservices is a mental model that limits the business scope of your monoliths to 1 bounded context.
 It then gives you a set of principles for making your smaller monoliths interact while staying reliable.
+
+### Culture is important!
+
+Breaking the application up to seperate components is critical.
+Along with that is the seperation of the teams that go along to support that.
+Conway's Law is the key tenet we follow when we think about the changes the microservices bring to a development organization.
+Melvin Conway wrote in [How Committees Invent in 1968](http://www.melconway.com/research/committees.html):
+> organizations which design systems (in the broad sense used here) are constrained to produce designs which are copies of the communication structures of these organizations.
+
+So as we design software that is divided along these business responsibilities, we need to shape our development teams to match it, from the beginning. Failing to do so will allow this Law to force us to write monoliths again.
+
 
 ## So the pendulum is a symptom of poor boundary control
 
