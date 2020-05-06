@@ -165,9 +165,8 @@ Which means they shouldn't talk synchronously to each other to perform big distr
 They should have their own smaller transactions they can perform.
 
 The larger system operates by putting these smaller Transactions together in larger sagas following that pattern.
-These should be asynchronous and brokered.
-Like event driven architectures.
-The component systems /mini monoliths should publish integration events.
+These should be asynchronous and brokered, like event driven architectures.
+The component systems/mini monoliths should publish integration events.
 
 That's how other monoliths can get information they need to do their transactions.
 These could be product summaries or currency reference data or whatever.
