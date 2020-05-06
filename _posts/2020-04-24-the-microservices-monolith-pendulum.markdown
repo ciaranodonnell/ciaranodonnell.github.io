@@ -107,10 +107,21 @@ Now, I think this Autonomy concept is where a lot of people miss some of they de
 
 ### Dumb Pipes and Designing for Failure
 
-- Designing for failure is hard.
-- Falacies of distributed systems
+Another important aspect of microservices is that we should design them for failure.
+Thinking about [the fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing), we know that the network is NOT reliable, and latency is NOT zero.
+Knowing those things, we quickly realize that in order for our software to be high quality, we need to handle the failure in the network, and the high latency periods that look like failure, but sometimes arent.
+
+Designing for failure is challenging though. It's very hard to make software continue to work when things it needs aren't available.
+As I have written before, some (if not all) of these cases will need to be handled by **business** rules.
+Most failures actually need to be thought about in terms of how they affect the busienss processes that are being handled.
+
+One of the exacerbating problems with designing for failures is the interpretation a lot of people use for the 'Dumb Pipes' principle.
+
+The dumbest pipe people seem to chose is REST over HTTP. 
 - lots of people chose to go with the simplest pipe - ReST
 - REST means lots of things, like service discovery and temporal coupling.
+
+There are other options, like brokered communication.
 
 ## The pendulum
 
