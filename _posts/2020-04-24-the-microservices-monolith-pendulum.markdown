@@ -10,7 +10,7 @@ excerpt: Monoliths were once all the rage, but recently microservices have becom
 #header:
 #teaser: /images/Gartner_Hype_Cycle.svg
 permalink: 
-tags: [microservices, containers, architecture, software engineering]
+tags: [microservices,monoliths, architecture, software engineering]
 ---
 
 # Monolith to Microservices, and back again?
@@ -109,10 +109,16 @@ Now, I think this Autonomy concept is where a lot of people miss some of they de
 
 - Designing for failure is hard.
 - Falacies of distributed systems
+- lots of people chose to go with the simplest pipe - ReST
+- REST means lots of things, like service discovery and temporal coupling.
 
 ## The pendulum
 
 I'm seeing an increasing number of anti microservices posts recently.
+
+
+## Why did it go wrong?
+
 I still think, like SOA, most people trying it don't understand it.
 They try to size them and group them on technology lines.
 They see them as totally different to monoliths.
