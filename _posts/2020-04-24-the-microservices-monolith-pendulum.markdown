@@ -114,15 +114,43 @@ Now, I think this Autonomy concept is where a lot of people miss some of they de
 
 ## The pendulum
 
-I'm seeing an increasing number of anti microservices posts recently.
+I'm seeing an increasing number of anti-microservices posts recently.
+Some of these are from people that never moved, like David Heinemeier Hansson who wrote and interesting piece called '[The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith/)'.
+[Jet.com also blogged](https://www.infoq.com/news/2019/02/migrate-microservices-workflows/) on how they abandoned microservices to move to, what they call, workflows.
+Segment moved [to microservices and back again](https://www.infoq.com/news/2020/04/microservices-back-again/) and wrote about it.
 
+I've also seen various postst on reddit and tweets on twitter which have been talking about a growing discontent with microservices and arguing against their use.
+A decent number of these people are arguing that we shouldn't be making this move to microservices at all.
+
+There are lots of people in the world that build software and many of them will have made a move towards microservices.
+I would also bet that a few of them are having bad experiences.
+
+They are seeing increasing complexity managing a production environment with lots of moving parts.
+
+They are struggling to manage the interprocess communication complexity that comes with having all these seperate moving pieces that need to talk to each other.
+
+They are also struggling to manage the increase in code volume. Each service needs scaffolding, configuration, deployment scipts, database scripts, etc. There are lot more lines of C#/Java/Javascript/YAML/ARM/Terraform/SQL to be managed.
+
+Lots of people are seeing these increases in cost and complexity, like a tax on their microservices, but they aren't necessarily seeing the benefits: the scale, the resiliance, and the supposed reducec complexity.
 
 ## Why did it go wrong?
 
 I still think, like SOA, most people trying it don't understand it.
-They try to size them and group them on technology lines.
-They see them as totally different to monoliths.
-I don't see them that way
+They dont understand what it's good for, and what it's bad for.
+They don't understand how to decompose their existing systems and size their microservices.
+They struggle to get the automation level, and observability they need to make it all manageable.
+
+There are a lot of blog posts about the success, and the wins bug companies have had with microservices, but the people in existing enterprises don't operate in the same environment.
+
+
+
+> *NOT SURE ABOUT THIS SECTION*
+
+Most of corporate America has a IT departments that grew up in the older way of thinking, before devops, before cloud, in a period where software releases were very infrequent, and production stability was paramount. Developers couldn't be trusted to take care of IT, it needed to be protected from them at all costs. Lots of the companies boasting big success stories aren't like that.
+
+Another challenge with these microservices success stories that show at conferences is that they are often from companies with fairly limited scopes. They don't have the business complexity that most of corporate America operates. They are web start-ups, with specific products. So when they break down their monolith to small components, they sound like VERY small components to corporate developers.
+
+> *DOWN TO HERE*
 
 ## Back to Autonomy
 
