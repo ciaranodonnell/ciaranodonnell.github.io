@@ -6,9 +6,9 @@ categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt: Microservices are often thought as the modern way to build cloud native applications, so are containers. The question addressed here is whether microservices means containers, or containers means microservices. 
+excerpt: Monoliths were once all the rage, but recently microservices have become the target state for everyone who wants to be trendy. Now it seems people are bucking the trend and moving back to monoliths. Here I think about why that might be  
 #header:
-teaser: /images/Gartner_Hype_Cycle.svg
+#teaser: /images/Gartner_Hype_Cycle.svg
 permalink: 
 tags: [microservices, containers, architecture, software engineering]
 ---
@@ -103,8 +103,12 @@ If we broke microservices down to individual activities then they would no longe
 They would need to share a datastore that contains the orders, and could potentially need to talk to each other in real time in order to operate.
 In the wikipedia example, Invoice/Ship/Fulfill order would probably all need to call the Update order function to persist their changes.
 
-Now this Autonomy concept I think is where a lot of people miss some of they design elements of successful microservices.
+Now, I think this Autonomy concept is where a lot of people miss some of they design elements of successful microservices.
 
+### Dumb Pipes and Designing for Failure
+
+- Designing for failure is hard.
+- Falacies of distributed systems
 
 ## The pendulum
 
@@ -113,6 +117,8 @@ I still think, like SOA, most people trying it don't understand it.
 They try to size them and group them on technology lines.
 They see them as totally different to monoliths.
 I don't see them that way
+
+## Back to Autonomy
 
 I think of microservices as being a thought pattern.
 What you actually build is systems.
@@ -143,11 +149,21 @@ That's how they get so complex and stay fragile.
 IMO Microservices is a mental model that limits the business scope of your monoliths to 1 bounded context.
 It then gives you a set of principles for making your smaller monoliths interact while staying reliable.
 
+## So the pendulum is a symptom of poor boundary control
+
 That's why I think there's this back and forth now about monoliths arent so bad.
 It's right.
 They get back when they grow beyond a single business area.
 Microservices means stopping that from happening.
 All the other serverless, containers, API gateways, etc are just noise
 
-This was a little stream of my thoughts on it which I'll probably expand to a blog post.
-Would love to hear other people's thoughts about it.
+## Summary
+
+So really everyone's kinda right, except for all the wrong things.
+
+Monolith in its purest/worst definition is a single component with multiple business responsibilities.
+Microservices is a thought pattern which gives you a model to build complex, multiple business responsibility software, where no individual component has more than one responsibility.
+The services, or applications, that we build at the end of a microservices design should look like little monoliths.
+They should have their own databases, full of all the data they need to operate. They shouldn't rely on other systems in real time, but integrate though standarized interfaces.
+
+People are crazy that rationality of monoliths because they over decomposed when they went to microservices.
