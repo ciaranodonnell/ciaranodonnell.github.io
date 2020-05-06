@@ -185,12 +185,21 @@ It then gives you a set of principles for making your smaller monoliths interact
 
 Breaking the application up to seperate components is critical.
 Along with that is the seperation of the teams that go along to support that.
+
 Conway's Law is the key tenet we follow when we think about the changes the microservices bring to a development organization.
 Melvin Conway wrote in [How Committees Invent in 1968](http://www.melconway.com/research/committees.html):
+
 > organizations which design systems (in the broad sense used here) are constrained to produce designs which are copies of the communication structures of these organizations.
 
-So as we design software that is divided along these business responsibilities, we need to shape our development teams to match it, from the beginning. Failing to do so will allow this Law to force us to write monoliths again.
+So as we design software that is divided along these business responsibilities, we need to shape our development teams to match it, **from the beginning**.
 
+This change is very often forgotten when people move to microservices.
+Or at least delayed, with people thinking they'll get there.
+
+Failing to model our teams correctly will allow this Law to force us to write monoliths again.
+It will affect how we do things like sprint planning, demos, and testing. It will affect the way we build interfaces and APIs.
+It will also mean that the developers we have on our teams have too much mental context to maintain when developing.
+They will be generalists in the whole business domain, never experts in their bounded context.
 
 ## So the pendulum is a symptom of poor boundary control
 
