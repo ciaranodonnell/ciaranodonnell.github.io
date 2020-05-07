@@ -163,8 +163,6 @@ They struggle to get the automation level, and observability they need to make i
 
 There are a lot of blog posts about the success, and the wins bug companies have had with microservices, but the people in existing enterprises don't operate in the same environment.
 
-> *NOT SURE ABOUT THIS SECTION*
-
 Most of corporate America have an IT department that grew up in the older way of thinking, before devops, before cloud, in a period where software releases were very infrequent, and production stability was paramount.
 Developers couldn't be trusted to take care of IT, it needed to be protected from them at all costs.
 Lots of the companies boasting big success stories aren't like that.
@@ -177,8 +175,6 @@ So when they break down their monolith to small components, they sound like VERY
 
 Another massive challenge are software product companies (like Salesforce, SAP, Microsoft) that have a vested interest in discouraging decoupling.
 The level of discipline and shared vision enterprises require to increase their technical agility is very high.
-
-> *DOWN TO HERE*
 
 ## Back to Autonomy
 
