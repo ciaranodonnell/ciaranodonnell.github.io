@@ -118,11 +118,20 @@ Most failures actually need to be thought about in terms of how they affect the 
 
 One of the exacerbating problems with designing for failures is the interpretation a lot of people use for the 'Dumb Pipes' principle.
 
-The dumbest pipe people seem to choose is REST over HTTP. 
-- lots of people choose to go with the simplest pipe - ReST
-- REST means lots of things, like service discovery and temporal coupling.
+The dumbest pipe people seem to choose is REST over HTTP.
+HTTP certainly qualifies as a dumb pipe, but it might actually be too dumb.
+While REST is pretty good for getting acros the entire internet from a users web browser or mobile phone to your services and back again, I think we need better for our microservices.
 
-There are other options, like brokered communication.
+On the internet there are a lot of services provided for you, one big one being the DNS system.
+You don't have to worry about people finding you and getting your address, you just buy a domain name and that system manages it for you.
+You might also have some redundency on the front door, perhaps something like Azure Traffic Manager or some other load balancer.
+
+Internally with HTTP you have to manage all that, the service discovery and the load balancing.
+This is complicated, and takes a seperate effort that doesn't provide any real business value directly, except for the fact it makes it work and done well can give you reliability.
+
+REST over HTTP also keeps us coupled.
+Temporal coupling means we have to make sure client and server / requestor and responder are running at the same time.
+That's easy to do until things fail, or get slow, then it becomes quite a pain. Another complexity that needs to be managed.
 
 ## The pendulum
 
@@ -160,6 +169,7 @@ Most of corporate America have an IT department that grew up in the older way of
 Developers couldn't be trusted to take care of IT, it needed to be protected from them at all costs.
 Lots of the companies boasting big success stories aren't like that.
 They are “pure digital” companies/software-first companies that go build instead of buy (and have done so with nearly all of their IT estate).
+
 Corporate America is largely still on the opposite side of the spectrum (and “buy” 95% of the time and consider “build” to be systems integration work).
 These digital first companies with their microservices success stories often have fairly limited scopes. They don't have the business complexity that most of corporate America operates.
 They are web start-ups, with specific products.
