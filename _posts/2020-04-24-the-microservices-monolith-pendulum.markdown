@@ -227,7 +227,6 @@ It will affect how we do things like sprint planning, demos, and testing. It wil
 It will also mean that the developers we have on our teams have too much mental context to maintain when developing.
 They will be generalists in the whole business domain, never experts in their bounded context.
 
-
 ## So the pendulum is a symptom of poor boundary control
 
 That's why I think there's this back and forth now about monoliths aren't so bad.
