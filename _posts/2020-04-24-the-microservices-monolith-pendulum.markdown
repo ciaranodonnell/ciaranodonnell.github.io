@@ -32,7 +32,7 @@ These principles are pretty well known now and lots of people talk about them, o
 The challenge with them is that they are a little abstract.
 I could write a similar set of rules about automobiles needing wheels, seats, engines, windows, being made of metal, burning gas, etc.
 I could then follow all of those and still get hatchbacks, mini-vans, Ferraris, buses, and Hummers.
-All very different vehicles with different good points and bad points.
+All vastly different vehicles with different good points and bad points.
 
 I think something similar to this has happened with microservices.
 Lots of people have followed the guidelines in different ways, and they end up with something unique.
@@ -40,11 +40,11 @@ Sometimes they are Hummers, all expensive to run, and sometimes they're like lit
 Everyone then talks about the pros and cons of microservices, debating the various points, but talking about different things.
 
 Now I am not the original inventor of the term microservice, so I don't claim to know what their intention was, nor what the exact problems they were solving that caused them to create microservices.
-But, I have written systems this way, evolving my own path to microservices style architectures through my career.
+But I have written systems this way, evolving my own path to microservices style architectures, through my career.
 In my current role I am tasked with leading software architecture for a consultancy, and therefore I see lots of problems and solutions being designed and built using microservices approaches.
 
 I have refinements, or perhaps more specific guidelines one designing microservices for enterprise systems.
-I say enterprise systems as I don't often solve problems like Twitter, or Netflix, where its a relatively simple business, but a large technical challenge around scale, performance, or throughput.
+I say enterprise systems as I don't often solve problems like Twitter, or Netflix, where it’s a relatively simple business, but a large technical challenge around scale, performance, or throughput.
 Enterprises suffer from existing systems, coupled integrations, complex business models with associated politics.
 
 ## Designing a real Microservice
@@ -66,22 +66,22 @@ In the SOA world, and in the microservices world now, this gives us LOTS of very
 
 If we read a little further through that same Wikipedia page, under the *Service Engineering* section we'd find:
 
-> A business analyst, domain expert, and/or enterprise architecture team will develop the organization's service model first by defining the top level business functions.
+> A business analyst, domain expert, and/or enterprise architecture team will develop the organization's service model first by defining the top-level business functions.
 > Once the business functions are defined, they are further partitioned and refined into services that represent the processes and activities needed to manage the assets of the organization in their various states.
 > One example is the separation of the business function "Manage Orders" into services such as "Create Order," "Fulfill Order," "Ship Order," "Invoice Order" and "Cancel/Update Order."
 > These business functions have to have a granularity that is adequate in the given project and domain context.
 
 Ok, so that's a little more detailed.
-Importantly here is says the first step is to decompose the business into separate top level business functions.
+Importantly here is says the first step is to decompose the business into separate top-level business functions.
 I agree with that, decomposition by business domain/bounded context makes sense.
 
 But as we keep reading it tells us that these domains then need to be decomposed further into separate activities, or workflows, that each business domain contains.
 To me this is possibly a step too far.
-Making each service a specific activity means that overall these services (or microservices) aren't completely functional.
+Making each service a specific activity means that overall, these services (or microservices) aren't completely functional.
 Yes, they do a thing, but they aren't really re-usable on their own.
 I need re-use all of them to make it all re-usable.
 
-So to sum up, a service is a grouping of **business functionality**, that is **small enough to be a single piece of business functionality**, but **large enough to be re-usable**.
+So, to sum up, a service is a grouping of **business functionality**, that is **small enough to be a single piece of business functionality**, but **large enough to be re-usable**.
 
 This is actually what our 2nd bullet means.
 Our microservices should be organized around business capabilities.
@@ -100,8 +100,8 @@ It should be a complete unit that doesn't need other microservices to be functio
   )
 
 Firstly, I think this reinforces out definition from before about them being a complete bit of business functionality, like all the activities to manage orders.
-If we broke microservices down to individual activities then they would no longer be independent.
-They would need to share a datastore that contains the orders, and could potentially need to talk to each other in real time in order to operate.
+If we broke microservices down to individual activities, then they would no longer be independent.
+They would need to share a datastore that contains the orders and could potentially need to talk to each other in real time in order to operate.
 In the Wikipedia example, Invoice/Ship/Fulfill order would probably all need to call the Update order function to persist their changes.
 
 Now, I think this Autonomy concept is where a lot of people miss some of they design elements of successful microservices.
@@ -120,14 +120,14 @@ One of the exacerbating problems with designing for failures is the interpretati
 
 The dumbest pipe people seem to choose is REST over HTTP.
 HTTP certainly qualifies as a dumb pipe, but it might actually be too dumb.
-While REST is pretty good for getting acros the entire internet from a users web browser or mobile phone to your services and back again, I think we need better for our microservices.
+While REST is pretty good for getting across the entire internet from a user’s web browser or mobile phone to your services and back again, I think we need better for our microservices.
 
 On the internet there are a lot of services provided for you, one big one being the DNS system.
 You don't have to worry about people finding you and getting your address, you just buy a domain name and that system manages it for you.
-You might also have some redundency on the front door, perhaps something like Azure Traffic Manager or some other load balancer.
+You might also have some redundancy on the front door, perhaps something like Azure Traffic Manager or some other load balancer.
 
 Internally with HTTP you have to manage all that, the service discovery and the load balancing.
-This is complicated, and takes a seperate effort that doesn't provide any real business value directly, except for the fact it makes it work and done well can give you reliability.
+This is complicated and takes a separate effort that doesn't provide any real business value directly, except for the fact it makes it work and done well can give you reliability.
 
 REST over HTTP also keeps us coupled.
 Temporal coupling means we have to make sure client and server / requestor and responder are running at the same time.
@@ -163,7 +163,7 @@ They struggle to get the automation level, and observability they need to make i
 
 There are a lot of blog posts about the success, and the wins bug companies have had with microservices, but the people in existing enterprises don't operate in the same environment.
 
-Most of corporate America have an IT department that grew up in the older way of thinking, before devops, before cloud, in a period where software releases were very infrequent, and production stability was paramount.
+Most of corporate America have an IT department that grew up in the older way of thinking, before DevOps, before cloud, in a period where software releases were very infrequent, and production stability was paramount.
 Developers couldn't be trusted to take care of IT, it needed to be protected from them at all costs.
 Lots of the companies boasting big success stories aren't like that.
 They are “pure digital” companies/software-first companies that go build instead of buy (and have done so with nearly all of their IT estate).
@@ -242,7 +242,7 @@ So really everyone's kinda right, except for all the wrong things.
 Monolith in its purest/worst definition is a single component with multiple business responsibilities.
 Microservices is a thought pattern which gives you a model to build complex, multiple business responsibility software, where no individual component has responsibility for more than one business area.
 The services, or applications, that we build at the end of a microservices design should look like little monoliths.
-They should have their own databases, full of all the data they need to operate. They shouldn't rely on other systems in real time, but integrate though standardized interfaces.
+They should have their own databases, full of all the data they need to operate. They shouldn't rely on other systems in real time but integrate though standardized interfaces.
 
-People advocate for the rationality of monoliths because they over decomposed when they went to microservices, and created a high-latency version of the mess they had before.
+People advocate for the rationality of monoliths because they over decomposed when they went to microservices and created a high-latency version of the mess they had before.
 They reject the pattern not because of their experience with it, but because they never followed it in the first place.
