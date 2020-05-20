@@ -12,9 +12,10 @@ I am open to doing more public speaking and will happily present any of my past 
 
 ## Available Topics
 - APIs and Open Banking
-- Mircroservices
+- Microservices
 - Distributed Transactions with Microservices
 - Change Data Capture for Integration with Legacy Systems
+- Technology for the Infinite Game / Evolutionary Architecture
 
 ## Past Events
 ### 2019
