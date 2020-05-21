@@ -22,17 +22,17 @@ They at or around the start of a journey to microservices.
 
 The thing that these teams have in common is that they have a somewhat incomplete understanding about that that journey entails.
 
-Microservics, as I have written about before, is a problem solving approach to dividing (very) large systems into (business) component parts.
+Microservices, as I have written about before, is a problem solving approach to dividing (very) large systems into (business) component parts.
 It's not a specific technology that you can buy or adopt, it's not a release process, or a hosting technology (like kubernetes), it's not containers, or serverless, or devops.
 It's lots of patterns, practices, and approaches coupled together.
-It's like a vision of business aligned, autonomous components, with low coupling, high cohesion, and tesitng and automation thrown in.
+It's like a vision of business aligned, autonomous components, with low coupling, high cohesion, and testing and automation thrown in.
 
 Changing the way you structure your teams, break up your components, model and execute your transactions, and maintain and deploy your software is a lot of change.
 It takes a lot of time to make all those changes, to habituate the practices, and to believe in the culture.
 
-This is at least equivilant to the level of change that Agile brought to companyes, in fact in some cases this is peoples first time doing agile development too.
+This is at least equivalent  to the level of change that Agile brought to companies, in fact in some cases this is peoples first time doing agile development too.
 
-When taking teams to agile methodologies, such as scrum, I was a firm believer in the Shu-Ha-Ri method of learning. I think for most teams in enterprise environments this is a good way to learn this microservies culture too.
+When taking teams to agile methodologies, such as scrum, I was a firm believer in the Shu-Ha-Ri method of learning. I think for most teams in enterprise environments this is a good way to learn this microservices culture too.
 
 ## What is Shu Ha Ri?
 
@@ -66,11 +66,11 @@ In the last phase you come to master the art. You can invent your own processes,
 When adopting microservices, there are so many aspects to the patterns and practices.
 It's hard for engineering teams to understand all the different pieces of advice that they hear, as well as to judge whether they're from masters of the art or people still on the journey.
 
-One example of a very frequently abandoned piece of microservcies advice is the '*database per microservice*' idea.
+One example of a very frequently abandoned piece of microservices advice is the '*database per microservice*' idea.
 More than half of the teams I have spoken to who are planning to move to microservices have decided that they will drop this idea.
 
 The database per service is really important for the autonomy principle of microservices.
-If a service doesnt have it's own database then it will almost certainly need to call other services in real time to get the data it needs to operate, or it will have a shared database that lots of other services also read from.
+If a service doesn't have it's own database then it will almost certainly need to call other services in real time to get the data it needs to operate, or it will have a shared database that lots of other services also read from.
 
 Autonomy is very useful principle when people are building cloud native applications, especially when they want to enable large scale in terms of user applications, **and** in terms of scaling the velocity of a development organization.
 
@@ -82,22 +82,22 @@ If a microservice has it's own database, then it should be possible to make it f
 ### Autonomy for Scale
 
 If services are autonomous and you're expecting them to be able to function without the synchronous involvement of other services, then you should be able to scale them independently.
-Keeping autonomy as a princple keeps you thinking this way.
+Keeping autonomy as a principle keeps you thinking this way.
 
 Having a separate database allows us to scale the database as we need, without the rest of the application having to scale the same way, it can also allow us to do things like denormalize, create read models, caches, and other optimizations to scale our services.
 
 ### Autonomy for Development Velocity
 
-If services are autonomous, with their own databases, and they dont need other services to run, then you will need to put standard contracts between them.
+If services are autonomous, with their own databases, and they don't need other services to run, then you will need to put standard contracts between them.
 Following that principle will mean your development teams aren't dependent on each other.
 One of the worst development coupling practices is to have a shared database.
 It means my service team can't make schema changes without affecting other teams, which overall makes development more complicated, and product velocity slower.
 
-Having seperate databases means that my service team can evolve our product at maximum velocity, as long as we meet our contracts.
+Having separate databases means that my service team can evolve our product at maximum velocity, as long as we meet our contracts.
 
 ### Ripple affect
 
-So abandoning the idea of the 'database per service' means you're avbandoning some (if not all) of your autonomy.
+So, abandoning the idea of the 'database per service' means you're abandoning some (if not all) of your autonomy.
 Autonomy causes other good things in microservices, like reliability, scale, development velocity, etc.
 
 Now it's not impossible to share a database while still trying to achieve the rest, but without the understanding of the principles and the practices, and how they interact, it's much harder.
@@ -120,5 +120,5 @@ I think the same approach is needed here.
 Obviously as a consultant who helps people do this for money, you can discount my advice on this.
 But the above situation, which I have seen at many companies in many industries, isn't unique.
 It's a common example but as I said there are a lot of patterns and practices that make up microservices.
-Going through the transformation is not easy and there is no reassonable way to assume developers focused on industry solutions will get it right on their own.
+Going through the transformation is not easy and there is no reasonable way to assume developers focused on industry solutions will get it right on their own.
 Corporate 'business' teams aren't always very forgiving of IT trying new things and them not going perfectly.
