@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Monoliths to Microservices! And Back Again?"
-date:   2020-02-21 13:43:00 -0500
+date:   2020-05-29 18:43:00 -0500
 categories: posts
 comments: true
 toc: true
