@@ -84,4 +84,15 @@ I know lots of people like me. Nobody knows everything about everything. Lots of
 
 ## How do we get rid of Imposter Syndrome
 
-I don't think we can really get rid of imposter syndrome. 
+I don't think we can really get rid of imposter syndrome, and perhaps we shouldn't want to.
+It's good to know what our weaknesses are and what we need to learn.
+It keeps our ego's in check, and stops us from being at the Dunning-Kruger end of the scale.
+
+What we need to do is get rid of the anxiety. We can't allow our Imposter Syndrome to hold us back.
+You need to keep in mind two things
+
+1) What I said about everyone feeling it. Its normal and good to be aware of what you dont know and really its a sign that you are capable of meta-cognition and have a large enough understanding of the field to have it.
+
+2) The list of things you can do, and experience you have grows **every single day**. You get smarter everyday, you gain experience, learn from your mistakes, read new things, see new things. You fix bugs, write tests, solve problems and get better every time. Don't forget that you get stronger every day!
+
+
