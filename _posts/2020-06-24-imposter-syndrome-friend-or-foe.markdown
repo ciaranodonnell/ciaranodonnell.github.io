@@ -97,4 +97,9 @@ You need to keep in mind two things
 
 Keep hold of the good side of imposter syndrome and try your best to drop the bad. Celebrate the successes in your career and accept the mistakes as growth experiences.
 
+Be inspired by the list of things there is to learn, but don't feel like you have to learn everything.
+Technology is too broad a field for that.
+Learn what you want to learn about, and practice what you want to learn about.
+
+
 
