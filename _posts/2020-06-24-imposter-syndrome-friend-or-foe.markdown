@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Imposter Syndrome - Friend of Foe"
+title:  "Managing Imposter Syndrome"
 date:   2020-07-09 13:43:00 -0500
 categories: posts
 comments: true
