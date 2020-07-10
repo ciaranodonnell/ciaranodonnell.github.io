@@ -63,7 +63,7 @@ When you see conference talks from developers at big companies that are doing pr
 Now I might be wrong about some people, on some projects, but I am sure I am right more than I am wrong about this. One of the ways I know this is that I still suffer from it. 
 
 I lead Software Architecture for Avanade. It's a big company, with big clients, and we do big projects, some of them are cutting edge, some aren’t.
-I teach a lot of people about software architecture, about design patters, development culture, and how to build distributed systems successfully, but I don't know everything.
+I teach a lot of people about software architecture, about design patterns, development culture, and how to build distributed systems successfully, but I don't know everything.
 Here is a list of technologies that easily make me feel like an imposter:
 - Kubernetes
 - Service Meshes
