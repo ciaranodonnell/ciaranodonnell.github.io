@@ -51,7 +51,7 @@ The one thing that people with crippling imposter syndrome anxiety typically thi
 
 That's just not true!
 
-First, you aren't and imposter because you feel this way.
+First, you aren't an imposter because you feel this way.
 Every one of the *"best"** people I have met in technology feel this way <br>
 *(however you want to define best, I mean people I most respect from their technical eminence and cultural quality)
 
