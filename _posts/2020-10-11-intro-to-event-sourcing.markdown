@@ -63,7 +63,16 @@ So there are 2 reasons people want to use CQRS. The first we already covered, wh
 
 The second good space for using CQRS is when there is work that needs to be done on the inputs to transform them into a read model. 
 
-Lets say for example that the CreateArticleRequest contains the article body in Markdown format, but the read model is HTML so it can easily be displayed in a browser
+Lets say for example that the CreateArticleRequest contains the article body in Markdown format, but the read model is HTML so it can easily be displayed in a browser.
+This is a good example for the type of seggregation between the Create and Update commands the Read queries.
+
+Often this type of CQRS implementation will actually involve more than one type of storage for this data. 
+
+The simplest will be a cache of the read data. So the database has the body of the article stored in markdown, and when the client reads it, it's taken from the database, converted to HTML and the retrn
+
+The create requests that are sent to the server are stored somewhere, perhaps a database table, and then there is a background process that renders the Markdown in HTML and write the actual Article to the final Article collection.
+
+
 
 
 CQRS is NOT usually implemented with Event Sourcing. However ES is always implemented with CQRS.
