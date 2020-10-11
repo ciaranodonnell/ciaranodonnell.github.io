@@ -31,22 +31,40 @@ Ok, so what are Commands and Queries?
 
 Lets start by defining what it isn't and why we might need it. 
 
-
 Imagine we have a simple blog application, and you want an CRUD API for the posts. In a *pure* REST based API you would have an endpoint like */api/arcicle/* where you could:
 - Create a new post: PUT an Article object at the URL
 - Update a post: POST a Article
 - Read all the articles: Get */api/arcicle/*
 - Read a single article: Get */api/arcicle/{article id}*
 
-So whatever I want to do with the Articles on the blog, I just Get, Put, Post the same kind of object. This is a nice, consistent REST endpoint.
+So whatever I want to do with the Articles on the blog, I just Get, Put, Post the same kind of object. This is a nice, consistent REST endpoint. 
 
-However, there is a sort of inefficiency here, that when I want to create new articles, I have to send all the data about an article, like the CreatedDate (Which should be set on the server), the comments list, the number of views, etc.
-All the fields that you might retrieve from the service can be included in the PUT to create, even when that doesnt make sense.
+However, we have hidden something in this API. 
+Creating a new Article is not the same as Updating one, Reading one, or Deleting one. 
+
+When I want to create new articles, I dont want to have to send all the data about an article, like the CreatedDate (Which should be set on the server), the comments list, the number of views, etc.
+
+All the fields that you might retrieve from the service shouldn't have to be included in the PUT to create one.
 The 'created date' or 'posted by', for example, should be set by the server, not the client. 
 
-To implement these rules we typically change the API and have imperative endpoints, like /api/createarticle
+The different between the simple Get structure and the Create or Update structures is the difference between Query and Command. 
+
+Queries are for when we want to read the data back from a system or service, and we typically get all the data. Commands are when we want to modify the data, and we typically *don't* have to provide all the readable data, because we don't have it, or aren't allowed to modify it.
+
+### Responsibility Seggregation
+
+To implement these Commands we typically change the API and have imperative endpoints, like /api/createarticle
 To implement these rules we typically change the API and have imperative endpoints, like */api/createarticle*.
-When we 
+Then we create a simple model like a CreateArticleRequest model that only contains the fields the client is allowed to set on the client side and we use that in the PUT. 
+
+Doing this means we have a different Command model and Read model and we have seggregated the logic that performs the associted actions.
+
+So there are 2 reasons people want to use CQRS. The first we already covered, when there are business rules that prevent you from wanted to have the models the same, like the client wants to request a Create by providing core information, and the read model provides much more data, like the Created-Date.
+
+The second good space for using CQRS is when there is work that needs to be done on the inputs to transform them into a read model. 
+
+Lets say for example that the CreateArticleRequest contains the article body in Markdown format, but the read model is HTML so it can easily be displayed in a browser
+
 
 CQRS is NOT usually implemented with Event Sourcing. However ES is always implemented with CQRS.
 
