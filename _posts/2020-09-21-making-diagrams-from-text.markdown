@@ -29,3 +29,4 @@ So what our the options?
 Now, as the URL suggests, web sequence diagrams only does one type of diagram - sequence diagrams.
 
 Now that might sound like a big limitation, but sequence diagrams are actually pretty useful for describing the behavior of a system. 
+
