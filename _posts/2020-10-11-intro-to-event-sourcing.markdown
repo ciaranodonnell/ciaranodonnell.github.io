@@ -17,7 +17,7 @@ tags: [tech, architecture, patterns, cqrs, events, event-sourcing]
 
 *Command/Query Responsibility Seggregation*, or CQRS for short, is a really common pattern. Even  people who don't know it often find out they have implemented it through necessity without knowing. 
 
-*Event Sourcing* (ES for short) is a MUCH less common pattern that lot of people don't understand or really need.
+*Event Sourcing* (ES for short) is a MUCH less common pattern that lot of people don't understand well (or really need).
 
 They are often confused for each other, or confused for being one pattern CQRS/ES.
 
@@ -33,7 +33,7 @@ Ok, so what are Commands and Queries?
 
 Lets start by defining what it isn't and why we might need it. 
 
-Imagine we have a simple blog application, and you want an CRUD API for the posts. In a *pure* REST based API you would have an endpoint like */api/arcicle/* where you could:
+Imagine we have a simple blog application, and you want an CRUD API for the articles. In a *pure* REST based API you would have an endpoint like */api/arcicle/* where you could:
 - Create a new post: PUT an Article object at the URL
 - Update a post: POST a Article
 - Read all the articles: Get */api/arcicle/*
@@ -41,13 +41,11 @@ Imagine we have a simple blog application, and you want an CRUD API for the post
 
 So whatever I want to do with the Articles on the blog, I just Get, Put, Post the same kind of object. This is a nice, consistent REST endpoint. 
 
-However, we have hidden something in this API. 
+However, this simplicity in the API hides a little complexity.
 Creating a new Article is not the same as Updating one, Reading one, or Deleting one. 
 
-When I want to create new articles, I dont want to have to send all the data about an article, like the CreatedDate (Which should be set on the server), the comments list, the number of views, etc.
-
-All the fields that you might retrieve from the service shouldn't have to be included in the PUT to create one.
-The 'created date' or 'posted by', for example, should be set by the server, not the client. 
+When we're creating a new article we shouldn't have to include all the fields that you might retrieve from the service.
+The 'created date' or 'posted by', for example, should be set by the server, not the client. We won't have values for a comments list or number of views.
 
 The different between the simple Get structure and the Create or Update structures is the difference between Query and Command. 
 
