@@ -6,7 +6,9 @@ categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt: As we create software, it is very useful to be able to create diagrams about the software that we want to create, or have created. However this can be time consuming to do, and very time consuming to maintain as the plans/designs change. The solution is to generate diagrams from simpler text descriptions. Lets look at how.
+excerpt: Command Query Responsibility Seggregation, or CQRS for short, is a really common pattern. Even  people who don't know it often find out they have implemented it through necessity without knowing. 
+
+*Event Sourcing* (ES for short) is a MUCH less common pattern that lot of people don't understand or really need.
 #header:
 #teaser: /images/shuhari/ShuHaRi.png
 permalink: 
@@ -68,21 +70,62 @@ This is a good example for the type of seggregation between the Create and Updat
 
 Often this type of CQRS implementation will actually involve more than one type of storage for this data. 
 
-The simplest will be a cache of the read data. So the database has the body of the article stored in markdown, and when the client reads it, it's taken from the database, converted to HTML and the retrn
+The simplest will be a cache of the read data. So the database has the body of the article stored in markdown, and when the client reads it, it's taken from the database, converted to HTML and then returned to the client, potentially being added to a cache to improve furture read performance of the same articles.
 
-The create requests that are sent to the server are stored somewhere, perhaps a database table, and then there is a background process that renders the Markdown in HTML and write the actual Article to the final Article collection.
+The more involved implementation would mean the create requests that are sent to the server are stored somewhere, perhaps a database table, and then there is a background process that renders the Markdown in HTML and write the actual Article to the final Article collection.
+This would enable improved read performance on all articles as you wouldn't need to convert on the fly.
 
+I think the main goal of CQRS is to allow independent logic for the reading and updating of data, primarily to scale the read and write side of a system independently. 
 
-
+## OK, so what is Event Sourcing?
 
 CQRS is NOT usually implemented with Event Sourcing. However ES is always implemented with CQRS.
 
-At an API level, CQRS can be as simple as have a CreateNewPost structure that's sent to the Write Post API. It has the author, title, tags, and content. Then the ReadPost API returns Post structures that have author, title, tags, body, created date, last edit date, comments, view counts, related posts. (This is useful when the body contains something like markup and you want to generate the html after saving it to turn it into a post.)
+Event sourcing is a different pattern to CQRS, that achieves different objectives.
+In Event Sourcing the actual 'system of record' for the data of a system is a log of 'Events' that occured in the system which mutated state.
+So in relation to CQRS, the database of an Event Sourced system is a store of all the successful commands that were applied, stored in the order they were applied.
 
-These being different models is CQRS. The non CQRS method of doing this would be to have a REST "Post" endpoint that to write you HTTP PUT a full Post model too and GET from to do the ReadPost API.
+This is different to other systems, where the database is primarily made up of the result of the commands executed in order. In the blog system examples, a non-event sourced system has a table of Articles in the database and each update command changes the row it acts on. In an Event Sourced system, there table would be ArticleEvents and would have a row for each Create, Update, and Delete command that was received.
 
-CQRS can also be interpreted/implemented internally by having a nice normalized data store, and a denormalized cache built up to make reads easier /faster.
+Event Sourcing has the great advantage that it means you can:
+- Recreate the system state at any point in time but replaying all the commands from inception till that moment. If the commands are structured correctly in the store (with oldValue/newValue pairs) then you could play and rewind the stream from any moment to any other moment. 
+- Re-process the events using different logic to create other views of the data, such as calculating changes/minute stats, order most active posters.
 
-Event sourcing is a different pattern that achieves different objectives. It almost always requires CQRS in order to be usable when implemented. In eventaourcing you would still want to break the event logs up into domains and then you need to ensure causal consistency. You don't have to have a message broker though (although I think nowadays most systems would benefit from them)
+The obvious disadvantage to Event Sourcing is that in order to know the state of the system, you have to replay the Events from the beginning. We typically get around this by using the CQRS to create a read summary. 
+
+The most common example people use for Event Sourcing is a bank account.
+In any real banking system, a bank account is not stored as a single record in a table with a current balance field.
+Instead there is a ledger for the entire bank which has a record of every credit and debit applied to the accounts.
+
+If there is a change to the transaction history, like a failed transaction, the records are removed from that ledger.
+It also has a record of 'reversals' which are transactions that undo previous transactions.
+
+If you want to know the balance of any account, at any point, then you add up the credits and deduct the debits.
+That is the source of truth for any account.
+This also makes it simple to create bank statements for people every month.
+Those statements can also serve as checkpoints in the data. We can take the final balance from last one of those statements and just apply the transactions since to get the current balance, greatly reducing the performance implication.
 
 The key difference about event sourcing is that the log of events is the real store of the data. Tables you update from the events are just like a cache (or materialized view some people call them). They are disposable and should be regeneratable at any time.
+
+## So how do these relate to microservices?
+
+Unsurprisingly, they don't directly as They are separate patterns.
+Microservices is process for problem solving by breaking down large, complex business landscapes into separate components that each satisfy a sub-domain of the business.
+
+If you want to use CQRS or Event Sourcing in a microservices solution, you need to think of them as the implementation details of each microservice. The event logs that you store should be inside a sub-domain.
+
+If you use CQRS in microservices, or even just communicate between services as events, you can create an event log the same as you do in event sourcing.
+This can be used for reporting, trend analysis, replaying later as a source of test data, etc. 
+However, if that log isnt the source of truth then you arent event **sourced**, and thats probably ok.
+
+## Summary
+
+CQRS is a pattern where your system has a separate channel of communication and processing for reading data compared to updating it.
+
+Event Sourcing is a pattern for make the actual source of truth in your system be a sequence of update commands. The current state of the system is determined by processing the events.
+You may store that result, but only as a cached value, not as the source of truth.
+
+Both these patterns are useful but they do solve different challenges.
+CQRS is much more common and doesn't need Event Sourcing.
+Event Sourcing does normally involve CQRS too.
+
