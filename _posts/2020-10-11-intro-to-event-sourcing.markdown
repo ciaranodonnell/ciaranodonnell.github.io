@@ -6,9 +6,7 @@ categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt: Command Query Responsibility Seggregation, or CQRS for short, is a really common pattern. Even  people who don't know it often find out they have implemented it through necessity without knowing. 
-
-*Event Sourcing* (ES for short) is a MUCH less common pattern that lot of people don't understand or really need.
+excerpt: Command Query Responsibility Seggregation, or CQRS for short, is a really common pattern. Even  people who don't know it often find out they have implemented it through necessity without knowing. Event Sourcing (ES for short) is a MUCH less common pattern that lot of people don't understand or really need.
 #header:
 #teaser: /images/shuhari/ShuHaRi.png
 permalink: 
@@ -44,31 +42,31 @@ So whatever I want to do with the Articles on the blog, I just Get, Put, Post th
 However, this simplicity in the API hides a little complexity.
 Creating a new Article is not the same as Updating one, Reading one, or Deleting one. 
 
-When we're creating a new article we shouldn't have to include all the fields that you might retrieve from the service.
+When we're creating a new article, we shouldn't have to include all the fields that you might retrieve from the service.
 The 'created date' or 'posted by', for example, should be set by the server, not the client. We won't have values for a comments list or number of views.
 
 The different between the simple Get structure and the Create or Update structures is the difference between Query and Command. 
 
 Queries are for when we want to read the data back from a system or service, and we typically get all the data. Commands are when we want to modify the data, and we typically *don't* have to provide all the readable data, because we don't have it, or aren't allowed to modify it.
 
-### Responsibility Seggregation
+### Responsibility Segregation
 
 To implement these Commands we typically change the API and have imperative endpoints, like /api/createarticle
-To implement these rules we typically change the API and have imperative endpoints, like */api/createarticle*.
+To implement these rules, we typically change the API and have imperative endpoints, like */api/createarticle*.
 Then we create a simple model like a CreateArticleRequest model that only contains the fields the client is allowed to set on the client side and we use that in the PUT. 
 
-Doing this means we have a different Command model and Read model and we have seggregated the logic that performs the associted actions.
+Doing this means we have a different Command model and Read model and we have segregated the logic that performs the associated actions.
 
 So there are 2 reasons people want to use CQRS. The first we already covered, when there are business rules that prevent you from wanted to have the models the same, like the client wants to request a Create by providing core information, and the read model provides much more data, like the Created-Date.
 
 The second good space for using CQRS is when there is work that needs to be done on the inputs to transform them into a read model. 
 
 Lets say for example that the CreateArticleRequest contains the article body in Markdown format, but the read model is HTML so it can easily be displayed in a browser.
-This is a good example for the type of seggregation between the Create and Update commands the Read queries.
+This is a good example for the type of segregation between the Create and Update commands the Read queries.
 
 Often this type of CQRS implementation will actually involve more than one type of storage for this data. 
 
-The simplest will be a cache of the read data. So the database has the body of the article stored in markdown, and when the client reads it, it's taken from the database, converted to HTML and then returned to the client, potentially being added to a cache to improve furture read performance of the same articles.
+The simplest will be a cache of the read data. So, the database has the body of the article stored in markdown, and when the client reads it, it's taken from the database, converted to HTML and then returned to the client, potentially being added to a cache to improve future read performance of the same articles.
 
 The more involved implementation would mean the create requests that are sent to the server are stored somewhere, perhaps a database table, and then there is a background process that renders the Markdown in HTML and write the actual Article to the final Article collection.
 This would enable improved read performance on all articles as you wouldn't need to convert on the fly.
@@ -77,10 +75,10 @@ I think the main goal of CQRS is to allow independent logic for the reading and 
 
 ## OK, so what is Event Sourcing?
 
-CQRS is NOT usually implemented with Event Sourcing. However ES is always implemented with CQRS.
+CQRS is NOT usually implemented with Event Sourcing. However, ES is always implemented with CQRS.
 
 Event sourcing is a different pattern to CQRS, that achieves different objectives.
-In Event Sourcing the actual 'system of record' for the data of a system is a log of 'Events' that occured in the system which mutated state.
+In Event Sourcing the actual 'system of record' for the data of a system is a log of 'Events' that occurred in the system which mutated state.
 So in relation to CQRS, the database of an Event Sourced system is a store of all the successful commands that were applied, stored in the order they were applied.
 
 This is different to other systems, where the database is primarily made up of the result of the commands executed in order. In the blog system examples, a non-event sourced system has a table of Articles in the database and each update command changes the row it acts on. In an Event Sourced system, there table would be ArticleEvents and would have a row for each Create, Update, and Delete command that was received.
@@ -114,7 +112,7 @@ If you want to use CQRS or Event Sourcing in a microservices solution, you need 
 
 If you use CQRS in microservices, or even just communicate between services as events, you can create an event log the same as you do in event sourcing.
 This can be used for reporting, trend analysis, replaying later as a source of test data, etc. 
-However, if that log isnt the source of truth then you arent event **sourced**, and thats probably ok.
+However, if that log isn’t the source of truth then you aren’t event **sourced**, and that’s probably ok.
 
 ## Summary
 
@@ -123,7 +121,6 @@ CQRS is a pattern where your system has a separate channel of communication and 
 Event Sourcing is a pattern for make the actual source of truth in your system be a sequence of update commands. The current state of the system is determined by processing the events.
 You may store that result, but only as a cached value, not as the source of truth.
 
-Both these patterns are useful but they do solve different challenges.
+Both these patterns are useful, but they do solve different challenges.
 CQRS is much more common and doesn't need Event Sourcing.
 Event Sourcing does normally involve CQRS too.
-
