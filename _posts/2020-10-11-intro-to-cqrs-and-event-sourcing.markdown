@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "CQRS and Event Sourcing - are they the same?"
-date:   2020-07-09 13:43:00 -0500
+date:   2020-10-10 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
