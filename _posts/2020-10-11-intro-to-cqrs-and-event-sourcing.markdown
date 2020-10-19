@@ -51,8 +51,7 @@ Queries are for when we want to read the data back from a system or service, and
 
 ### Responsibility Segregation
 
-To implement these Commands we typically change the API and have imperative endpoints, like /api/createarticle
-To implement these rules, we typically change the API and have imperative endpoints, like */api/createarticle*.
+To implement these Commands we typically change the API and have imperative endpoints, like */api/createarticle*.
 Then we create a simple model like a CreateArticleRequest model that only contains the fields the client is allowed to set on the client side and we use that in the PUT. 
 
 Doing this means we have a different Command model and Read model and we have segregated the logic that performs the associated actions.
