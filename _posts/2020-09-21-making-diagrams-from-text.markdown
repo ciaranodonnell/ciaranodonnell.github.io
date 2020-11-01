@@ -70,11 +70,37 @@ Mermaid supports a bunch of different diagram types:
 - ER Diagram
 - User Journey Diagrams
   
-It also supports theming 
+It also supports theming these diagrams.
+
+One of the things I personally love about mermaid.js is that it's diagrams (currently only 2 types) are supported in Azure DevOps. 
+The [official documentation for Mermaid in AzDo is here](https://docs.microsoft.com/en-us/azure/devops/project/wiki/wiki-markdown-guidance?view=azure-devops#add-mermaid-diagrams-to-a-wiki-page).
+
+You can add something like this to your wiki:
+```
+::: mermaid
+
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+
+:::
+```
+
+And it will render in the page as:
+
+![Sequence Diagram in Azure DevOps](../images/2020-09-21-making-diagrams/sequence-in-azdo.png)
 
 ## yUML ([https://yuml.me/](https://yuml.me/))
 
-yUML is another website for creating diagrams. 
+yUML is another website for creating diagrams.
 It supports 
 
 - Class Diagrams
@@ -144,5 +170,12 @@ generates:
 
 ![Example Python output image](../images/2020-09-21-making-diagrams/aws_grouped_workers_diagram.png)
 
+There are a bunch of different technologies and cloud provider logos setup in there already.
+I think this makes it pretty simple to create these diagrams.
 
+## Summary
 
+Documentation as code (docs in source control with code) is the only approach I've seen or experienced where the projects/products keep their documentation up to date.
+I personally love this that there are options to make our diagrams part of that same process.
+
+If you find other approaches for doing this, please drop me a comment on this post or tweet it to me on twitter.
