@@ -59,12 +59,90 @@ This means that, using nodejs, you can run it as a local image generator on your
 You can also use it on your website in a browser too. 
 In fact, there is a live editor for mermaid JS diagrams at [https://mermaid-js.github.io/mermaid-live-editor/#/edit/](https://mermaid-js.github.io/mermaid-live-editor/#/edit/).
 
+Mermaid supports a bunch of different diagram types:
 
-## yUML
+- Sequence Diagrams
+- Gantt Chart
+- Flow Chart
+- Class Diagrams
+- State Diagram
+- Pie Chart
+- ER Diagram
+- User Journey Diagrams
+  
+It also supports theming 
 
-This is cool
+## yUML ([https://yuml.me/](https://yuml.me/))
+
+yUML is another website for creating diagrams. 
+It supports 
+
+- Class Diagrams
+- Use Case Diagrams
+- Activity Diagrams
+
+They have a cool *Scruffy* style which I like, imitating hand drawn
+
+![yUML Class Diagram](../images/2020-09-21-making-diagrams/yuml-example-image.png)
 
 
 ## Diagrams as Code ([https://diagrams.mingrammer.com/](https://diagrams.mingrammer.com/))
 
-This is cool 
+This is a cool library that does something a little different from the other.
+Rather than try to create a form of UML diagrams, it creates cloud architecture diagrams.
+
+One of things I hate about creating architecture diagrams that show the cloud services that are being used is finding the right icons for the all the services.
+
+This library helps fix that challenge.
+
+It's a python library that generates diagrams locally by running a python script. 
+
+An Example script:
+
+``` python
+
+from diagrams import Cluster, Diagram, Edge
+from diagrams.onprem.analytics import Spark
+from diagrams.onprem.compute import Server
+from diagrams.onprem.database import PostgreSQL
+from diagrams.onprem.inmemory import Redis
+from diagrams.onprem.logging import Fluentd
+from diagrams.onprem.monitoring import Grafana, Prometheus
+from diagrams.onprem.network import Nginx
+from diagrams.onprem.queue import Kafka
+
+with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
+    ingress = Nginx("ingress")
+
+    metrics = Prometheus("metric")
+    metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")
+
+    with Cluster("Service Cluster"):
+        grpcsvc = [
+            Server("grpc1"),
+            Server("grpc2"),
+            Server("grpc3")]
+
+    with Cluster("Sessions HA"):
+        master = Redis("session")
+        master - Edge(color="brown", style="dashed") - Redis("replica") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="brown") >> master
+
+    with Cluster("Database HA"):
+        master = PostgreSQL("users")
+        master - Edge(color="brown", style="dotted") - PostgreSQL("slave") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="black") >> master
+
+    aggregator = Fluentd("logging")
+    aggregator >> Edge(label="parse") >> Kafka("stream") >> Edge(color="black", style="bold") >> Spark("analytics")
+
+    ingress >> Edge(color="darkgreen") << grpcsvc >> Edge(color="darkorange") >> aggregator
+
+```
+
+generates:
+
+![Example Python output image](../images/2020-09-21-making-diagrams/aws_grouped_workers_diagram.png)
+
+
+
