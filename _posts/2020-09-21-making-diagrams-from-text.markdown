@@ -98,6 +98,12 @@ And it will render in the page as:
 
 ![Sequence Diagram in Azure DevOps](../images/2020-09-21-making-diagrams/sequence-in-azdo.png)
 
+At Avanade we are using a 'Documentation as Code' approach centered around the Azure Devops wikis.
+We are keeping our markdown based documentation in a folder structure next to our source code, and every commit that adds or changes the functionality needs to include documentation changes.
+We then publish these folders as a wiki.
+Having the ability to have diagrams included in that documentation be generated from the text is super powerful.
+ 
+
 ## yUML ([https://yuml.me/](https://yuml.me/))
 
 yUML is another website for creating diagrams.
