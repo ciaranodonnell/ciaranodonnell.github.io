@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Making Diagrams from Text"
-date:   2020-07-09 13:43:00 -0500
+date:   2020-11-18 13:43:00 -0500
 categories: posts
 comments: true
 toc: true
