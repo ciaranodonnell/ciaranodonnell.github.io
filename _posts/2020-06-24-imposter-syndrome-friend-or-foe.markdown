@@ -13,7 +13,8 @@ permalink:
 tags: [tech, imposter syndrome, culture, mentoring, growth]
 ---
 
-Imposter syndrome is one of the challenges of modern software engineering, and probably tech in general. Lots of people have it, and they all wish they didn’t, but I might argue it's not all that bad.
+Imposter syndrome is one of the most common challenges faced in the field of software engineering, and probably broader technology field.
+Lots of people have it, and they all wish they didn’t, but I might argue it's not all that bad.
 
 ## What is Imposter Syndrome?
 
