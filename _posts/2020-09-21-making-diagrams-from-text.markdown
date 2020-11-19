@@ -32,17 +32,17 @@ Now that might sound like a big limitation, but sequence diagrams are actually p
 
 Entering some simple test like this:
 
-![Websquence Diagram Screenshot of text](../images/2020-09-21-making-diagrams/websequencediagrams-text.png)
+![Websquence Diagram Screenshot of text](/images/2020-09-21-making-diagrams/websequencediagrams-text.png)
 
 gets you a diagram like this:
 
- ![WebsquenceDiagrams.com Screenshot of Diagram](../images/2020-09-21-making-diagrams/websequencediagrams-image.png)
+ ![WebsquenceDiagrams.com Screenshot of Diagram](/images/2020-09-21-making-diagrams/websequencediagrams-image.png)
 
 
 That's pretty cool, and we can end up creating some pretty big diagrams:
 
 
- ![WebsquenceDiagrams.com Screenshot of Diagram](../images/2020-09-21-making-diagrams/websequencediagrams-bigimage.png)
+ ![WebsquenceDiagrams.com Screenshot of Diagram](/images/2020-09-21-making-diagrams/websequencediagrams-bigimage.png)
 
 
 The last thing worth point about about [websequencediagrams.com](https://www.websequencediagrams.com) is it can produce diagrams with different styles.
@@ -96,7 +96,7 @@ sequenceDiagram
 
 And it will render in the page as:
 
-![Sequence Diagram in Azure DevOps](../images/2020-09-21-making-diagrams/sequence-in-azdo.png)
+![Sequence Diagram in Azure DevOps](/images/2020-09-21-making-diagrams/sequence-in-azdo.png)
 
 At Avanade we are using a 'Documentation as Code' approach centered around the Azure Devops wikis.
 We are keeping our markdown based documentation in a folder structure next to our source code, and every commit that adds or changes the functionality needs to include documentation changes.
@@ -115,7 +115,7 @@ It supports
 
 They have a cool *Scruffy* style which I like, imitating hand drawn
 
-![yUML Class Diagram](../images/2020-09-21-making-diagrams/yuml-example-image.png)
+![yUML Class Diagram](/images/2020-09-21-making-diagrams/yuml-example-image.png)
 
 
 ## Diagrams as Code ([https://diagrams.mingrammer.com/](https://diagrams.mingrammer.com/))
@@ -174,7 +174,7 @@ with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
 
 generates:
 
-![Example Python output image](../images/2020-09-21-making-diagrams/aws_grouped_workers_diagram.png)
+![Example Python output image](/images/2020-09-21-making-diagrams/aws_grouped_workers_diagram.png)
 
 There are a bunch of different technologies and cloud provider logos setup in there already.
 I think this makes it pretty simple to create these diagrams.
