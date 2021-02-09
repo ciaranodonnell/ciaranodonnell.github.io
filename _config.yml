@@ -118,9 +118,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ciaranodonnell"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/ciaran_odonnell"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-play"
+      url: "https://www.youtube.com/channel/UC6otXMhyzib7YJRucwfignA"
 
 # Site Footer
 footer:
