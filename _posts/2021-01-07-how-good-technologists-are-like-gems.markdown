@@ -39,4 +39,11 @@ So I have been trying to find a way to describe the fact that it's not the origi
 
 
 
+<<<<<<< Updated upstream
 ![multiple colored gems](/images/2021-01-07-how-good-tech-gems/multiple-colored-gems.jpg)
+=======
+![multiple colored gems](/images/2021-01-07-how-good-tech-gems/multiple-colored-gems.jpg)
+
+
+![Diamond before and after cutting](/images/2021-01-07-how-good-tech-gems/diamond-before-after.jpg)
+>>>>>>> Stashed changes
