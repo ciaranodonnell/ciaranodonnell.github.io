@@ -119,7 +119,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ciaranodonnell"
     - label: "YouTube"
-      icon: "fab fa-fw fa-youtube-play"
+      icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UC6otXMhyzib7YJRucwfignA"
 
 # Site Footer
