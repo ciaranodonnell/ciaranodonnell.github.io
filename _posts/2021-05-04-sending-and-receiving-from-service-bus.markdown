@@ -27,40 +27,43 @@ If you're paying with your credit card, then running a Standard tier  Service fo
 ## Creating a Service Bus Instance
 
 First things first, you need to create a Service Bus. 
-You can seach the Marketplace on the Azure Portal for 'service bus', and you'll find this:
+You can search the Marketplace on the Azure Portal for 'service bus', and you'll find this:
 
 ![Service Bus in Portal](/images/servicebus/service-bus-in-portal.png)
 
 Hitting create gets you to a screen where you enter the Service Bus *Namespace*.
 This the **globally unique** name for your Service Bus instance.
+The form will validate it's uniqueness for you live.
+This forms part of the URL for your service bus.
 
 ![Create Service Bus Namespace](/images/servicebus/create-namespace.png)
 
-Hitting the Create button now will give you Service Bus instance setup.
+Hitting the Create button now will tell Azure to setup a  Service Bus instance for you. The process takes just a minute or so.
 
 ## Creating a Queue
 
-Creating a Queue is a pretty simple process. 
-On the left hand side of the portal there is a section for **Entities**.
+Once your Service Bus has been created, creating a Queue is a pretty simple process. 
+Navigate to your Service Bus in the portal, and on the left hand side menu of the service bus page is a section for **Entities**.
 
-Under Entities, click Queues. This will give you a list of all the Queues setup on your Service Bus, which if you just made it, will be none.
+Under Entities, click Queues. This will give you a list of all the Queues setup on your Service Bus which, if you just made it, will be none.
 
 ![Adding a Queue](/images/servicebus/queues-add-new.png)
 
 
-Hit the button '+ Queue' and you'll get a flyout for the Queue information you need to enter
+Hit the button '+ Queue' and you'll get a flyout page for the Queue information you need to enter.
 
 ![Adding a Queue](/images/servicebus/create-queue-flyout.png)
 
-Everything here except the Name will be defaulted. 
+Everything here except the Name will be set to default values. 
 This is just the Queue name and will need to be unique just for your Service Bus Namespace.
+
 If you don't know what the rest of the options are at the moment, you can leave them as the default for now and we'll cover those in future posts.
 
 Once you hit the Create button, the Queue will be made and ready in just a few seconds.
 
 ## Creating a Topic and Subscription
 
-This is similar to creating a Queue, but you hit the Topic option under entities. Again as your namespace is new, there wont be any.
+This is similar to creating a Queue, but you hit the Topic option under Entities. Again as your namespace is new, there wont be any.
 Just hit the '+ Topic' button to add a Topic
 
 ![Adding a Topic](/images/servicebus/create-topic-flyout.png)
