@@ -104,5 +104,6 @@ This connection string is what you pass to the Service Bus client components.
 I've been creating a series of videos on building message driven systems and Azure Service Bus. Check it out here:
 [Building Message Driven Systems Playlist](https://www.youtube.com/watch?v=57Qr9tk6Uxc&list=PLj1Z4NiDbwIOkkPvM2HFbMMPb9Lr1B_Oj)
 
+The source code for the examples in that series can be found in this Github repository [https://github.com/ciaranodonnell/AzureDemos/tree/master/AzureServiceBus/](https://github.com/ciaranodonnell/AzureDemos/tree/master/AzureServiceBus/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t1u8u7VgKWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
