@@ -77,11 +77,11 @@ It's basically named list of messages that you read from in the order the messag
 I like to use the analogy of a one lane road.
 Whatever order the cars enter that road at one end, thats the order they leave at the other end.
 
-![A line of cars on a single lane road](../images/2021-10-14-intro-to-message-brokers/single-track-road.png)
+![A line of cars on a single lane road](/images/2021-10-14-intro-to-message-brokers/single-track-road.png)
 
 Using this analogy we can think of Queues on a message broker as being a set of named streets that we can send out messages (cars) to. 
 
-![Multiple named lanes of cars in a box labeled message broker](../images/2021-10-14-intro-to-message-brokers/queues-on-a-broker.png)
+![Multiple named lanes of cars in a box labeled message broker](/images/2021-10-14-intro-to-message-brokers/queues-on-a-broker.png)
 
 Event at this most basic level, a message broker can help us with our problems. 
 
@@ -117,7 +117,7 @@ If you want more than one application to be able to receive a copy of *every* me
 Topics and Subscriptions work in a very similar fashion to queues. Queues have names that you specify when you send a message to it, that is effectively the same as a Topic.
 The storage of messages waiting for delivery in a Queue are effectively the same as a Subscription.
 
-![Topics and Subscriptions showing one topic splitting two subscriptions](../images/servicebus/../2021-10-14-intro-to-message-brokers/topics-and-subscriptions.png)
+![Topics and Subscriptions showing one topic splitting two subscriptions](/images/servicebus/../2021-10-14-intro-to-message-brokers/topics-and-subscriptions.png)
 
 So with Topics it's now possible for a sending application to a send a single Message to the broker, and the broker put that into more than one Subscription (outbound queue) for more than one receiving application to get it. 
 This is often referred to as 'Fan Out'. 
