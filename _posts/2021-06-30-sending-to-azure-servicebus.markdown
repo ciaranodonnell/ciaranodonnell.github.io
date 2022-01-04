@@ -100,7 +100,7 @@ await sender.SendMessageAsync(new ServiceBusMessage("This is a single message th
 
 ### Batch of Messages
 
-The best way to send a batch of messages is to create a [```ServiceBusMessageBatch```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebusmessagebatch?view=azure-dotnet). Then you can add [```ServiceBusMessage```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebusmessage?view=azure-dotnet)s messages to the batch and pass that to an overload of [```SendMessagesAsync```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebussender.sendmessagesasync?view=azure-dotnet#Azure_Messaging_ServiceBus_ServiceBusSender_SendMessagesAsync_Azure_Messaging_ServiceBus_ServiceBusMessageBatch_System_Threading_CancellationToken_)
+The best way to send a batch of messages is to create a [```ServiceBusMessageBatch```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebusmessagebatch?view=azure-dotnet). Then you can add [```ServiceBusMessages```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebusmessage?view=azure-dotnet) messages to the batch and pass that to an overload of [```SendMessagesAsync```](https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebussender.sendmessagesasync?view=azure-dotnet#Azure_Messaging_ServiceBus_ServiceBusSender_SendMessagesAsync_Azure_Messaging_ServiceBus_ServiceBusMessageBatch_System_Threading_CancellationToken_)
 
 ``` csharp
 var batch = await sender.CreateMessageBatchAsync();
