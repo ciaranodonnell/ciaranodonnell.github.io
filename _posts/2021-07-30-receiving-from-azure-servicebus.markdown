@@ -125,6 +125,7 @@ You can't process the message here, you only get the exception details.
 
 Once you have registered your event handlers you need to call ```StartProcessingAsync``` on the processor. This is what actually connects it to the endpoint and starts receiving messages. 
 
+When you want to disconnect your processor from Service Bus, there is a matching ```StopProcessingAsync```
 ## More Information
 
 I've been creating a series of videos on building message driven systems and Azure Service Bus. Check it out here:
