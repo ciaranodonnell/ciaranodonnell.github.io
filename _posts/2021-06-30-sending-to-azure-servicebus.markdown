@@ -39,12 +39,12 @@ namespace ConsoleApp1
 {
   static class Program
   {
-	static async Task Main(string[] args)
-	{
+  static async Task Main(string[] args)
+  {
       Console.WriteLine("Starting Azure Service Bus Demo");
       
-	  // Send stuff to service bus
-	}
+    // Send stuff to service bus
+  }
   }
 }
 ```

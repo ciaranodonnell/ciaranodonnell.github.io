@@ -29,17 +29,17 @@ using Azure.Messaging.ServiceBus;
 
 namespace ConsoleApp1
 {
-	static class Program
-	{
+  static class Program
+  {
 
-		static async Task Main(string[] args)
-		{
+    static async Task Main(string[] args)
+    {
 
-			Console.WriteLine("Starting Azure Service Bus Demo");
+      Console.WriteLine("Starting Azure Service Bus Demo");
 
-			var connectionString = "Endpoint=...;SharedAccessKeyName=...;SharedAccessKey=...";
+      var connectionString = "Endpoint=...;SharedAccessKeyName=...;SharedAccessKey=...";
 
-			ServiceBusClient client = new ServiceBusClient(connectionString);
+      ServiceBusClient client = new ServiceBusClient(connectionString);
 
     }
   }
