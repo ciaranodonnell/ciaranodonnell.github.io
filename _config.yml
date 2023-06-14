@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "Ciaran O'Donnell"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a software architect and technology enthusiast. I work at Avanade leading their Software Engineering & Architecture Center of Excellence. My passion is in finding good software architectures and also good culture, processes, practices etc. I like technology and want the industry to grow, mature and become more inclusive. I also like training for American Ninja Warrior but hold no misconceptions that I'll ever appear on the show :)"
+  bio              : "I'm a software architect and technology enthusiast. I work at Google as a Staff Software Engineer and Team Lead for Trust on Google Meet. My passion is in finding good software architectures and also good culture, processes, practices etc. I like technology and want the industry to grow, mature and become more inclusive. I also like training for American Ninja Warrior but hold no misconceptions that I'll ever appear on the show :)"
   location         : "Charlotte, NC"
   email            :
   links:
