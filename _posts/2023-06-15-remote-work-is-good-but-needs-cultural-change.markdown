@@ -12,7 +12,7 @@ However, a set of employers are starting to reverse the trend and are beginning 
 These drives range from full 5 days a week returns, to hybrid approaches like '3 days in, 2 days out'. 
 
 In my opinion these employers are making a mistake."
-permalink: 
+permalink: hybrid-work-worst-of-both-worlds
 tags: [tech, culture]
 --- 
 
