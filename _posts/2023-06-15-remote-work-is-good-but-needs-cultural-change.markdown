@@ -6,12 +6,12 @@ categories: posts
 comments: true
 toc: true
 author_profile: true
-excerpt: Remote work has become increasingly popular in recent years as we've gone through a global pandemic, and I believe both employers and employees have realized the benefits it can offer.
+excerpt: "Remote work has become increasingly popular in recent years as we've gone through a global pandemic, and I believe both employers and employees have realized the benefits it can offer.
 
 However, a set of employers are starting to reverse the trend and are beginning to force employees to return to the office.
 These drives range from full 5 days a week returns, to hybrid approaches like '3 days in, 2 days out'. 
 
-In my opinion these employers are making a mistake. 
+In my opinion these employers are making a mistake."
 permalink: 
 tags: [tech, culture]
 --- 
