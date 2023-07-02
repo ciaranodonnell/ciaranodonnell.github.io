@@ -97,3 +97,38 @@ Really distributed systems problems all stem from 2 problems:
 
 Handling failure is really the ultimate challenge of distributed systems. In fact there is an often used quote by [Leslie Lamport](https://amturing.acm.org/award_winners/lamport_1205376.cfm) to define distributed systems
 > “A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable”
+
+When looking for topics to study on distributed systems you can normally source some good questions by looking at your own architecture diagram. 
+Even a basic 2 tier application, UI-over-database, can generate some good questions. 
+- What if the database service is down?
+  - How do we tell? Error?
+  - How do we manage that from the user experience?
+  - What do we do about pending writes?
+  - (How) Should we cache data locally?
+  - How do we check when the database is back? 
+- What if the a call to the database times out? 
+  - All the questions from the above apply?
+  - Does this mean a write failed?
+  - Does this mean a write succeeded but we did get the response?
+
+These questions highlight the uncertainty that comes with distributed systems.
+These questions basically scale up and replicate out as your distributed system grows. 
+- How do I know if something is working?
+- How do I keep the user happy when some of it isn't working?
+- How do I validate what has successfully happened and what hasn't
+
+There are many strategies for solving these problems, and a lot of them will be returned from a web search for the question.
+These will be a great place to start.
+
+#### Concurrency
+
+Something that introduces its own set of questions, plus makes all the above questions about handling failure more complicated, is concurrency.
+This is when you have more that one user trying to take actions in the system at the same time. 
+
+The simplest form of this is pretty easy to handle. Two different users editing two different records at the same time. Most database systems can handle this pretty easily.
+
+The core challenge is when you want two people to be able to edit the same record at the same time. A database system can normally actualy handle this with error quite easily, but the challenge is in the user experience, not just the errors.
+What if I load a user from a database to my UI, then someone else loads the user, changes it and saves it, then I try to change it and save it. How should this be handled? In fact, how should it be detected even?
+
+The failure questions all become more complicated when there are multiple people editing records.
+The detection and handling of failure become more complicated. How to queue up instructions, 
