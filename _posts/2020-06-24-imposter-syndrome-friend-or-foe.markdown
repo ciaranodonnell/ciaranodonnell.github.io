@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Imposter Syndrome - Friend of Foe"
+title:  "Managing Imposter Syndrome"
 date:   2020-07-09 13:43:00 -0500
 categories: posts
 comments: true
@@ -13,7 +13,8 @@ permalink:
 tags: [tech, imposter syndrome, culture, mentoring, growth]
 ---
 
-Imposter syndrome is one of the challenges of modern software engineering, and probably tech in general. Lots of people have it, and they all wish they didn’t, but I might argue it's not all that bad.
+Imposter syndrome is one of the most common challenges faced in the field of software engineering, and probably broader technology field.
+Lots of people have it, and they all wish they didn’t, but I might argue it's not all that bad.
 
 ## What is Imposter Syndrome?
 
@@ -51,7 +52,7 @@ The one thing that people with crippling imposter syndrome anxiety typically thi
 
 That's just not true!
 
-First, you aren't and imposter because you feel this way.
+First, you aren't an imposter because you feel this way.
 Every one of the *"best"** people I have met in technology feel this way <br>
 *(however you want to define best, I mean people I most respect from their technical eminence and cultural quality)
 
@@ -63,7 +64,7 @@ When you see conference talks from developers at big companies that are doing pr
 Now I might be wrong about some people, on some projects, but I am sure I am right more than I am wrong about this. One of the ways I know this is that I still suffer from it. 
 
 I lead Software Architecture for Avanade. It's a big company, with big clients, and we do big projects, some of them are cutting edge, some aren’t.
-I teach a lot of people about software architecture, about design patters, development culture, and how to build distributed systems successfully, but I don't know everything.
+I teach a lot of people about software architecture, about design patterns, development culture, and how to build distributed systems successfully, but I don't know everything.
 Here is a list of technologies that easily make me feel like an imposter:
 - Kubernetes
 - Service Meshes
