@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a Technologist, originally from England, currently living in Charlotte, NC.
 
-I work at a software consultancy called Avanade, which is part of Accenture, and I lead the Application Architecture Center of Excellence for North America. Beyond that I am a husband, a father and a 'technology enthusiast'.
+I am a Staff Software Engineer at Google working on Trust in the Google Meet product. Beyond that I am a husband, a father and a 'technology enthusiast'.
 
 I love working with technology and people, finding ways to improve the lives of humans through the use of technology. My work at Avanade is helping find solutions for our customers problems, training and mentoring employees, and building a community of learning, sharing and collaboration both internally and with our clients.
 
