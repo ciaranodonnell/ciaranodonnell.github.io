@@ -43,20 +43,20 @@ To be a leader in backend engineering then you should probably be comfortable wi
 *Short answer:* They all are! 
 
 *Long Answer:* I would say the ones that affect you and your team are the ones that will probably be immediately important for you to learn. 
-What affects yuou will likely affect other people. 
+What affects you will likely affect other people, so whatever skills you learn should be transferable to future projects.
 
 I would also prioritize the ones you are already a little familiar with. 
 If you know a little, but have some gaps, or don't feel like you could really explain it well, then work on that one.
 
 Lots of these problems are interconnected. So the more you explore one of them the more you'll encounter the others.
-Encountering the others will give you some high level exposure to them, so they'll fall into the higher priority group.
+Encountering the others will give you some high level exposure to them, so they'll fall into the higher priority group (because you'll understand them a little).
 Then you just work your way through that. 
 
 Which leads us to...
 
 ### How to learn? / What side projects?
 
-Learning these topics is really a matter of finding a good explainer, possibly a video or maybe a code along and learning it. For me, I like a video I can code along to, followed by an explainer to how/why something works.
+Learning these topics is really a matter of finding a good explainer, possibly a video, or maybe a code along and learning it. For me, I like a video I can code along to, followed by an explainer to how/why something works.
 You should chose what works well for your style of learning.
 
 I don't always find a side project to work on these issues.
@@ -72,13 +72,15 @@ That makes it hard for me to really remember it and use it later.
 So my advice is to try small examples first, even if they're too small to be really useful on their own.
 Then try and use the new learnings or tech **with** stuff you already know.
 
-My example: If learning unit testing, do it with the language and code you already know. Don't swap from Java to Ruby because you heard it's great for unit testing. I wouldn't even start with all the assertion and mocking libraries you can find. Start simple with plain old objects and the basic assertions you get with nUnit or jUnit.
+My example: If learning unit testing, do it with the language and code you already know. Don't swap from Java to Ruby because you heard it's great for unit testing. 
+
+I wouldn't even start with all the assertion and mocking libraries you can find. Start simple with plain old objects and the basic assertions you get with nUnit or jUnit. You can then start to mix in some helpers once you get the hang of the basics.
 
 
 ## Distributed Systems
 
 Now this is a different question to backend engineering.
-Infact, distributed systems engineering is really an advanced form of backend engineering. Or perhaps it's better to say that someone who is good at distributed systems probably already understands lots of the backend concepts mentioned above.
+In fact, distributed systems engineering is really an advanced form of backend engineering. Or perhaps it's better to say that someone who is good at distributed systems probably already understands lots of the backend concepts mentioned above.
 
 If you are a backend engineer and you have a front end, or a database, or other APIs you are calling, or multiple services in your own system, perhaps hosted on the cloud, *then you are a distributed systems engineer*. 
 
@@ -131,4 +133,4 @@ The core challenge is when you want two people to be able to edit the same recor
 What if I load a user from a database to my UI, then someone else loads the user, changes it and saves it, then I try to change it and save it. How should this be handled? In fact, how should it be detected even?
 
 The failure questions all become more complicated when there are multiple people editing records.
-The detection and handling of failure become more complicated. How to queue up instructions, 
+The detection and handling of failure become more complicated. How to queue up writes, how to know when it is safe to read the database. 
